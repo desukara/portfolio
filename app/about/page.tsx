@@ -29,8 +29,8 @@ export default function AboutPage() {
         <div>
           <span className="kicker">01 / THE PERSON BEHIND THE LESSONS</span>
           <h1>Good teaching begins with <em>connection.</em></h1>
-          <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also spent approximately six years as a full-time U.S. Army classroom instructor in Hawaii.</p>
-          <p className="about-muted">My background also includes customer-facing work across several U.S. cities. Employment dates and individual responsibilities will be added after confirmation.</p>
+          <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also spent a full-time U.S. Army classroom instructor in Hawaii from 2000 to 2004.</p>
+          <p className="about-muted">My background also includes customer-facing work across several U.S. cities. I have also pursued web development studies at Harvard Extension School since 2022, with my certificate in progress.</p>
           <Link href="/#portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="about-feature" aria-label="Abstract illustration of an open book and dialogue">

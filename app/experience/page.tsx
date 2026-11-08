@@ -11,7 +11,7 @@ const roles = [
  {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"BCA — English school",place:"Saitama, Japan",summary:"English teaching experience at BCA, an English school in Saitama.",detail:"Dates, student age groups, and classroom responsibilities to be added after confirmation."},
  {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"KIFL",place:"Kanda, Tokyo, Japan",summary:"English teaching experience at KIFL in central Tokyo.",detail:"Dates, courses taught, and classroom responsibilities to be added after confirmation."},
  {kind:"ONLINE ENGLISH TEACHING",title:"Online TEFL Teacher",org:"Panda ABC",place:"Online · China-based company",summary:"Online English-language teaching for Panda ABC, a Chinese education company.",detail:"Dates, teaching platform, and typical lesson format to be added after confirmation."},
- {kind:"CLASSROOM INSTRUCTION · MILITARY",title:"Full-time Classroom Instructor",org:"United States Army",place:"Hawaii, United States",summary:"Approximately six years of classroom instruction while serving on a full-time active-duty Army assignment.",detail:"Subject matter, instructional responsibilities, and service dates to be confirmed. This role is shown separately from English-language teaching."},
+ {kind:"CLASSROOM INSTRUCTION · MILITARY",title:"Full-time Classroom Instructor",org:"United States Army",place:"Hawaii, United States",summary:"Full-time classroom instruction while serving on an active-duty Army assignment in Hawaii, 2000–2004.",detail:"Subject matter and instructional responsibilities to be confirmed. This role is shown separately from English-language teaching."},
 ];
 
 export default function ExperiencePage(){
@@ -25,11 +25,11 @@ export default function ExperiencePage(){
   <section className="experience-hero shell">
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>
    <h1>Teaching across <em>classrooms, cultures &amp; borders.</em></h1>
-   <p className="experience-lead">TEFL-certified, with English teaching experience in Japan and online, backed by approximately six years of full-time U.S. Army classroom instruction.</p>
+   <p className="experience-lead">TEFL-certified, with English teaching experience in Japan and online, backed by U.S. Army classroom instruction in Hawaii (2000–2004).</p>
    <div className="experience-highlights">
     <div><strong>TEFL</strong><span>Certified</span></div>
     <div><strong>Japan + Online</strong><span>English teaching</span></div>
-    <div><strong>~6 years</strong><span>Army classroom instruction</span></div>
+    <div><strong>2000–2004</strong><span>Army classroom instruction</span></div>
    </div>
   </section>
   <section className="experience-section">
