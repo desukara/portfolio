@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
   try {
     const result = await fetch(url + "/rest/v1/interview_requests", {
       method: "POST",
-      headers: { apikey: key, Authorization: "Bearer " + key, "Content-Type": "application/json", Prefer: "return=minimal" },
+      headers: { apikey: key, "Content-Type": "application/json", Prefer: "return=minimal" },
       body: JSON.stringify(Object.fromEntries(Object.entries(data).filter(([, v]) => v !== null && v !== ""))),
       cache: "no-store",
       signal: AbortSignal.timeout(8000),
