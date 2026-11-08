@@ -8,7 +8,7 @@ const portfolioSections = [
   { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My teaching background across Japan, online learning, and classroom instruction." },
   { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "Teaching experience in Japan, online, and during U.S. Army service." },
   { title: "Lesson samples", href: "/#portfolio", tag: "03 / WORK", text: "Selected lesson plans, worksheets, and activities with clear learning objectives." },
-  { title: "Resume & contact", href: "/resume", tag: "04 / CONNECT", text: "View and print my professional résumé, including education and experience." },
+  { title: "Request a meeting", href: "/meeting", tag: "04 / CONNECT", text: "Schools and hiring teams can propose an online interview directly through my website." },
 ];
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
           <a href="/#portfolio">Portfolio</a>
           <a href="/resume">Résumé</a>
         </nav>
-        <a className="nav-cta" href="/resume">Résumé <span aria-hidden="true">↗</span></a>
+        <a className="nav-cta" href="/meeting">Request a meeting <span aria-hidden="true">↗</span></a>
       </header>
       <section className="hero shell" id="home">
         <div className="hero-copy">
@@ -32,7 +32,7 @@ export default function Home() {
           <p className="hero-detail">Currently teaching with Shane English Corporation in Tokyo; my contract provides flexibility to consider and accept new work. Available for full-time roles, excluding Shabbat (Friday sunset through Saturday sunset).</p>
           <div className="actions">
             <a className="button-primary" href="#portfolio">Explore my work <span aria-hidden="true">↗</span></a>
-            <a className="button-link" href="/resume">View résumé <span aria-hidden="true">→</span></a>
+            <a className="button-link" href="/meeting">Request a meeting <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className="hero-art" aria-label="Decorative teaching portfolio illustration" role="img">
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </section>
       <footer id="contact">
-        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Let&apos;s make<br /><em>learning happen.</em></h2><p>Currently preparing for full-time English teaching opportunities in Tokyo.</p><a className="button-primary" href="/resume">View résumé <span aria-hidden="true">↗</span></a></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
+        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Let&apos;s make<br /><em>learning happen.</em></h2><p>Represent a school or hiring team? Propose an online interview or introductory conversation.</p><a className="button-primary" href="/meeting">Request a meeting <span aria-hidden="true">↗</span></a></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
         <div className="shell footer-bottom"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><span>MADE FOR MEANINGFUL LEARNING</span></div>
       </footer>
     </main>

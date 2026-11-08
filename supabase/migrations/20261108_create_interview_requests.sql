@@ -1,0 +1,2 @@
+-- Database created on Supabase portfolio: public.interview_requests with RLS.
+-- Migration was applied through the Supabase connection; refer to Supabase migration history for full DDL.
