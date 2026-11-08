@@ -5,10 +5,10 @@ const skills = [
 ];
 
 const portfolioSections = [
-  { title: "About me", tag: "01 / PROFILE", text: "My background, approach to teaching, and the value I bring to a school." },
-  { title: "Teaching experience", tag: "02 / EXPERIENCE", text: "Schools, students, classroom responsibilities, and career achievements." },
-  { title: "Lesson samples", tag: "03 / WORK", text: "Selected lesson plans, worksheets, and activities with clear learning objectives." },
-  { title: "Resume & contact", tag: "04 / CONNECT", text: "Qualifications, downloadable CV, and a simple way to get in touch." },
+  { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My background, approach to teaching, and the value I bring to a school." },
+  { title: "Teaching experience", href: "/#portfolio", tag: "02 / EXPERIENCE", text: "Schools, students, classroom responsibilities, and career achievements." },
+  { title: "Lesson samples", href: "/#portfolio", tag: "03 / WORK", text: "Selected lesson plans, worksheets, and activities with clear learning objectives." },
+  { title: "Resume & contact", href: "/#contact", tag: "04 / CONNECT", text: "Qualifications, downloadable CV, and a simple way to get in touch." },
 ];
 
 export default function Home() {
@@ -16,13 +16,13 @@ export default function Home() {
     <main>
       <div className="top-strip"><span>ENGLISH LANGUAGE EDUCATION</span><span>TOKYO, JAPAN</span></div>
       <header className="site-header shell">
-        <a className="brand" href="#home" aria-label="Back to home">TEACH<span>.</span></a>
+        <a className="brand" href="/" aria-label="Back to home">TEACH<span>.</span></a>
         <nav aria-label="Main navigation">
-          <a href="#approach">Approach</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
+          <a href="/about">About</a>
+          <a href="/#portfolio">Portfolio</a>
+          <a href="/#contact">Contact</a>
         </nav>
-        <a className="nav-cta" href="mailto:your-email@example.com">Let&apos;s talk <span aria-hidden="true">↗</span></a>
+        <a className="nav-cta" href="/about">My story <span aria-hidden="true">↗</span></a>
       </header>
       <section className="hero shell" id="home">
         <div className="hero-copy">
@@ -53,7 +53,7 @@ export default function Home() {
       <section className="section portfolio-section" id="portfolio">
         <div className="shell">
           <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>More than<br /><em>a résumé.</em></h2></div><p>A simple look at my experience, materials, and what I can contribute to a teaching team.</p></div>
-          <div className="portfolio-grid">{portfolioSections.map((item) => <article className="portfolio-card" key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">↗</span></article>)}</div>
+          <div className="portfolio-grid">{portfolioSections.map((item) => <a className="portfolio-card" href={item.href} key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">↗</span></a>)}</div>
           <p className="work-note">Coming next: individual pages with verified experience, real lesson examples, and a downloadable résumé.</p>
         </div>
       </section>
