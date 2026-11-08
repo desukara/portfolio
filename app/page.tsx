@@ -1,3 +1,4 @@
+// Git-based deployment verification for the interview portfolio.
 const skills = [
   { number: "01", title: "Communication first", description: "Practical lessons designed to build confidence in real-world English communication." },
   { number: "02", title: "Engaging learning", description: "Interactive activities, clear goals, and supportive classroom experiences." },
