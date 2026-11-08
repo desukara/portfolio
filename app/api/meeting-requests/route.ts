@@ -65,6 +65,54 @@ export async function POST(request: NextRequest) {
       console.error("Meeting request storage failed", result.status);
       return NextResponse.json({ error: "We could not save the request. Please try again." }, { status: 502 });
     }
+
+    // Store the interview request first. Email delivery never controls whether the request is saved.
+    const resendKey = process.env.RESEND_API_KEY;
+    if (resendKey) {
+      const details = [
+        "NEW EASTOKYO INTERVIEW REQUEST",
+        "",
+        "Contact: " + data.contact_name,
+        "Organization: " + data.organization,
+        "Email: " + data.contact_email,
+        "Position: " + (data.position_title || "Not specified"),
+        "Meeting format: " + data.meeting_platform,
+        "Preferred date: " + data.preferred_date,
+        "Preferred time: " + data.preferred_time,
+        "Time zone: " + data.time_zone,
+        "Alternate date: " + (data.alternate_date || "None"),
+        "Alternate time: " + (data.alternate_time || "None"),
+        "",
+        "Message:",
+        data.message || "None",
+        "",
+        "Review saved requests in the Eastokyo Supabase project.",
+        "The interview is NOT confirmed until you reply.",
+      ].join("\n");
+      try {
+        const email = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            Authorization: "Bearer " + resendKey,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: "Eastokyo Interviews <meet@eastokyo.com>",
+            to: ["meet@eastokyo.com"],
+            reply_to: data.contact_email,
+            subject: "New Eastokyo interview request",
+            text: details,
+          }),
+          cache: "no-store",
+          signal: AbortSignal.timeout(8000),
+        });
+        if (!email.ok) console.error("Interview notification failed", email.status);
+      } catch {
+        console.error("Interview notification unavailable; request was saved");
+      }
+    } else {
+      console.warn("Interview request saved without email: RESEND_API_KEY is not configured");
+    }
     return NextResponse.json({ ok: true }, { status: 201, headers: { "Cache-Control": "no-store" } });
   } catch {
     return NextResponse.json({ error: "The form is temporarily unavailable. Please try again." }, { status: 503 });
