@@ -31,3 +31,28 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media(max-width:900px){.about-hero{grid-template-columns:1fr;padding-top:65px;padding-bottom:80px;gap:40px}.about-feature{max-width:560px;width:100%;min-height:400px;margin:auto}.about-next{grid-template-columns:1fr;gap:28px}}
 @media(max-width:600px){.about-hero h1{font-size:53px}.about-intro{font-size:17px}.about-feature{min-height:335px}.feature-book{top:50px;min-height:255px}.feature-book strong{font-size:39px}.about-values{padding:70px 0}.about-next{padding-top:70px;padding-bottom:75px}.mini-footer-inner{flex-direction:column}}
+
+/* Verified-background-first experience page */
+.experience-hero{padding-top:112px;padding-bottom:90px}
+.experience-hero h1{font-size:clamp(52px,6vw,84px);letter-spacing:-.055em;line-height:1.12;max-width:1000px;margin:23px 0 30px}
+.experience-lead{font-size:20px;line-height:1.65;max-width:730px;color:var(--muted)}
+.experience-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;border-top:1px solid var(--line);padding-top:28px}
+.experience-highlights div{display:flex;flex-direction:column;gap:8px}
+.experience-highlights strong{font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:500}
+.experience-highlights span{font-size:12px;color:var(--muted);letter-spacing:.05em}
+.experience-section{background:#e8eee7;padding:95px 0}
+.role-list{border-top:1px solid #cbd8d0}
+.role-row{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:32px 10px;border-bottom:1px solid #cbd8d0}
+.role-number{font-family:'Playfair Display',Georgia,serif;font-size:28px;color:#79938a}
+.role-row h3{font-family:'Playfair Display',Georgia,serif;font-size:32px;margin:11px 0 7px;font-weight:500}
+.role-row p{line-height:1.7;max-width:710px;font-size:14px;margin-bottom:8px}
+.role-row .role-org{font-weight:700;margin-bottom:15px}
+.role-org span{font-weight:400;color:var(--muted)}
+.role-pending{font-size:12px!important;color:#657b75!important;font-style:italic}
+.communication-section{display:grid;grid-template-columns:1fr 1fr;gap:65px;padding-top:105px;padding-bottom:110px}
+.communication-section h2{font-size:clamp(43px,4.5vw,62px);line-height:1.2;letter-spacing:-.05em;margin:20px 0 0}
+.communication-section p{color:var(--muted);line-height:1.85;font-size:16px}
+.experience-cta{background:#dce9e1;padding:78px 0 90px}
+.experience-cta h2{font-size:clamp(42px,4.5vw,64px);letter-spacing:-.04em;margin:18px 0}
+.experience-cta p{color:var(--muted);margin-bottom:26px}
+@media(max-width:700px){.experience-hero{padding-top:65px;padding-bottom:65px}.experience-lead{font-size:17px}.experience-highlights{grid-template-columns:1fr;gap:18px}.experience-highlights div{gap:3px}.experience-highlights strong{font-size:27px}.role-row{grid-template-columns:42px 1fr;gap:10px}.role-row h3{font-size:27px}.experience-section{padding:70px 0}.communication-section{grid-template-columns:1fr;gap:20px;padding-top:70px;padding-bottom:75px}}

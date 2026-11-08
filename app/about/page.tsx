@@ -29,8 +29,8 @@ export default function AboutPage() {
         <div>
           <span className="kicker">01 / THE PERSON BEHIND THE LESSONS</span>
           <h1>Good teaching begins with <em>connection.</em></h1>
-          <p className="about-intro">I&apos;m an English language educator preparing for full-time teaching opportunities in Tokyo. This site brings together my teaching approach, professional background, and selected work.</p>
-          <p className="about-muted">This page is an early draft. My verified teaching history, qualifications, and personal introduction will be added before the portfolio is shared with employers.</p>
+          <p className="about-intro">I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also spent approximately six years as a full-time U.S. Army classroom instructor in Hawaii.</p>
+          <p className="about-muted">My background also includes customer-facing work across several U.S. cities. Employment dates and individual responsibilities will be added after confirmation.</p>
           <Link href="/#portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="about-feature" aria-label="Abstract illustration of an open book and dialogue">
@@ -50,7 +50,7 @@ export default function AboutPage() {
       </section>
       <section className="about-next shell">
         <div><span className="kicker">03 / NEXT UP</span><h2>A profile backed by <em>real work.</em></h2></div>
-        <div><p>The next sections will feature confirmed roles, qualifications, lesson materials, and a résumé that employers can view, download, and print.</p><Link href="/#contact" className="button-link">Return to contact information <span aria-hidden="true">→</span></Link></div>
+        <div><p>Explore my English teaching roles in Japan and online, and my classroom instruction experience in Hawaii. A downloadable and print-ready résumé will follow once the details are confirmed.</p><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link></div>
       </section>
       <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage ↗</Link></div></footer>
     </main>

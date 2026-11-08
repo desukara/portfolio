@@ -5,8 +5,8 @@ const skills = [
 ];
 
 const portfolioSections = [
-  { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My background, approach to teaching, and the value I bring to a school." },
-  { title: "Teaching experience", href: "/#portfolio", tag: "02 / EXPERIENCE", text: "Schools, students, classroom responsibilities, and career achievements." },
+  { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My teaching background across Japan, online learning, and classroom instruction." },
+  { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "TEFL teaching in Japan and online, plus six years of Army classroom instruction." },
   { title: "Lesson samples", href: "/#portfolio", tag: "03 / WORK", text: "Selected lesson plans, worksheets, and activities with clear learning objectives." },
   { title: "Resume & contact", href: "/#contact", tag: "04 / CONNECT", text: "Qualifications, downloadable CV, and a simple way to get in touch." },
 ];
@@ -28,7 +28,7 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow"><span className="status-dot" /> OPEN TO FULL-TIME OPPORTUNITIES IN TOKYO</div>
           <h1>English learning<br />that <em>connects</em><span className="period">.</span></h1>
-          <p className="hero-lead">Hello, I&apos;m <strong>[Your Name]</strong> — an English language educator building meaningful learning experiences in Tokyo.</p>
+          <p className="hero-lead">I&apos;m a <strong>TEFL-certified English teacher</strong> with experience in Japan, online instruction, and six years of full-time U.S. Army classroom teaching.</p>
           <p className="hero-detail">Explore my approach, teaching materials, and professional background. This portfolio is currently being prepared for school applications.</p>
           <div className="actions">
             <a className="button-primary" href="#portfolio">Explore my work <span aria-hidden="true">↗</span></a>
