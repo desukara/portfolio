@@ -1,32 +1,101 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { PrintResumeButton } from "./print-button";
-export const metadata: Metadata = { title:"Résumé | English Teaching Portfolio",description:"James Simmons — TEFL-certified English teacher, Tokyo. View and print professional résumé." };
-export default function ResumePage(){
- return <main className="resume-route">
-  <div className="resume-toolbar shell"><Link href="/">← Portfolio home</Link><span>RÉSUMÉ · DRAFT</span><PrintResumeButton /></div>
-  <article className="resume-document" id="resume-document">
-   <header><h1>James Simmons</h1><p>TEFL-Certified English Teacher | Tokyo, Japan | Seeking Full-Time English Teaching Work</p></header>
-   <section className="resume-availability"><h2>Employment Status & Availability</h2><p><strong>Currently employed:</strong> Shane English Corporation, Tokyo. My current contract provides flexibility to accept new employment opportunities at my discretion.</p><p><strong>Seeking:</strong> Full-time English teaching work in Tokyo.</p><p><strong>Schedule requirement:</strong> Not available to work during Shabbat (Friday sunset through Saturday sunset).</p></section>
-   <section><h2>Professional Profile</h2><p>TEFL-certified English teacher with experience teaching in Japan and online, including BCA English School in Saitama, KIFL in Kanda, Tokyo, and Panda ABC. Brings additional classroom instruction experience from a full-time U.S. Army active-duty assignment in Hawaii (2000–2004), plus customer-facing communication experience.</p></section>
-   <section><h2>English Teaching Experience</h2><h3>Shane English Corporation — English Teacher <span>Tokyo | Current</span></h3><p>Current English-teaching position in Tokyo. Responsibilities and start year to be confirmed.</p>
-    <h3>KIFL — English Teacher <span>Kanda, Tokyo | 2021</span></h3><p>English-language teaching role in Tokyo. Specific courses and responsibilities to be confirmed.</p>
-    <h3>BCA English School — English Teacher <span>Saitama, Japan | 2020</span></h3><p>English-language teaching role in Saitama. Specific courses and responsibilities to be confirmed.</p>
-    <h3>Panda ABC — Online English Teacher <span>2019</span></h3><p>Online English-language instruction through a China-based education company. Student groups and lesson format to be confirmed.</p>
-   </section>
-   <section><h2>Additional Classroom Instruction</h2><h3>United States Army — Full-Time Classroom Instructor <span>Hawaii | 2000–2004</span></h3><p>Classroom instruction during a full-time active-duty Army assignment. Instructional subject matter and responsibilities to be confirmed. This role is separate from English-language teaching.</p></section>
-   <section><h2>Customer Service & Professional Communication</h2><h3>New York City and Other U.S. Locations <span>Approximately 2005–2018</span></h3><p>Customer-facing roles including the following New York City establishments. Individual employment years are intentionally omitted.</p><ul><li><strong>2nd Avenue Deli</strong> — Upper East Side, Manhattan</li><li><strong>Olympic Pita</strong> — Midtown Manhattan</li><li><strong>Sunflower Kosher Diner</strong> — Upper West Side, Manhattan</li></ul>
-    <h3>Independent Contractor — Taxi Services <span>2022–2025</span></h3><p>Customer-facing transportation services across Boston, South Florida, Charlotte, Atlanta, and Pittsburgh.</p>
-   </section>
-   <section><h2>Education &amp; Professional Training</h2>
-    <h3>Harvard Extension School — Web Development <span>2022–Present | Cambridge, Massachusetts</span></h3>
-    <p>Continuing web development studies. Certificate in progress; not yet awarded. Institution: 51 Brattle Street, Cambridge, MA 02138.</p>
-    <h3>U.S. Army Medical Department Center and School — Academy of Health Sciences <span>2000 | Fort Sam Houston, San Antonio, Texas</span></h3>
-    <p>Preventive Medicine training. Current institution address: 3630 Stanley Road, Fort Sam Houston, TX 78234. Specific course credential to be confirmed.</p>
-   </section>
-   <section><h2>Certification</h2><p><strong>TEFL Certificate</strong> — Issuer and course details to be confirmed.</p></section>
-   <p className="resume-draft-note">DRAFT — Professional contact information, specific course details and teaching responsibilities must be completed before sharing with employers.</p>
-  </article>
-  <div className="resume-postscript shell"><p>To save this page as a PDF, select <strong>Print / Save PDF</strong> and choose your browser’s “Save as PDF” destination.</p></div>
- </main>
+
+export const metadata: Metadata = {
+  title: "James Simmons | Résumé",
+  description: "James Simmons — English teacher in Tokyo. Professional experience, education, and availability.",
+};
+
+type Position = { employer: string; role: string; location: string; dates: string; summary: string };
+const teaching: Position[] = [
+  { employer: "Shane English Corporation", role: "English Teacher", location: "Tokyo, Japan", dates: "CURRENT", summary: "Currently teaching English in Tokyo." },
+  { employer: "KIFL", role: "English Teacher", location: "Kanda, Tokyo", dates: "2021", summary: "English-language teaching in central Tokyo." },
+  { employer: "BCA English School", role: "English Teacher", location: "Saitama, Japan", dates: "2020", summary: "English-language teaching in Saitama." },
+  { employer: "Panda ABC", role: "Online English Teacher", location: "Online / China-based education company", dates: "2019", summary: "Delivered English-language instruction online." },
+];
+
+function ResumePosition({ employer, role, location, dates, summary }: Position) {
+  return <div className="cv-position">
+    <div className="cv-position-top"><h3>{employer} <span className="cv-separator">|</span> {role}</h3><span className="cv-date">{dates}</span></div>
+    <p className="cv-location">{location}</p>
+    <p>{summary}</p>
+  </div>;
+}
+
+export default function ResumePage() {
+  return <main className="resume-route">
+    <div className="resume-toolbar shell">
+      <Link href="/">← Back to portfolio</Link>
+      <span>JAMES SIMMONS / RÉSUMÉ</span>
+      <PrintResumeButton />
+    </div>
+    <article className="resume-document cv" aria-label="James Simmons professional résumé">
+      <header className="cv-header">
+        <h1>JAMES SIMMONS</h1>
+        <p className="cv-subtitle">ENGLISH TEACHER / TOKYO, JAPAN</p>
+        <p className="cv-status">Seeking full-time English teaching work <span aria-hidden="true">•</span> Currently employed at Shane English Corporation</p>
+      </header>
+
+      <section>
+        <h2>PROFESSIONAL PROFILE</h2>
+        <p>TEFL-certified English teacher with experience in Tokyo, Saitama, and online instruction. Previously served as a full-time U.S. Army classroom instructor in Hawaii (2000–2004). Additional customer service experience supporting clear communication with people from diverse backgrounds.</p>
+      </section>
+
+      <section>
+        <h2>CURRENT EMPLOYMENT &amp; AVAILABILITY</h2>
+        <p><strong>Current:</strong> Shane English Corporation, Tokyo. <strong>Seeking:</strong> Full-time English teaching in Tokyo. My current contract provides flexibility to accept new work at my discretion. <strong>Schedule:</strong> Not available during Shabbat (Friday sunset through Saturday sunset).</p>
+      </section>
+
+      <section>
+        <h2>ENGLISH TEACHING EXPERIENCE</h2>
+        {teaching.map(position => <ResumePosition key={position.employer} {...position} />)}
+      </section>
+
+      <section>
+        <h2>U.S. ARMY CLASSROOM INSTRUCTION</h2>
+        <ResumePosition employer="United States Army" role="Full-Time Classroom Instructor" location="Hawaii, USA" dates="2000–2004" summary="Provided classroom instruction during active-duty military service. This role is separate from English-language teaching." />
+      </section>
+
+      <section>
+        <h2>EDUCATION &amp; PROFESSIONAL TRAINING</h2>
+        <div className="cv-position">
+          <div className="cv-position-top"><h3>Harvard Extension School <span className="cv-separator">|</span> Web Development</h3><span className="cv-date">2022–PRESENT</span></div>
+          <p className="cv-location">Cambridge, Massachusetts</p>
+          <p>Web Development studies; certificate in progress.</p>
+        </div>
+        <div className="cv-position">
+          <div className="cv-position-top"><h3>U.S. Army Medical Department Center and School</h3><span className="cv-date">2000</span></div>
+          <p className="cv-location">Academy of Health Sciences · Fort Sam Houston, San Antonio, Texas</p>
+          <p>Preventive Medicine training.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>CUSTOMER SERVICE &amp; PROFESSIONAL COMMUNICATION</h2>
+        <div className="cv-position cv-customer">
+          <div className="cv-position-top"><h3>New York City and other U.S. locations</h3><span className="cv-date">APPROX. 2005–2018</span></div>
+          <div className="cv-employers">
+            <p><strong>2nd Avenue Deli</strong><span>Upper East Side, Manhattan</span></p>
+            <p><strong>Olympic Pita</strong><span>Midtown Manhattan</span></p>
+            <p><strong>Sunflower Kosher Diner</strong><span>Upper West Side, Manhattan</span></p>
+          </div>
+        </div>
+        <div className="cv-position">
+          <div className="cv-position-top"><h3>Independent Contractor <span className="cv-separator">|</span> Taxi Services</h3><span className="cv-date">2022–2025</span></div>
+          <p className="cv-location">Boston · South Florida · Charlotte · Atlanta · Pittsburgh</p>
+          <p>Customer-facing transportation services across multiple U.S. cities.</p>
+        </div>
+      </section>
+
+      <section className="cv-certification">
+        <h2>CERTIFICATION</h2>
+        <p>TEFL Certificate</p>
+      </section>
+    </article>
+    <div className="resume-postscript shell">
+      <p>Choose <strong>Print / Save PDF</strong> to print this résumé or save an A4 copy from your browser.</p>
+      <Link href="/experience">Explore professional experience →</Link>
+    </div>
+  </main>;
 }

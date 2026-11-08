@@ -21,15 +21,15 @@ export default function AboutPage() {
         <nav aria-label="Main navigation">
           <Link href="/about" aria-current="page">About</Link>
           <Link href="/#portfolio">Portfolio</Link>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/resume">Résumé</Link>
         </nav>
-        <Link className="nav-cta" href="/#contact">Get in touch <span aria-hidden="true">↗</span></Link>
+        <Link className="nav-cta" href="/resume">View résumé <span aria-hidden="true">↗</span></Link>
       </header>
       <section className="about-hero shell">
         <div>
           <span className="kicker">01 / THE PERSON BEHIND THE LESSONS</span>
           <h1>Good teaching begins with <em>connection.</em></h1>
-          <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also spent a full-time U.S. Army classroom instructor in Hawaii from 2000 to 2004.</p>
+          <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also served as a full-time U.S. Army classroom instructor in Hawaii from 2000 to 2004.</p>
           <p className="about-muted">My background also includes customer-facing work across several U.S. cities. I have also pursued web development studies at Harvard Extension School since 2022, with my certificate in progress.</p>
           <Link href="/#portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">↗</span></Link>
         </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
       </section>
       <section className="about-next shell">
         <div><span className="kicker">03 / NEXT UP</span><h2>A profile backed by <em>real work.</em></h2></div>
-        <div><p>Explore my English teaching roles in Japan and online, and my classroom instruction experience in Hawaii. A downloadable and print-ready résumé will follow once the details are confirmed.</p><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link></div>
+        <div><p>Explore my English teaching roles in Japan and online, and my classroom instruction experience in Hawaii. My résumé is available to view and print.</p><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link></div>
       </section>
       <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage ↗</Link></div></footer>
     </main>

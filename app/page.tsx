@@ -6,9 +6,9 @@ const skills = [
 
 const portfolioSections = [
   { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My teaching background across Japan, online learning, and classroom instruction." },
-  { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "TEFL teaching in Japan and online, plus six years of Army classroom instruction." },
+  { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "Teaching experience in Japan, online, and during U.S. Army service." },
   { title: "Lesson samples", href: "/#portfolio", tag: "03 / WORK", text: "Selected lesson plans, worksheets, and activities with clear learning objectives." },
-  { title: "Resume & contact", href: "/resume", tag: "04 / CONNECT", text: "A printable résumé draft covering my teaching and communication experience." },
+  { title: "Resume & contact", href: "/resume", tag: "04 / CONNECT", text: "View and print my professional résumé, including education and experience." },
 ];
 
 export default function Home() {
@@ -20,9 +20,9 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="/about">About</a>
           <a href="/#portfolio">Portfolio</a>
-          <a href="/#contact">Contact</a>
+          <a href="/resume">Résumé</a>
         </nav>
-        <a className="nav-cta" href="/about">My story <span aria-hidden="true">↗</span></a>
+        <a className="nav-cta" href="/resume">Résumé <span aria-hidden="true">↗</span></a>
       </header>
       <section className="hero shell" id="home">
         <div className="hero-copy">
@@ -32,7 +32,7 @@ export default function Home() {
           <p className="hero-detail">Currently teaching with Shane English Corporation in Tokyo; my contract provides flexibility to consider and accept new work. Available for full-time roles, excluding Shabbat (Friday sunset through Saturday sunset).</p>
           <div className="actions">
             <a className="button-primary" href="#portfolio">Explore my work <span aria-hidden="true">↗</span></a>
-            <a className="button-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+            <a className="button-link" href="/resume">View résumé <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div className="hero-art" aria-label="Decorative teaching portfolio illustration" role="img">
@@ -54,11 +54,11 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>More than<br /><em>a résumé.</em></h2></div><p>A simple look at my experience, materials, and what I can contribute to a teaching team.</p></div>
           <div className="portfolio-grid">{portfolioSections.map((item) => <a className="portfolio-card" href={item.href} key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">↗</span></a>)}</div>
-          <p className="work-note">Coming next: individual pages with verified experience, real lesson examples, and a downloadable résumé.</p>
+          <p className="work-note">My professional history and printable résumé are available now. Lesson materials will be added as the portfolio grows.</p>
         </div>
       </section>
       <footer id="contact">
-        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Let&apos;s make<br /><em>learning happen.</em></h2><p>Currently preparing for full-time English teaching opportunities in Tokyo.</p><a className="button-primary" href="mailto:your-email@example.com">Email me <span aria-hidden="true">↗</span></a><p className="placeholder-note">Contact email is a placeholder — replace before sharing this portfolio with schools.</p></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
+        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Let&apos;s make<br /><em>learning happen.</em></h2><p>Currently preparing for full-time English teaching opportunities in Tokyo.</p><a className="button-primary" href="/resume">View résumé <span aria-hidden="true">↗</span></a></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
         <div className="shell footer-bottom"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><span>MADE FOR MEANINGFUL LEARNING</span></div>
       </footer>
     </main>
