@@ -8,7 +8,7 @@ const portfolioSections = [
   { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My teaching background across Japan, online learning, and classroom instruction." },
   { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "TEFL teaching in Japan and online, plus six years of Army classroom instruction." },
   { title: "Lesson samples", href: "/#portfolio", tag: "03 / WORK", text: "Selected lesson plans, worksheets, and activities with clear learning objectives." },
-  { title: "Resume & contact", href: "/#contact", tag: "04 / CONNECT", text: "Qualifications, downloadable CV, and a simple way to get in touch." },
+  { title: "Resume & contact", href: "/resume", tag: "04 / CONNECT", text: "A printable résumé draft covering my teaching and communication experience." },
 ];
 
 export default function Home() {

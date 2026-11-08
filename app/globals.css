@@ -56,3 +56,33 @@
 .experience-cta h2{font-size:clamp(42px,4.5vw,64px);letter-spacing:-.04em;margin:18px 0}
 .experience-cta p{color:var(--muted);margin-bottom:26px}
 @media(max-width:700px){.experience-hero{padding-top:65px;padding-bottom:65px}.experience-lead{font-size:17px}.experience-highlights{grid-template-columns:1fr;gap:18px}.experience-highlights div{gap:3px}.experience-highlights strong{font-size:27px}.role-row{grid-template-columns:42px 1fr;gap:10px}.role-row h3{font-size:27px}.experience-section{padding:70px 0}.communication-section{grid-template-columns:1fr;gap:20px;padding-top:70px;padding-bottom:75px}}
+
+/* Printable résumé */
+.resume-route{background:#e6ece8;min-height:100vh;padding-bottom:46px}
+.resume-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:25px;padding-bottom:25px;font-size:13px;font-weight:700}
+.resume-toolbar>span{font-size:11px;letter-spacing:.16em;color:#617c77}
+.resume-print-button{font-family:inherit;font-weight:700;font-size:13px;border:0;background:#153b3c;color:white;padding:13px 20px;cursor:pointer}
+.resume-print-button:hover{background:#265a55}
+.resume-document{max-width:800px;background:#fffdf9;margin:auto;padding:58px 62px;box-shadow:0 25px 80px #153b3c20;color:#153b3c}
+.resume-document header{border-bottom:2px solid #e67a57;padding-bottom:16px}
+.resume-document h1{font-family:'DM Sans',Arial,sans-serif;font-size:30px;letter-spacing:-.04em;line-height:1.15;margin:0 0 8px}
+.resume-document header p{color:#53666b;font-size:12px;margin:0}
+.resume-document section{margin-top:22px}
+.resume-document section h2{font-family:'DM Sans',Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.11em;border-bottom:1px solid #e67a57;padding-bottom:7px;margin:0 0 12px;font-weight:700}
+.resume-document h3{font-size:12px;margin:14px 0 5px}
+.resume-document h3 span{font-size:11px;font-weight:500;color:#53666b}
+.resume-document p,.resume-document li{font-size:11px;line-height:1.62;margin:5px 0}
+.resume-document ul{margin:9px 0 10px;padding-left:20px}
+.resume-document .resume-draft-note{border-top:1px solid #dbe2dc;margin-top:22px;padding-top:12px;font-size:10px;color:#7a5b4a}
+.resume-postscript{text-align:center;color:#53666b;font-size:13px;line-height:1.6;padding-top:25px}
+@media(max-width:700px){.resume-toolbar{flex-wrap:wrap}.resume-document{padding:32px 22px;margin:0 12px}.resume-document h1{font-size:25px}}
+@page{size:A4;margin:15mm 17mm}
+@media print{
+ body,.resume-route{background:white!important}
+ .resume-toolbar,.resume-postscript{display:none!important}
+ .resume-document{max-width:none;width:100%;margin:0;padding:0;box-shadow:none}
+ .resume-document section{break-inside:avoid;page-break-inside:avoid;margin-top:16px}
+ .resume-document header{padding-bottom:11px}
+ .resume-document h3{margin-top:9px}
+ .resume-document p,.resume-document li{font-size:10pt;line-height:1.35}
+}
