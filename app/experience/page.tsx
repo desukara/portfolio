@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 };
 
 const roles = [
+ {kind:"CURRENT POSITION · TOKYO",title:"English Teacher",org:"Shane English Corporation",place:"Tokyo, Japan",summary:"Currently employed as an English teacher in Tokyo. My contract provides flexibility to accept new work at my discretion.",detail:"Employment start year and specific teaching responsibilities to be added."},
  {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"BCA — English school",place:"Saitama, Japan",summary:"English teaching experience at BCA, an English school in Saitama.",detail:"Dates, student age groups, and classroom responsibilities to be added after confirmation."},
  {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"KIFL",place:"Kanda, Tokyo, Japan",summary:"English teaching experience at KIFL in central Tokyo.",detail:"Dates, courses taught, and classroom responsibilities to be added after confirmation."},
  {kind:"ONLINE ENGLISH TEACHING",title:"Online TEFL Teacher",org:"Panda ABC",place:"Online · China-based company",summary:"Online English-language teaching for Panda ABC, a Chinese education company.",detail:"Dates, teaching platform, and typical lesson format to be added after confirmation."},
@@ -43,7 +44,7 @@ export default function ExperiencePage(){
    <div><span className="kicker">02 / PEOPLE SKILLS</span><h2>Communication is at the <em>heart of teaching.</em></h2></div>
    <div><p>Customer service experience across New York City, Boston, South Florida, Pittsburgh, Charlotte, and Hawaii adds a broad communication background to my teaching career.</p><p className="role-pending">Employers, job titles, and dates will be included where relevant after confirmation.</p></div>
   </section>
-  <section className="experience-cta"><div className="shell"><span className="kicker">03 / WHAT'S NEXT</span><h2>Ready for the next <em>classroom.</em></h2><p>Seeking full-time English-language teaching opportunities in Tokyo.</p><Link className="button-primary" href="/#contact">Contact / portfolio home ↗</Link></div></section>
+  <section className="experience-cta"><div className="shell"><span className="kicker">03 / WHAT'S NEXT</span><h2>Ready for the next <em>classroom.</em></h2><p>Currently employed at Shane English Corporation and seeking full-time English-language teaching opportunities in Tokyo. Unavailable during Shabbat (Friday sunset through Saturday sunset).</p><Link className="button-primary" href="/#contact">Contact / portfolio home ↗</Link></div></section>
   <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Homepage ↗</Link></div></footer>
  </main>
 }

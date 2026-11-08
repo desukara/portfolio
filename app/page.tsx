@@ -26,10 +26,10 @@ export default function Home() {
       </header>
       <section className="hero shell" id="home">
         <div className="hero-copy">
-          <div className="eyebrow"><span className="status-dot" /> OPEN TO FULL-TIME OPPORTUNITIES IN TOKYO</div>
+          <div className="eyebrow"><span className="status-dot" /> SEEKING FULL-TIME TEACHING WORK IN TOKYO</div>
           <h1>English learning<br />that <em>connects</em><span className="period">.</span></h1>
           <p className="hero-lead">I&apos;m a <strong>TEFL-certified English teacher</strong> with experience in Japan, online instruction, and six years of full-time U.S. Army classroom teaching.</p>
-          <p className="hero-detail">Explore my approach, teaching materials, and professional background. This portfolio is currently being prepared for school applications.</p>
+          <p className="hero-detail">Currently teaching with Shane English Corporation in Tokyo; my contract provides flexibility to consider and accept new work. Available for full-time roles, excluding Shabbat (Friday sunset through Saturday sunset).</p>
           <div className="actions">
             <a className="button-primary" href="#portfolio">Explore my work <span aria-hidden="true">↗</span></a>
             <a className="button-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a>

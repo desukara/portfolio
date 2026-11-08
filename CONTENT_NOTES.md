@@ -9,3 +9,9 @@
 
 ## Still needed
 Exact role dates, TEFL issuer/hours, education, Army instruction subject, employment duties, selected examples and outcomes, display name and contact email, permission to publish the CV. Avoid inventing experience or promotional claims.
+
+## Current employment and work requirements (user-confirmed)
+- Currently employed as an English teacher at Shane English Corporation in Tokyo (start year not provided).
+- Actively seeking full-time work.
+- Current contract provides flexibility to accept new employment at the user's discretion; do not imply a specific notice period or that a new contract has been signed.
+- No shifts during Shabbat, stated as Friday sunset through Saturday sunset. Confirm exact cutoff before negotiating schedules with an employer.

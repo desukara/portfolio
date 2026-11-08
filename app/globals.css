@@ -86,3 +86,6 @@
  .resume-document h3{margin-top:9px}
  .resume-document p,.resume-document li{font-size:10pt;line-height:1.35}
 }
+
+.resume-availability{background:#ecf2ec;border-left:3px solid #e67a57;padding:12px 14px}.resume-availability h2{margin-bottom:8px!important}.resume-availability p{margin:5px 0}
+@media print{.resume-availability{background:white!important;border-left:2px solid #e67a57;padding:8px 10px}}
