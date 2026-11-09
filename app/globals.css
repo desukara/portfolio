@@ -179,3 +179,33 @@
 .hero-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;max-height:none;border-radius:0}
 @media(max-width:900px){.hero-photo{height:400px}}
 @media(max-width:600px){.hero-photo{height:330px}}
+
+
+/* Mobile and keyboard usability: prevent accidental horizontal overflow, give
+   interactive elements comfortable tap targets, and retain visible focus. */
+html,body{max-width:100%}
+.shell{min-width:0}
+img,video,iframe{max-width:100%}
+button,input,select,textarea{font:inherit}
+a,button,input,select,textarea{-webkit-tap-highlight-color:transparent}
+.site-header nav a,.nav-cta,.resume-toolbar a,.resume-toolbar button{display:inline-flex;align-items:center;min-height:44px}
+.meeting-form input,.meeting-form select{min-height:44px}
+.meeting-form .meeting-submit{min-height:48px}
+@media(max-width:700px){
+ .site-header{height:auto;align-items:center}
+ .site-header nav{justify-content:flex-start;gap:4px 15px}
+ .site-header nav a{min-height:44px}
+ .top-strip{flex-wrap:wrap;row-gap:5px}
+ .actions{flex-wrap:wrap;gap:18px}
+ .button-primary{min-height:48px}
+ .hero h1,.about-hero h1,.experience-hero h1,.meeting-hero h1{overflow-wrap:break-word}
+ .meeting-form-card{min-width:0}
+}
+@media(max-width:380px){
+ .shell{padding-left:16px;padding-right:16px}
+ .hero h1,.about-hero h1{font-size:clamp(40px,12vw,54px)}
+ .meeting-hero h1{font-size:clamp(38px,11vw,48px)}
+ .site-header nav{gap:2px 12px;font-size:11px}
+ .brand{font-size:26px}
+ .hero-photo{height:280px}
+}
