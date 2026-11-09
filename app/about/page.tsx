@@ -1,3 +1,4 @@
+import SiteHeader from "../components/site-header";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -7,31 +8,22 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { id: "01", title: "Confidence", description: "A welcoming classroom gives learners room to try, make mistakes, and keep going." },
-  { id: "02", title: "Clarity", description: "Strong lessons have a clear goal, useful language, and activities that build toward it." },
-  { id: "03", title: "Connection", description: "Language becomes meaningful when learners can use it to communicate in real situations." },
+  { id: "01", title: "Notice strengths", description: "A quiet response does not always mean a learner lacks knowledge. I look for other ways they can show what they know." },
+  { id: "02", title: "Adapt with purpose", description: "I use established learning goals and teacher guidance while adjusting the delivery to suit the learner." },
+  { id: "03", title: "Build rapport", description: "Knowing what engages an individual learner helps create opportunities for meaningful participation." },
 ];
 
 export default function AboutPage() {
   return (
     <main>
-      <div className="top-strip"><span>ENGLISH LANGUAGE EDUCATION</span><span>TOKYO, JAPAN</span></div>
-      <header className="site-header shell">
-        <Link className="brand" href="/" aria-label="Go to homepage">TEACH<span>.</span></Link>
-        <nav aria-label="Main navigation">
-          <Link href="/about" aria-current="page">About</Link>
-          <Link href="/#portfolio">Portfolio</Link>
-          <Link href="/resume">Résumé</Link>
-        </nav>
-        <Link className="nav-cta" href="/resume">View résumé <span aria-hidden="true">↗</span></Link>
-      </header>
+      <SiteHeader current="/about" />
       <section className="about-hero shell">
         <div>
           <span className="kicker">01 / THE PERSON BEHIND THE LESSONS</span>
-          <h1>Good teaching begins with <em>connection.</em></h1>
+          <h1>Understand the learner.<br/><em>Then teach.</em></h1>
           <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also served as a full-time U.S. Army classroom instructor in Hawaii from 2000 to 2004.</p>
-          <p className="about-muted">My background also includes customer-facing work across several U.S. cities. I have also pursued web development studies at Harvard Extension School since 2022, with my certificate in progress.</p>
-          <Link href="/#portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">↗</span></Link>
+          <p className="about-muted">At Shane, I teach learners from age three through retirement, using the school’s textbooks and teacher’s guides while adapting activities and pacing to the students in front of me. My strength is recognizing individual learners’ interests and abilities and building a connection that helps them participate. My background also includes customer-facing work across several U.S. cities. I have also pursued web development studies at Harvard Extension School since 2022, with my certificate in progress.</p>
+          <Link href="/portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="about-feature" aria-label="Abstract illustration of an open book and dialogue">
           <div className="feature-disc"></div>
@@ -43,7 +35,7 @@ export default function AboutPage() {
         <div className="shell">
           <div className="section-heading">
             <div><span className="kicker">02 / TEACHING MINDSET</span><h2>What matters<br/><em>in the classroom.</em></h2></div>
-            <p>Three principles guiding this portfolio&apos;s teaching approach. These are guiding ideas, not claims about past employment.</p>
+            <p>Principles informed by my experience teaching students with different ages, personalities, and goals.</p>
           </div>
           <div className="skills-grid">{values.map(item => <article className="skill-card" key={item.id}><span>{item.id} /</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div>
         </div>

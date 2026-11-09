@@ -1,38 +1,30 @@
+import SiteHeader from "./components/site-header";
 // Verified Git-triggered automatic production deploy for the interview portfolio.
 const skills = [
-  { number: "01", title: "Communication first", description: "Practical lessons designed to build confidence in real-world English communication." },
-  { number: "02", title: "Engaging learning", description: "Interactive activities, clear goals, and supportive classroom experiences." },
-  { number: "03", title: "Every learner matters", description: "An adaptable approach that recognizes different goals, ages, and learning styles." },
+  { number: "01", title: "Recognize strengths", description: "Look for what each learner already knows and the conditions in which they can show it." },
+  { number: "02", title: "Build connection", description: "Establish rapport by meeting learners at their level and responding to their personalities." },
+  { number: "03", title: "Adapt with purpose", description: "Follow clear curriculum goals while adjusting activities and pacing to engage the student." },
 ];
 
 const portfolioSections = [
   { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My teaching background across Japan, online learning, and classroom instruction." },
   { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "Teaching experience in Japan, online, and during U.S. Army service." },
-  { title: "Lesson samples", href: "/#portfolio", tag: "03 / WORK", text: "Selected lesson plans, worksheets, and activities with clear learning objectives." },
+  { title: "Lesson samples", href: "/portfolio", tag: "03 / WORK", text: "Read a real classroom reflection about engaging a young learner through play." },
   { title: "Request a meeting", href: "/meeting", tag: "04 / CONNECT", text: "Schools and hiring teams can propose an online interview directly through my website." },
 ];
 
 export default function Home() {
   return (
     <main>
-      <div className="top-strip"><span>ENGLISH LANGUAGE EDUCATION</span><span>TOKYO, JAPAN</span></div>
-      <header className="site-header shell">
-        <a className="brand" href="/" aria-label="Back to home">TEACH<span>.</span></a>
-        <nav aria-label="Main navigation">
-          <a href="/about">About</a>
-          <a href="/#portfolio">Portfolio</a>
-          <a href="/resume">Résumé</a>
-        </nav>
-        <a className="nav-cta" href="/meeting">Request a meeting <span aria-hidden="true">↗</span></a>
-      </header>
+      <SiteHeader current="/" />
       <section className="hero shell" id="home">
         <div className="hero-copy">
           <div className="eyebrow"><span className="status-dot" /> SEEKING FULL-TIME TEACHING WORK IN TOKYO</div>
-          <h1>English learning<br />that <em>connects</em><span className="period">.</span></h1>
-          <p className="hero-lead">I&apos;m a <strong>TEFL-certified English teacher</strong> with experience in Japan, online instruction, and U.S. Army classroom instruction in Hawaii (2000–2004).</p>
+          <h1>Teaching begins<br />with <em>understanding</em><span className="period">.</span></h1>
+          <p className="hero-lead">I&apos;m a <strong>TEFL-certified English teacher</strong> in Tokyo, teaching learners from age three through retirement. I focus on recognizing individual strengths, building rapport, and adapting instruction to the learner.</p>
           <p className="hero-detail">Currently teaching with Shane English Corporation in Tokyo; my contract provides flexibility to consider and accept new work. Available for full-time roles, excluding Shabbat (Friday sunset through Saturday sunset).</p>
           <div className="actions">
-            <a className="button-primary" href="#portfolio">Explore my work <span aria-hidden="true">↗</span></a>
+            <a className="button-primary" href="/portfolio">See my classroom practice <span aria-hidden="true">↗</span></a>
             <a className="button-link" href="/meeting">Request a meeting <span aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -45,17 +37,17 @@ export default function Home() {
         </div>
       </section>
       <section className="intro-band">
-        <div className="shell intro-grid"><p>MY TEACHING PHILOSOPHY</p><h2>Language opens doors.<br />Great teaching helps people walk through them.</h2></div>
+        <div className="shell intro-grid"><p>MY TEACHING PHILOSOPHY</p><h2>Meet the learner where they are.<br />Build on what they already do well.</h2></div>
       </section>
       <section className="section shell" id="approach">
-        <div className="section-heading"><div><span className="kicker">01 / MY APPROACH</span><h2>Thoughtful teaching.<br /><em>Real progress.</em></h2></div><p>These are the principles shaping the way I prepare and deliver English lessons.</p></div>
+        <div className="section-heading"><div><span className="kicker">01 / MY APPROACH</span><h2>Connection first.<br /><em>Teaching with purpose.</em></h2></div><p>These are the principles shaping the way I prepare and deliver English lessons.</p></div>
         <div className="skills-grid">{skills.map((skill) => <article className="skill-card" key={skill.number}><span>{skill.number} /</span><h3>{skill.title}</h3><p>{skill.description}</p></article>)}</div>
       </section>
       <section className="section portfolio-section" id="portfolio">
         <div className="shell">
           <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>More than<br /><em>a résumé.</em></h2></div><p>A simple look at my experience, materials, and what I can contribute to a teaching team.</p></div>
           <div className="portfolio-grid">{portfolioSections.map((item) => <a className="portfolio-card" href={item.href} key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">↗</span></a>)}</div>
-          <p className="work-note">My professional history and printable résumé are available now. Lesson materials will be added as the portfolio grows.</p>
+          <p className="work-note">Explore an original classroom reflection alongside my professional experience and résumé. Additional teaching samples will be developed over time.</p>
         </div>
       </section>
       <footer id="contact">
