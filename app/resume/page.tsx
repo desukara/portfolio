@@ -1,3 +1,4 @@
+import SiteHeader from "../components/site-header";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { PrintResumeButton } from "./print-button";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 type Position = { employer: string; role: string; location: string; dates: string; summary: string };
 const teaching: Position[] = [
-  { employer: "Shane English Corporation", role: "English Teacher", location: "Tokyo, Japan", dates: "CURRENT", summary: "Currently teaching English in Tokyo." },
+  { employer: "Shane English Corporation", role: "English Teacher", location: "Tokyo, Japan", dates: "CURRENT", summary: "Teach English to learners from age three through retirement, following established textbooks and teacher guides while adapting activities and pacing to learners’ needs." },
   { employer: "KIFL", role: "English Teacher", location: "Kanda, Tokyo", dates: "2021", summary: "English-language teaching in central Tokyo." },
   { employer: "BCA English School", role: "English Teacher", location: "Saitama, Japan", dates: "2020", summary: "English-language teaching in Saitama." },
   { employer: "Panda ABC", role: "Online English Teacher", location: "Online / China-based education company", dates: "2019", summary: "Delivered English-language instruction online." },
@@ -39,7 +40,7 @@ export default function ResumePage() {
 
       <section>
         <h2>PROFESSIONAL PROFILE</h2>
-        <p>TEFL-certified English teacher with experience in Tokyo, Saitama, and online instruction. Previously served as a full-time U.S. Army classroom instructor in Hawaii (2000–2004). Additional customer service experience supporting clear communication with people from diverse backgrounds.</p>
+        <p>TEFL-certified English teacher working with learners from age three through retirement. Experienced in curriculum-guided instruction, rapport-building, and adapting activities to individual learners. Previous English teaching in Tokyo, Saitama, and online instruction. Previously served as a full-time U.S. Army classroom instructor in Hawaii (2000–2004). Additional customer service experience supporting clear communication with people from diverse backgrounds.</p>
       </section>
 
       <section>
