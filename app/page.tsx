@@ -1,5 +1,4 @@
 import SiteHeader from "./components/site-header";
-// Verified Git-triggered automatic production deploy for the interview portfolio.
 const skills = [
   { number: "01", title: "Recognize strengths", description: "Look for what each learner already knows and the conditions in which they can show it." },
   { number: "02", title: "Build connection", description: "Establish rapport by meeting learners at their level and responding to their personalities." },
@@ -29,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-art hero-photo">
-          <img src="https://raw.githubusercontent.com/desukara/portfolio/main/publichomepage-photo.jpeg" alt="Portrait of the English teacher" />
+          <img src="https://raw.githubusercontent.com/desukara/portfolio/main/publichomepage-photo.jpeg" alt="James Simmons, English teacher in Tokyo" loading="eager" />
         </div>
       </section>
       <section className="intro-band">
