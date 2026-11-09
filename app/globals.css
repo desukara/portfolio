@@ -173,3 +173,9 @@
 .hero-photo img{width:100%;height:100%;max-height:none;min-width:0;object-fit:contain;object-position:center}
 @media(max-width:900px){.hero-photo{height:400px}}
 @media(max-width:600px){.hero-photo{height:330px}}
+
+/* Final portrait presentation: clean rectangular frame, no decorative arch. */
+.hero-photo{background:transparent;border-radius:0;height:500px;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;max-height:none;border-radius:0}
+@media(max-width:900px){.hero-photo{height:400px}}
+@media(max-width:600px){.hero-photo{height:330px}}
