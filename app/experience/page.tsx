@@ -1,3 +1,4 @@
+import {careerRoles} from "./roles";
 import SiteHeader from "../components/site-header";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -7,18 +8,6 @@ export const metadata: Metadata = {
  description: "Teaching experience in Tokyo and Saitama, online English instruction, and U.S. Army classroom instruction.",
 };
 
-const roles = [
- {kind:"CURRENT ROLE · TOKYO",title:"English Teacher",org:"Shane English Corporation",place:"Tokyo, Japan",dates:"Current",summary:"Teach learners from age three through retirement using Shane’s established textbooks, curriculum, and teacher’s guides. Adapt activities, explanations, and pacing to individual learners while maintaining the lesson’s objectives."},
- {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"KIFL",place:"Kanda, Tokyo",dates:"2021",summary:"English-language teaching in central Tokyo."},
- {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"BCA English School",place:"Saitama, Japan",dates:"2020",summary:"English-language teaching in Saitama."},
- {kind:"ONLINE ENGLISH TEACHING",title:"Online English Teacher",org:"Panda ABC",place:"Online · China-based education company",dates:"2019",summary:"Delivered English-language instruction online."},
- {kind:"CLASSROOM INSTRUCTION · U.S. ARMY",title:"Full-Time Classroom Instructor",org:"United States Army",place:"Hawaii, USA",dates:"2000–2004",summary:"Provided classroom instruction during active-duty military service, separate from English-language teaching."},
-];
-const nyc = [
- {name:"2nd Avenue Deli",area:"Upper East Side, Manhattan"},
- {name:"Olympic Pita",area:"Midtown Manhattan"},
- {name:"Sunflower Kosher Diner",area:"Upper West Side, Manhattan"},
-];
 
 export default function ExperiencePage(){
  return <main>
@@ -35,19 +24,19 @@ export default function ExperiencePage(){
   </section>
   <section className="experience-section"><div className="shell">
     <div className="section-heading"><div><span className="kicker">01 / EXPERIENCE</span><h2>Where I&apos;ve<br/><em>taught.</em></h2></div><p>Current curriculum-guided English teaching across a wide age range, previous teaching positions in Japan and online, and separate U.S. Army classroom instruction.</p></div>
-    <div className="role-list">{roles.map((role,i)=><article key={role.org} className="role-row">
-     <span className="role-number">{String(i+1).padStart(2,"0")}</span><div><span className="kicker">{role.kind}</span><h3>{role.title}</h3><p className="role-org">{role.org} <span>· {role.place} · {role.dates}</span></p><p>{role.summary}</p></div>
+    <div className="role-list">{careerRoles.slice(0,5).map((role,i)=><article key={role.slug} className="role-row">
+     <span className="role-number">{String(i+1).padStart(2,"0")}</span><div><span className="kicker">{role.category.toUpperCase()}</span><h3>{role.title}</h3><p className="role-org">{role.name} <span>· {role.location} · {role.dates}</span></p><p>{role.summary}</p><Link className="career-role-link" href={`/experience/${role.slug}`}>Read about this role →</Link></div>
     </article>)}</div>
    </div></section>
   <section className="communication-section shell">
    <div><span className="kicker">02 / CUSTOMER SERVICE</span><h2>Experience working <em>with people.</em></h2></div>
    <div>
      <p>Customer service and professional communication experience in New York City and other U.S. locations, approximately 2005–2018.</p>
-     <ul className="experience-nyc-list">{nyc.map(item=><li key={item.name}><strong>{item.name}</strong><span>{item.area}</span></li>)}</ul>
-     <p><strong>Independent Contractor · Taxi Services (2022–2025)</strong><br/>Boston · South Florida · Charlotte · Atlanta · Pittsburgh.</p>
+     <ul className="experience-nyc-list">{careerRoles.slice(5,8).map(item=><li key={item.slug}><Link href={`/experience/${item.slug}`}><strong>{item.name}</strong><span>{item.location} ↗</span></Link></li>)}</ul>
+     <p><Link className="career-role-link" href="/experience/independent-transportation">Independent Contractor · Taxi Services (2022–2025) →</Link><br/>Boston · South Florida · Charlotte · Atlanta · Pittsburgh.</p>
    </div>
   </section>
-  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently employed at Shane English Corporation in Tokyo. My contract provides flexibility to accept new work at my discretion. Not available during Shabbat (Friday sunset through Saturday sunset).</p><Link className="button-primary" href="/resume">View my résumé ↗</Link></div></section>
+  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently employed at Shane English Corporation in Tokyo. My contract provides flexibility to accept new work at my discretion. Not available during Shabbat (Friday sunset through Saturday sunset).</p><Link className="button-primary" href="/meeting">Request an interview ↗</Link> <Link className="button-link" href="/resume">View my résumé →</Link></div></section>
   <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Homepage ↗</Link></div></footer>
  </main>;
 }
