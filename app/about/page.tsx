@@ -42,7 +42,7 @@ export default function AboutPage() {
       </section>
       <section className="about-next shell">
         <div><span className="kicker">03 / NEXT UP</span><h2>A profile backed by <em>real work.</em></h2></div>
-        <div><p>Explore my English teaching roles in Japan and online, and my classroom instruction experience in Hawaii. My résumé is available to view and print.</p><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link></div>
+        <div><p>Explore my English teaching roles in Japan and online, and my classroom instruction experience in Hawaii. My approved résumé is available to view, download, and print.</p><div className="about-next-links"><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link><Link href="/resume/download" className="button-link" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></div>
       </section>
       <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage ↗</Link></div></footer>
     </main>

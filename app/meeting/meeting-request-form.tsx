@@ -48,9 +48,9 @@ export default function MeetingRequestForm() {
       <label>Alternate date<input name="alternate_date" type="date"/></label>
       <label>Alternate start time<input name="alternate_time" type="time"/></label>
     </div>
-    <label>Additional details<textarea name="message" rows={4} maxLength={1500} placeholder="Tell me about the opportunity, who will attend, and anything you'd like to discuss."/></label>
+    <label>About the opportunity (optional)<textarea name="message" rows={4} maxLength={1500} placeholder="Tell me about the opportunity, who will attend, and anything you'd like to discuss."/></label>
     <div className="meeting-honeypot" aria-hidden="true"><label>Leave this empty<input name="website" type="text" tabIndex={-1} autoComplete="off"/></label></div>
-    <p className="meeting-privacy">Your details will be used to review and respond to this meeting request. Times are proposals, not confirmed bookings. I&apos;m unavailable during Shabbat (Friday sunset through Saturday sunset), Japan time.</p>
+    <p className="meeting-privacy">Your contact details, meeting format, time zone, and one proposed date and time are required. Your details will be used to review and respond to this request. Times are proposals, not confirmed bookings. I&apos;m unavailable during Shabbat (Friday sunset through Saturday sunset), Japan time.</p>
     {state==="error"&&<p className="meeting-error" role="alert">{error}</p>}
     <button className="button-primary meeting-submit" type="submit" disabled={state==="sending"}>{state==="sending"?"Sending request…":"Send meeting request"} <span aria-hidden="true">↗</span></button>
   </form>;

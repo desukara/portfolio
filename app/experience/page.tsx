@@ -15,7 +15,7 @@ export default function ExperiencePage(){
   <section className="experience-hero shell">
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>
    <h1>Teaching across <em>classrooms, cultures &amp; borders.</em></h1>
-   <p className="experience-lead">TEFL-certified English teacher currently teaching students from age three through retirement at Shane English Corporation in Tokyo. I work within established curricula while adapting my delivery to learners’ strengths and personalities. My background also includes English teaching in Japan and online, and U.S. Army classroom instruction in Hawaii.</p>
+   <p className="experience-lead">TEFL-certified English teacher currently working in a cover teaching role at Shane English Corporation in Tokyo, with learners from age three through retirement. I work within established curricula while adapting my delivery to learners’ strengths and personalities. My background also includes English teaching in Japan and online, and U.S. Army classroom instruction in Hawaii.</p>
    <div className="experience-highlights">
     <div><strong>TEFL</strong><span>Certified</span></div>
     <div><strong>Japan + Online</strong><span>English teaching</span></div>
@@ -36,7 +36,7 @@ export default function ExperiencePage(){
      <p><Link className="career-role-link" href="/experience/independent-transportation">Independent Contractor · Taxi Services (2022–2025) →</Link><br/>Boston · South Florida · Charlotte · Atlanta · Pittsburgh.</p>
    </div>
   </section>
-  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently employed at Shane English Corporation in Tokyo. My contract provides flexibility to accept new work at my discretion. Not available during Shabbat (Friday sunset through Saturday sunset).</p><Link className="button-primary" href="/meeting">Request an interview ↗</Link> <Link className="button-link" href="/resume">View my résumé →</Link></div></section>
+  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently employed at Shane English Corporation in Tokyo. My contract provides flexibility to accept new work at my discretion. Not available during Shabbat (Friday sunset through Saturday sunset).</p><Link className="button-primary" href="/meeting">Request an interview ↗</Link> <Link className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></section>
   <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Homepage ↗</Link></div></footer>
  </main>;
 }
