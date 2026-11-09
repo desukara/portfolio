@@ -31,7 +31,7 @@ export default function ExperiencePage(){
   <section className="communication-section shell">
    <div><span className="kicker">02 / CUSTOMER SERVICE</span><h2>Experience working <em>with people.</em></h2></div>
    <div>
-     <p>Customer service and professional communication experience in New York City and other U.S. locations, approximately 2005–2018.</p>
+     <p>Customer service, kitchen operations, and professional communication experience in New York City and other U.S. locations.</p>
      <ul className="experience-nyc-list">{careerRoles.slice(5,8).map(item=><li key={item.slug}><Link href={`/experience/${item.slug}`}><strong>{item.name}</strong><span>{item.location} ↗</span></Link></li>)}</ul>
      <p><Link className="career-role-link" href="/experience/independent-transportation">Independent Contractor · Taxi Services (2022–2025) →</Link><br/>Boston · South Florida · Charlotte · Atlanta · Pittsburgh.</p>
    </div>
