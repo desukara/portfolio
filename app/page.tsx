@@ -28,12 +28,8 @@ export default function Home() {
             <a className="button-link" href="/experience">Explore my experience <span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <div className="hero-art" aria-label="Decorative teaching portfolio illustration" role="img">
-          <div className="art-sun" />
-          <div className="art-card"><span>HELLO!</span><strong>学び<br />meets<br />language.</strong><div className="art-rule"/></div>
-          <div className="art-orbit art-orbit-one"/>
-          <div className="art-orbit art-orbit-two"/>
-          <div className="art-label">LEARN · GROW · CONNECT</div>
+        <div className="hero-art hero-photo">
+          <img src="https://raw.githubusercontent.com/desukara/portfolio/main/publichomepage-photo.jpeg" alt="Portrait of the English teacher" />
         </div>
       </section>
       <section className="intro-band">
