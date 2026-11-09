@@ -244,3 +244,9 @@ main,section,article,footer{min-width:0}
 .resume-download-banner span{font-size:12px;color:#526d69}
 @media(max-width:700px){.resume-download-banner{padding-inline:20px}.resume-download-primary{width:100%;max-width:480px}}
 @media print{.resume-download-banner{display:none!important}}
+
+/* Keep the two résumé actions visibly grouped on all screens. */
+.resume-toolbar-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.resume-toolbar-actions .resume-print-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;text-align:center;white-space:nowrap;text-decoration:none}
+@media(max-width:700px){.resume-toolbar-actions{width:100%;justify-content:stretch}.resume-toolbar-actions .resume-print-button{flex:1 1 145px;white-space:normal}}
+@media print{.resume-toolbar-actions{display:none!important}}
