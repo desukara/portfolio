@@ -1,3 +1,4 @@
+import SiteHeader from "../components/site-header";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const roles = [
- {kind:"CURRENT ROLE · TOKYO",title:"English Teacher",org:"Shane English Corporation",place:"Tokyo, Japan",dates:"Current",summary:"Currently teaching English in Tokyo."},
+ {kind:"CURRENT ROLE · TOKYO",title:"English Teacher",org:"Shane English Corporation",place:"Tokyo, Japan",dates:"Current",summary:"Teach learners from age three through retirement using Shane’s established textbooks, curriculum, and teacher’s guides. Adapt activities, explanations, and pacing to individual learners while maintaining the lesson’s objectives."},
  {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"KIFL",place:"Kanda, Tokyo",dates:"2021",summary:"English-language teaching in central Tokyo."},
  {kind:"ENGLISH TEACHING · JAPAN",title:"English Teacher",org:"BCA English School",place:"Saitama, Japan",dates:"2020",summary:"English-language teaching in Saitama."},
  {kind:"ONLINE ENGLISH TEACHING",title:"Online English Teacher",org:"Panda ABC",place:"Online · China-based education company",dates:"2019",summary:"Delivered English-language instruction online."},
@@ -21,15 +22,11 @@ const nyc = [
 
 export default function ExperiencePage(){
  return <main>
-  <div className="top-strip"><span>ENGLISH LANGUAGE EDUCATION</span><span>TOKYO, JAPAN</span></div>
-  <header className="site-header shell"><Link className="brand" href="/" aria-label="Home">TEACH<span>.</span></Link>
-   <nav aria-label="Main navigation"><Link href="/about">About</Link><Link href="/experience" aria-current="page">Experience</Link><Link href="/resume">Résumé</Link></nav>
-   <Link className="nav-cta" href="/resume">View résumé <span aria-hidden="true">↗</span></Link>
-  </header>
+  <SiteHeader current="/experience" />
   <section className="experience-hero shell">
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>
    <h1>Teaching across <em>classrooms, cultures &amp; borders.</em></h1>
-   <p className="experience-lead">TEFL-certified English teacher currently working at Shane English Corporation in Tokyo, with previous teaching experience in Japan and online, and U.S. Army classroom instruction in Hawaii.</p>
+   <p className="experience-lead">TEFL-certified English teacher currently teaching students from age three through retirement at Shane English Corporation in Tokyo. I work within established curricula while adapting my delivery to learners’ strengths and personalities. My background also includes English teaching in Japan and online, and U.S. Army classroom instruction in Hawaii.</p>
    <div className="experience-highlights">
     <div><strong>TEFL</strong><span>Certified</span></div>
     <div><strong>Japan + Online</strong><span>English teaching</span></div>
@@ -37,7 +34,7 @@ export default function ExperiencePage(){
    </div>
   </section>
   <section className="experience-section"><div className="shell">
-    <div className="section-heading"><div><span className="kicker">01 / EXPERIENCE</span><h2>Where I&apos;ve<br/><em>taught.</em></h2></div><p>Teaching positions in Japan and online, plus classroom instruction during U.S. Army service.</p></div>
+    <div className="section-heading"><div><span className="kicker">01 / EXPERIENCE</span><h2>Where I&apos;ve<br/><em>taught.</em></h2></div><p>Current curriculum-guided English teaching across a wide age range, previous teaching positions in Japan and online, and separate U.S. Army classroom instruction.</p></div>
     <div className="role-list">{roles.map((role,i)=><article key={role.org} className="role-row">
      <span className="role-number">{String(i+1).padStart(2,"0")}</span><div><span className="kicker">{role.kind}</span><h3>{role.title}</h3><p className="role-org">{role.org} <span>· {role.place} · {role.dates}</span></p><p>{role.summary}</p></div>
     </article>)}</div>
