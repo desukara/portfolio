@@ -250,3 +250,26 @@ main,section,article,footer{min-width:0}
 .resume-toolbar-actions .resume-print-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;text-align:center;white-space:nowrap;text-decoration:none}
 @media(max-width:700px){.resume-toolbar-actions{width:100%;justify-content:stretch}.resume-toolbar-actions .resume-print-button{flex:1 1 145px;white-space:normal}}
 @media print{.resume-toolbar-actions{display:none!important}}
+
+/* Hiring-focused improvements: preserve the original portrait and existing visual system. */
+.home-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:25px;margin-bottom:45px}
+.home-proof>div{display:flex;flex-direction:column;gap:7px;padding:8px 22px}
+.home-proof>div:first-child{padding-left:0}
+.home-proof>div+div{border-left:1px solid var(--line)}
+.home-proof strong{font-family:'Playfair Display',Georgia,serif;font-size:clamp(20px,2.2vw,28px);font-weight:600;line-height:1.2}
+.home-proof span{font-size:12px;color:var(--muted);line-height:1.5}
+.footer-actions,.about-next-links{display:flex;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-actions .button-link{color:#f1e4d4;text-decoration:underline;text-underline-offset:5px}
+.portfolio-evidence{padding-block:90px 95px}
+.portfolio-evidence h2{font-size:clamp(35px,4vw,55px);line-height:1.15;letter-spacing:-.035em;margin:17px 0 18px}
+.portfolio-evidence-intro{max-width:730px;color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:32px}
+.portfolio-evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.portfolio-evidence-grid article{border:1px solid var(--line);background:#fffdf9;padding:28px;display:flex;flex-direction:column;align-items:flex-start}
+.portfolio-evidence-grid h3{font-family:'Playfair Display',Georgia,serif;font-size:26px;line-height:1.2;margin:23px 0 13px}
+.portfolio-evidence-grid p{font-size:14px;line-height:1.75;color:var(--muted);flex:1}
+.portfolio-evidence-grid a{font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px;margin-top:16px}
+.meeting-optional{border-top:1px solid var(--line);padding:14px 0}
+.meeting-optional summary{font-size:14px;font-weight:700;cursor:pointer;color:var(--deep)}
+.meeting-optional[open] summary{margin-bottom:18px}
+@media(max-width:900px){.portfolio-evidence-grid{grid-template-columns:1fr}.portfolio-evidence-grid article{min-height:0}.portfolio-evidence{padding-block:65px}}
+@media(max-width:600px){.home-proof{grid-template-columns:1fr;padding-block:10px;margin-bottom:24px}.home-proof>div,.home-proof>div:first-child{padding:17px 0}.home-proof>div+div{border-left:0;border-top:1px solid var(--line)}.hero .actions{flex-wrap:wrap;gap:20px}.footer-actions{align-items:flex-start;flex-direction:column;gap:8px}.portfolio-evidence-grid article{padding:23px}}
