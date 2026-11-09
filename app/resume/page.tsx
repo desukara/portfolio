@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { PrintResumeButton } from "./print-button";
 
 export const metadata: Metadata = {
-  title: "James Simmons | Résumé",
+  title: "Résumé",
   description: "James Simmons — English teacher in Tokyo. Professional experience, education, and availability.",
 };
 

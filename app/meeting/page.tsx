@@ -4,7 +4,7 @@ import Link from "next/link";
 import MeetingRequestForm from "./meeting-request-form";
 
 export const metadata: Metadata = {
-  title: "Request a Meeting | James Simmons",
+  title: "Request a Meeting",
   description: "Request an online interview or introductory meeting with James Simmons, an English teacher in Tokyo.",
 };
 export default function MeetingPage() {
