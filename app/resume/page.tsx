@@ -25,7 +25,6 @@ export default function ResumePage() {
       <span>JAMES SIMMONS / RÉSUMÉ</span>
       <div className="resume-toolbar-actions"><a className="resume-print-button" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a><PrintResumeButton /></div>
     </div>
-    <div className="resume-download-banner shell"><a className="resume-download-primary" href="/resume/download" download="J_Simmons_Resume_2026.pdf">↓ Download official résumé (PDF)</a><span>Approved résumé · PDF document</span></div>
     <article className="resume-document cv" aria-label="James Simmons professional résumé">
       <header className="cv-header">
         <h1>JAMES SIMMONS</h1>
