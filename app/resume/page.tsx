@@ -23,7 +23,7 @@ export default function ResumePage() {
     <div className="resume-toolbar shell">
       <Link href="/">← Back to portfolio</Link>
       <span>JAMES SIMMONS / RÉSUMÉ</span>
-      <a className="resume-print-button" href="/resume/download">Download PDF ↓</a><PrintResumeButton />
+      <PrintResumeButton />
     </div>
     <article className="resume-document cv" aria-label="James Simmons professional résumé">
       <header className="cv-header">
@@ -89,7 +89,7 @@ export default function ResumePage() {
       </section>
     </article>
     <div className="resume-postscript shell">
-      <p>Choose <strong>Download PDF</strong> for a PDF file, or <strong>Print</strong> to use your browser's print dialog.</p>
+      <p>Use <strong>Print</strong> to print the résumé page. The official downloadable PDF is temporarily unavailable while its exact file is restored.</p>
       <Link href="/experience">Explore professional experience →</Link>
     </div>
   </main>;
