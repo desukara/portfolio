@@ -8,13 +8,7 @@ export const metadata: Metadata = {
   description: "James Simmons — English teacher in Tokyo. Professional experience, education, and availability.",
 };
 
-type Position = { employer: string; role: string; location: string; dates: string; summary: string };
-const teaching: Position[] = [
-  { employer: "Shane English Corporation", role: "English Teacher", location: "Tokyo, Japan", dates: "CURRENT", summary: "Teach English to learners from age three through retirement, following established textbooks and teacher guides while adapting activities and pacing to learners’ needs." },
-  { employer: "KIFL", role: "English Teacher", location: "Kanda, Tokyo", dates: "2021", summary: "Evaluated face-to-face English oral examinations using established standards and taught spoken English in an interactive avatar-based virtual environment." },
-  { employer: "BCA English School", role: "Full-Time Kindergarten Homeroom Teacher", location: "Saitama, Japan", dates: "2020", summary: "Independently planned and taught an English-immersion curriculum across subjects to a class of children ages 5–7." },
-  { employer: "Panda ABC", role: "Online English Teacher", location: "Online / China-based education company", dates: "2019", summary: "Delivered online English lessons to young learners and adults, using expressive communication and engaging activities in individual and larger classes." },
-];
+import { teaching, type Position } from "./resume-data";
 
 function ResumePosition({ employer, role, location, dates, summary }: Position) {
   return <div className="cv-position">
@@ -29,7 +23,7 @@ export default function ResumePage() {
     <div className="resume-toolbar shell">
       <Link href="/">← Back to portfolio</Link>
       <span>JAMES SIMMONS / RÉSUMÉ</span>
-      <PrintResumeButton />
+      <a className="resume-print-button" href="/resume/download">Download PDF ↓</a><PrintResumeButton />
     </div>
     <article className="resume-document cv" aria-label="James Simmons professional résumé">
       <header className="cv-header">
@@ -95,7 +89,7 @@ export default function ResumePage() {
       </section>
     </article>
     <div className="resume-postscript shell">
-      <p>Choose <strong>Print / Save PDF</strong> to print this résumé or save an A4 copy from your browser.</p>
+      <p>Choose <strong>Download PDF</strong> for a PDF file, or <strong>Print</strong> to use your browser's print dialog.</p>
       <Link href="/experience">Explore professional experience →</Link>
     </div>
   </main>;
