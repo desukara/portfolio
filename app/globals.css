@@ -273,3 +273,12 @@ main,section,article,footer{min-width:0}
 .meeting-optional[open] summary{margin-bottom:18px}
 @media(max-width:900px){.portfolio-evidence-grid{grid-template-columns:1fr}.portfolio-evidence-grid article{min-height:0}.portfolio-evidence{padding-block:65px}}
 @media(max-width:600px){.home-proof{grid-template-columns:1fr;padding-block:10px;margin-bottom:24px}.home-proof>div,.home-proof>div:first-child{padding:17px 0}.home-proof>div+div{border-left:0;border-top:1px solid var(--line)}.hero .actions{flex-wrap:wrap;gap:20px}.footer-actions{align-items:flex-start;flex-direction:column;gap:8px}.portfolio-evidence-grid article{padding:23px}}
+
+/* Employer review: keyboard bypass and direct paths to teaching evidence. */
+.skip-link{position:fixed;top:12px;left:12px;z-index:1000;transform:translateY(-200%);padding:12px 18px;background:#153b3c;color:#fff;font-weight:700;border:2px solid #fff;box-shadow:0 3px 14px #153b3c33}
+.skip-link:focus{transform:none;outline:3px solid #153b3c;outline-offset:3px}
+#main-content,#classroom-reflection{scroll-margin-top:20px}
+.practice-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px;color:var(--deep)}
+.experience-paths{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:13px;font-weight:700}
+.experience-paths a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+@media print{.skip-link{display:none!important}}
