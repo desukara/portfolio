@@ -89,7 +89,7 @@ export default function ResumePage() {
       </section>
     </article>
     <div className="resume-postscript shell">
-      <p>Choose <strong>Download official PDF</strong> for the approved résumé, or <strong>Print</strong> to print this web page.</p>
+      <p>Choose <strong>Download résumé</strong> for the original approved PDF, or <strong>Print</strong> for this expanded web version. The web version includes additional role details and classroom responsibilities.</p>
       <Link href="/experience">Explore professional experience →</Link>
     </div>
   </main>;

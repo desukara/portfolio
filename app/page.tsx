@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-art hero-photo">
-          <img src="https://raw.githubusercontent.com/desukara/portfolio/main/publichomepage-photo.jpeg" alt="James Simmons, English teacher in Tokyo" loading="eager" />
+          <img src="/homepage-photo.jpeg" width={1076} height={1366} fetchPriority="high" alt="James Simmons, English teacher in Tokyo" loading="eager" />
         </div>
       </section>
       <section className="home-proof shell" aria-label="Teaching experience at a glance"><div><strong>TEFL</strong><span>Certified English teacher</span></div><div><strong>Japan + online</strong><span>Classroom and remote teaching</span></div><div><strong>Ages 3 to retirement</strong><span>Current learners at Shane</span></div></section>
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
       </section>
       <footer id="contact">
-        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Looking for an<br /><em>English teacher?</em></h2><p>I’m available to discuss full-time English teaching opportunities in Tokyo. Review my experience and résumé, then propose an introductory conversation.</p><div className="footer-actions"><a className="button-primary" href="/meeting">Request an interview <span aria-hidden="true">↗</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
+        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Looking for an<br /><em>English teacher?</em></h2><p>I’m available to discuss full-time English teaching opportunities in Tokyo. Review my experience and résumé, then propose an introductory conversation. You can also <a className="contact-email" href="mailto:meet@eastokyo.com?subject=English%20teaching%20opportunity%20in%20Tokyo">email meet@eastokyo.com</a>.</p><div className="footer-actions"><a className="button-primary" href="/meeting">Request an interview <span aria-hidden="true">↗</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
         <div className="shell footer-bottom"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><span>MADE FOR MEANINGFUL LEARNING</span></div>
       </footer>
     </main>

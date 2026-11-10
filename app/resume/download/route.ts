@@ -1,14 +1,14 @@
 import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const runtime = "nodejs";
-const OFFICIAL_URL = "https://raw.githubusercontent.com/desukara/portfolio/main/J_Simmons_Resume_2026.pdf";
+
 const OFFICIAL_SHA256 = "3a605a9d04dfbba3a7b32d87b971afc31dbe6962594b4e046500f1149754b4e2";
 
 export async function GET() {
   try {
-    const upstream = await fetch(OFFICIAL_URL, { cache: "no-store" });
-    if (!upstream.ok) throw new Error("Official PDF unavailable");
-    const bytes = Buffer.from(await upstream.arrayBuffer());
+    const bytes = await readFile(join(process.cwd(), "J_Simmons_Resume_2026.pdf"));
     if (createHash("sha256").update(bytes).digest("hex") !== OFFICIAL_SHA256) {
       throw new Error("Official PDF integrity check failed");
     }
