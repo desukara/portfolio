@@ -1,12 +1,4 @@
 import { ImageResponse } from "next/og";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
-export default function Image() {
-  return new ImageResponse(
-    <div style={{ display:"flex",width:"100%",height:"100%",background:"#153b3c",color:"#fffdf7",padding:80,flexDirection:"column",justifyContent:"center",fontFamily:"Arial,sans-serif" }}>
-      <div style={{fontSize:28,letterSpacing:5,color:"#f4bf9f"}}>JAMES SIMMONS · TOKYO</div>
-      <div style={{fontSize:76,fontWeight:700,marginTop:30,lineHeight:1.1}}>English Teaching Portfolio</div>
-      <div style={{fontSize:30,marginTop:35,color:"#dcefe7"}}>Understand the learner. Teach with purpose.</div>
-    </div>, size
-  );
-}
+export const size={width:1200,height:630};
+export const contentType="image/png";
+export default function OpenGraphImage(){return new ImageResponse(<div style={{width:"100%",height:"100%",background:"#192c3d",display:"flex",alignItems:"center",padding:90,gap:64,color:"#fff9f0"}}><div style={{height:330,width:330,border:"13px solid #dfaa55",borderRadius:65,display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column"}}><div style={{fontSize:64,color:"#dfaa55"}}>◆</div><div style={{fontSize:145,fontFamily:"Georgia,serif",fontWeight:700,letterSpacing:-12,marginTop:-25}}>JS</div><div style={{fontSize:47,color:"#dfaa55",marginTop:-30}}>⌣⌣</div></div><div style={{display:"flex",flexDirection:"column",gap:24}}><div style={{fontSize:94,fontFamily:"Georgia,serif",fontWeight:700,letterSpacing:-4}}>EASTOKYO</div><div style={{fontSize:31,color:"#dfaa55",letterSpacing:5}}>ENGLISH TEACHING IN TOKYO</div><div style={{fontSize:30}}>James Simmons · Teaching Portfolio</div></div></div>,size)}
