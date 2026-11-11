@@ -48,7 +48,7 @@ export default function Home() {
       </section>
       <footer id="contact">
         <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Looking for an<br /><em>English teacher?</em></h2><p>I’m available to discuss full-time English teaching opportunities in Tokyo. Review my experience and résumé, then propose an introductory conversation. You can also <strong className="contact-email">email meet@eastokyo.com</strong>.</p><div className="footer-actions"><a className="button-primary" href="/meeting">Request an interview <span aria-hidden="true">↗</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
-        <div className="shell footer-bottom"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><span>MADE FOR MEANINGFUL LEARNING</span></div>
+        <div className="shell footer-bottom"><span className="footer-brand"><img src="/brand/js-mark.svg" width={36} height={36} alt="" aria-hidden="true" /> JS · EASTOKYO</span><span>© {new Date().getFullYear()} English Teaching Portfolio</span><span>MADE FOR MEANINGFUL LEARNING</span></div>
       </footer>
     </main>
   );
