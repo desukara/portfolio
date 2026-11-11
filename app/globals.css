@@ -537,3 +537,7 @@ footer{background:#192c3d}
 .footer-brand img{width:36px;height:36px}
 @media(max-width:700px){.site-header .brand>img{width:40px;height:40px}.brand-wordmark{font-size:18px}.brand-wordmark small{font-size:7px;letter-spacing:.12em}.site-header .brand{gap:7px}}
 @media(max-width:380px){.brand-wordmark{font-size:15px}.brand-wordmark small{font-size:6px}}
+
+/* Keep EASTOKYO on one line; tagline alone sits below. */
+.brand-wordmark{display:block;white-space:nowrap}
+.brand-wordmark small{display:block}
