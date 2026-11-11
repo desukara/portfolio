@@ -19,11 +19,11 @@ export default function Home() {
       <section className="hero shell" id="home">
         <div className="hero-copy" id="main-content" tabIndex={-1}>
           <div className="eyebrow"><span className="status-dot" /> JAMES SIMMONS · ENGLISH TEACHER IN TOKYO</div>
-          <h1>Helping learners<br /><em>find their voice</em><span className="period">.</span></h1>
-          <p className="hero-lead">I&apos;m a <strong>TEFL-certified English teacher based in Tokyo</strong>, with classroom experience in Japan, online teaching, and full-time kindergarten homeroom instruction. I currently teach learners from age three through retirement.</p>
+          <h1>I’m James Simmons.<br /><em>I teach English.</em><span className="period">.</span></h1>
+          <p className="hero-lead">Welcome to my personal teaching portfolio. I&apos;m a <strong>TEFL-certified English teacher based in Tokyo</strong>, with classroom experience in Japan, online teaching, and full-time kindergarten homeroom instruction. I currently teach learners from age three through retirement.</p>
           <p className="hero-detail">Currently working as a cover teacher with Shane English Corporation. I&apos;m seeking a full-time teaching role in Tokyo and can consider new opportunities. Unavailable during Shabbat (Friday sunset through Saturday sunset).</p>
           <div className="actions">
-            <a className="button-primary" href="/meeting">Request an interview <span aria-hidden="true">↗</span></a>
+            <a className="button-primary" href="/portfolio">Explore my teaching <span aria-hidden="true">↗</span></a>
             <a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé <span aria-hidden="true">↓</span></a>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </section>
       <section className="home-proof shell" aria-label="Teaching experience at a glance"><div><strong>TEFL</strong><span>Certified English teacher</span></div><div><strong>Japan + online</strong><span>Classroom and remote teaching</span></div><div><strong>Ages 3 to retirement</strong><span>Current learners at Shane</span></div></section>
-      <section className="home-employer-path shell" aria-labelledby="employer-path-heading"><div><span className="kicker">FOR SCHOOL DIRECTORS &amp; HIRING TEAMS</span><h2 id="employer-path-heading">Everything you need to <em>get to know my teaching.</em></h2><p>Start with my experience, inspect how I approach a lesson, or download the approved résumé. If there’s a possible fit, I’d be glad to talk.</p></div><div className="home-employer-links"><a href="/experience"><strong>01 / Teaching experience</strong><span>Roles in Japan, online, and classroom instruction ↗</span></a><a href="/portfolio"><strong>02 / Classroom evidence</strong><span>A real reflection and an illustrative lesson sample ↗</span></a><a href="/resume/download" download="J_Simmons_Resume_2026.pdf"><strong>03 / Approved résumé</strong><span>Download the PDF ↓</span></a></div></section><section className="intro-band">
+      <section className="home-employer-path shell" aria-labelledby="employer-path-heading"><div><span className="kicker">INSIDE MY PERSONAL PORTFOLIO</span><h2 id="employer-path-heading">My experience, my lessons, <em>my approach.</em></h2><p>I built this portfolio to share who I am as a teacher, the classrooms I have worked in, and examples of how I plan and reflect on lessons.</p></div><div className="home-employer-links"><a href="/experience"><strong>01 / Teaching experience</strong><span>Roles in Japan, online, and classroom instruction ↗</span></a><a href="/portfolio"><strong>02 / Classroom evidence</strong><span>A real reflection and an illustrative lesson sample ↗</span></a><a href="/resume/download" download="J_Simmons_Resume_2026.pdf"><strong>03 / Approved résumé</strong><span>Download the PDF ↓</span></a></div></section><section className="intro-band">
         <div className="shell intro-grid"><p>HOW I TEACH</p><h2>A clear learning goal.<br />An approach that fits the learner.</h2></div>
       </section>
       <section className="section shell" id="approach">
@@ -47,8 +47,8 @@ export default function Home() {
         </div>
       </section>
       <footer id="contact">
-        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Looking for an<br /><em>English teacher?</em></h2><p>I’m available to discuss full-time English teaching opportunities in Tokyo. Review my experience and résumé, then propose an introductory conversation. You can also <strong className="contact-email">email meet@eastokyo.com</strong>.</p><div className="footer-actions"><a className="button-primary" href="/meeting">Request an interview <span aria-hidden="true">↗</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
-        <div className="shell footer-bottom"><span className="footer-brand"><img src="/brand/js-mark.svg" width={36} height={36} alt="" aria-hidden="true" /> JS · EASTOKYO</span><span>© {new Date().getFullYear()} English Teaching Portfolio</span><span>MADE FOR MEANINGFUL LEARNING</span></div>
+        <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Interested in my<br /><em>teaching experience?</em></h2><p>I’m James Simmons, an English teacher in Tokyo. If my experience fits an opening at your school, I’d welcome a conversation. You can also <strong className="contact-email">email meet@eastokyo.com</strong>.</p><div className="footer-actions"><a className="button-primary" href="/meeting">Request an interview <span aria-hidden="true">↗</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
+        <div className="shell footer-bottom"><span className="footer-brand"><img src="/brand/js-mark.svg" width={36} height={36} alt="" aria-hidden="true" /> JS · EASTOKYO</span><span>© {new Date().getFullYear()} James Simmons · Personal Teaching Portfolio</span><span>MADE FOR MEANINGFUL LEARNING</span></div>
       </footer>
     </main>
   );
