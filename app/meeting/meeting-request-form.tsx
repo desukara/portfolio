@@ -15,7 +15,7 @@ export default function MeetingRequestForm() {
   const [state, setState] = useState<"idle"|"sending"|"success"|"error">("idle");
   const [error, setError] = useState("");
   const feedback = useRef<HTMLDivElement>(null);
-  const [earliestDate] = useState(() => new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()));
+  const [earliestDate] = useState(() => new Date(Date.now()+9*60*60*1000).toISOString().slice(0,10));
   useEffect(() => {
     if (state === "success" || state === "error") feedback.current?.focus();
   }, [state]);
