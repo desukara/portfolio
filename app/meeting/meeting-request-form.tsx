@@ -15,7 +15,18 @@ export default function MeetingRequestForm() {
   const [state, setState] = useState<"idle"|"sending"|"success"|"error">("idle");
   const [error, setError] = useState("");
   const feedback = useRef<HTMLDivElement>(null);
-  const [earliestDate] = useState(() => new Date(Date.now()+9*60*60*1000).toISOString().slice(0,10));
+  // Compute Tokyo's date after hydration, avoiding server/client date mismatches.
+  const [earliestDate, setEarliestDate] = useState("");
+  useEffect(() => {
+    const refresh = () => {
+      const parts = new Intl.DateTimeFormat("en-US", {timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+      const get = (type: string) => parts.find(part => part.type === type)?.value ?? "";
+      setEarliestDate(get("year") + "-" + get("month") + "-" + get("day"));
+    };
+    refresh();
+    const interval = window.setInterval(refresh, 60_000);
+    return () => window.clearInterval(interval);
+  }, []);
   useEffect(() => {
     if (state === "success" || state === "error") feedback.current?.focus();
   }, [state]);
@@ -50,7 +61,7 @@ export default function MeetingRequestForm() {
       <label>Preferred start time <span>*</span><input name="preferred_time" type="time" required/></label>
     </div>
     <details className="meeting-optional"><summary>Add an alternate time (optional)</summary><div className="meeting-form-row">
-      <label>Alternate date<input name="alternate_date" type="date"/></label>
+      <label>Alternate date<input name="alternate_date" type="date" min={earliestDate}/></label>
       <label>Alternate start time<input name="alternate_time" type="time"/></label>
     </div></details>
     <label>About the opportunity (optional)<textarea name="message" rows={4} maxLength={1500} placeholder="Tell me about the opportunity, who will attend, and anything you'd like to discuss."/></label>
