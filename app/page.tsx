@@ -8,7 +8,7 @@ const skills = [
 const portfolioSections = [
   { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My teaching background across Japan, online learning, and classroom instruction." },
   { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "Teaching experience in Japan, online, and during U.S. Army service." },
-  { title: "Teaching portfolio", href: "/portfolio", tag: "03 / WORK", text: "Read a real classroom reflection about engaging a young learner through play." },
+  { title: "Teaching portfolio", href: "/portfolio", tag: "03 / WORK", text: "Inspect an original lesson sample and a real classroom reflection." },
   { title: "Request a meeting", href: "/meeting", tag: "04 / CONNECT", text: "Schools and hiring teams can propose an online interview directly through my website." },
 ];
 
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>Experience, evidence<br /><em>and next steps.</em></h2></div><p>See where I have taught, read a specific classroom example, and review the qualifications listed on my résumé.</p></div>
           <div className="portfolio-grid">{portfolioSections.map((item) => <a className="portfolio-card" href={item.href} key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">↗</span></a>)}</div>
-          <p className="work-note">The classroom reflection is a real, anonymized example—not a claim of measured outcomes. More teaching samples will be added when available.</p>
+          <p className="work-note">The classroom reflection is a real, anonymized example—not a claim of measured outcomes. An original illustrative lesson plan and learner materials are also available to inspect.</p>
         </div>
       </section>
       <footer id="contact">
