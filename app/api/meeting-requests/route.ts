@@ -11,10 +11,14 @@ function validDate(value: string): boolean {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const date = new Date(value + "T00:00:00Z");
   if (Number.isNaN(date.valueOf()) || date.toISOString().slice(0, 10) !== value) return false;
-  const today = new Date();
-  const min = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate() - 1));
+  // Use Tokyo's calendar day consistently with the client-side meeting form.
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit",
+  }).formatToParts(new Date());
+  const get = (type: string) => parts.find(part => part.type === type)?.value ?? "";
+  const min = new Date(Date.UTC(Number(get("year")), Number(get("month")) - 1, Number(get("day"))));
   const max = new Date(min);
-  max.setUTCDate(max.getUTCDate() + 181);
+  max.setUTCDate(max.getUTCDate() + 180);
   return date >= min && date <= max;
 }
 
