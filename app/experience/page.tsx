@@ -12,10 +12,11 @@ export const metadata: Metadata = {
 export default function ExperiencePage(){
  return <main>
   <SiteHeader current="/experience" />
-  <section className="experience-hero shell">
+  <section className="experience-hero shell" id="main-content" tabIndex={-1}>
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>
    <h1>Teaching across <em>classrooms, cultures &amp; borders.</em></h1>
    <p className="experience-lead">TEFL-certified English teacher currently working in a cover teaching role at Shane English Corporation in Tokyo, with learners from age three through retirement. I work within established curricula while adapting my delivery to learners’ strengths and personalities. My background also includes English teaching in Japan and online, and U.S. Army classroom instruction in Hawaii.</p>
+   <nav className="experience-paths" aria-label="Find experience for your school"><Link href="/experience/shane-english">Curriculum-guided cover teaching →</Link><Link href="/experience/bca-english-school">Kindergarten homeroom teaching →</Link><Link href="/experience/kifl">Oral assessment and spoken practice →</Link><Link href="/experience/panda-abc">Online English teaching →</Link></nav>
    <div className="experience-highlights">
     <div><strong>TEFL</strong><span>Certified</span></div>
     <div><strong>Japan + Online</strong><span>English teaching</span></div>

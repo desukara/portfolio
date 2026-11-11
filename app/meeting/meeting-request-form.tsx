@@ -1,5 +1,5 @@
 "use client";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 const timeZones = [
   ["Asia/Tokyo","Japan (Tokyo)"],
@@ -14,6 +14,10 @@ const timeZones = [
 export default function MeetingRequestForm() {
   const [state, setState] = useState<"idle"|"sending"|"success"|"error">("idle");
   const [error, setError] = useState("");
+  const feedback = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (state === "success" || state === "error") feedback.current?.focus();
+  }, [state]);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setState("sending");setError("");
@@ -26,8 +30,8 @@ export default function MeetingRequestForm() {
       form.reset();setState("success");
     } catch {setError("Unable to send the request. Please try again.");setState("error");}
   }
-  if(state === "success") return <div className="meeting-success" role="status"><span className="kicker">REQUEST RECEIVED</span><h2>Thank you for reaching out.</h2><p>Your meeting request has been submitted. This is not a confirmed appointment; I&apos;ll review the details and respond using the email you provided.</p><button type="button" onClick={()=>setState("idle")}>Submit another request</button></div>;
-  return <form className="meeting-form" onSubmit={submit}>
+  if(state === "success") return <div className="meeting-success" role="status" ref={feedback} tabIndex={-1}><span className="kicker">REQUEST RECEIVED</span><h2>Thank you for reaching out.</h2><p>Your meeting request has been submitted. This is not a confirmed appointment; I&apos;ll review the details and respond using the email you provided.</p><button type="button" onClick={()=>setState("idle")}>Submit another request</button></div>;
+  return <form className="meeting-form" onSubmit={submit} aria-busy={state === "sending"}>
     <div className="meeting-form-row">
       <label>Contact name <span>*</span><input name="contact_name" type="text" autoComplete="name" minLength={2} maxLength={120} required placeholder="Your full name"/></label>
       <label>School or organization <span>*</span><input name="organization" type="text" autoComplete="organization" minLength={2} maxLength={160} required placeholder="School or company"/></label>
@@ -44,14 +48,14 @@ export default function MeetingRequestForm() {
       <label>Preferred date <span>*</span><input name="preferred_date" type="date" required/></label>
       <label>Preferred start time <span>*</span><input name="preferred_time" type="time" required/></label>
     </div>
-    <div className="meeting-form-row">
+    <details className="meeting-optional"><summary>Add an alternate time (optional)</summary><div className="meeting-form-row">
       <label>Alternate date<input name="alternate_date" type="date"/></label>
       <label>Alternate start time<input name="alternate_time" type="time"/></label>
-    </div>
+    </div></details>
     <label>About the opportunity (optional)<textarea name="message" rows={4} maxLength={1500} placeholder="Tell me about the opportunity, who will attend, and anything you'd like to discuss."/></label>
     <div className="meeting-honeypot" aria-hidden="true"><label>Leave this empty<input name="website" type="text" tabIndex={-1} autoComplete="off"/></label></div>
     <p className="meeting-privacy">Your contact details, meeting format, time zone, and one proposed date and time are required. Your details will be used to review and respond to this request. Times are proposals, not confirmed bookings. I&apos;m unavailable during Shabbat (Friday sunset through Saturday sunset), Japan time.</p>
-    {state==="error"&&<p className="meeting-error" role="alert">{error}</p>}
+    {state==="error"&&<div className="meeting-error" role="alert" ref={feedback} tabIndex={-1}>{error} Your entries are still here. Try again or <a href="mailto:meet@eastokyo.com?subject=English%20teaching%20enquiry">email meet@eastokyo.com</a>.</div>}
     <button className="button-primary meeting-submit" type="submit" disabled={state==="sending"}>{state==="sending"?"Sending request…":"Send meeting request"} <span aria-hidden="true">↗</span></button>
   </form>;
 }
