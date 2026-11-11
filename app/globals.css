@@ -323,3 +323,10 @@ main,section,article,footer{min-width:0}
  .lesson-model{padding:12px 15px;margin:15px 0;break-inside:avoid}.lesson-checklist{font-size:8.5pt}.lesson-checklist th,.lesson-checklist td{padding:10px}.lesson-checklist caption{font-size:8pt}
  .lesson-answer-lines{padding:15px 0}.lesson-writing-space{min-height:70px}
 }
+
+/* Approachable professional: classroom reflection overview */
+.reflection-roadmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:32px 0 42px}
+.reflection-roadmap>div{background:#fffdf9;border:1px solid #d7e2d8;border-left:3px solid var(--coral);padding:22px 24px;min-width:0}
+.reflection-roadmap span{display:block;font-family:'DM Sans',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:#8c5742;margin-bottom:12px}
+.reflection-roadmap strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:clamp(19px,2vw,25px);font-weight:500;line-height:1.35;color:var(--ink)}
+@media(max-width:600px){.reflection-roadmap{grid-template-columns:1fr;gap:10px;margin:24px 0 32px}.reflection-roadmap>div{padding:18px 20px}}
