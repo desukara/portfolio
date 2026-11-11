@@ -436,3 +436,62 @@ main,section,article,footer{min-width:0}
 
 /* Restore readable mobile gutters to the full-width career stories. */
 @media(max-width:700px){.career-example-section .career-example{width:100%;max-width:850px;padding-inline:max(20px,env(safe-area-inset-left)) max(20px,env(safe-area-inset-right))}.career-example-section .career-example h3{overflow-wrap:break-word}.career-example-section .career-example p{overflow-wrap:break-word}}
+
+/* Release 31 — warm, confident editorial design refresh.
+   Preserve layout, form behavior, and mobile story gutters. */
+:root{
+  --ink:#202b38;
+  --muted:#52606a;
+  --paper:#fff9f0;
+  --deep:#192c3d;
+  --coral:#bd4d2b;
+  --line:#dfd2bf;
+  --gold:#dfaa55;
+}
+body{background:var(--paper)}
+.top-strip{background:#142535;color:#f4d7a8}
+.site-header{border-bottom-color:#d8c8b3}
+.brand{letter-spacing:-.065em}
+.brand span,.period{color:var(--coral)}
+.nav-cta{border-bottom:2px solid var(--coral)}
+.nav-cta:hover{color:var(--coral)}
+.eyebrow,.kicker{color:#98502e}
+.status-dot{background:#b87a36;box-shadow:0 0 0 5px #f9e7c9}
+h1,h2{letter-spacing:-.045em}
+.hero h1{color:var(--deep);text-wrap:balance}
+.hero h1 em,.section-heading h2 em{color:#a84428}
+.hero-lead{color:#283746}
+.button-primary,.meeting-submit{background:var(--coral);color:#fff;border-radius:5px;box-shadow:4px 4px 0 #eac48d;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+.button-primary:hover,.meeting-submit:hover{background:#96391f;transform:translateY(-2px);box-shadow:5px 6px 0 #eac48d}
+.button-primary:active,.meeting-submit:active{transform:none;box-shadow:2px 2px 0 #eac48d}
+.hero-art{background:#e8d5b9}
+.art-sun{background:#efb86b}
+.art-card{background:#fffaf0;box-shadow:20px 22px 1px #d4a978}
+.art-card>span,.skill-card>span,.portfolio-card>span:first-child{color:#99502c}
+.art-orbit{border-color:#bd7043}
+.intro-band{background:#f1dfc6;border-top:1px solid #dfc39e;border-bottom:1px solid #dfc39e}
+.portfolio-section{background:#f3e7d5}
+.portfolio-card{background:#fffaf2;border-color:#e2cdb2;border-radius:8px;box-shadow:0 5px 0 #e6d4bb;transition:transform .18s ease,box-shadow .18s ease}
+.portfolio-card:hover{transform:translateY(-3px);box-shadow:0 8px 0 #e6d4bb}
+.skill-card h3{color:var(--deep)}
+footer{background:#192c3d}
+.footer-grid h2 em{color:#f2b66e}
+.footer-grid p{color:#e4d8c8}
+.footer-grid .button-primary{background:#f4bd72;color:#192c3d;box-shadow:4px 4px 0 #9c552f}
+.footer-grid .button-primary:hover{background:#ffce8b}
+.footer-right span{color:#edc48e}
+.footer-bottom{border-top-color:#52606a}
+:focus-visible{outline-color:#b24a28}
+.skip-link{background:#192c3d}
+.meeting-form-hint{background:#fff3e2}
+.meeting-contact-shortcut .meeting-contact-address{background:#f6e6d1}
+.portfolio-jump-nav a,.resume-reader-guide nav a{background:#fffaf2}
+.portfolio-jump-nav a:hover,.home-employer-links a:hover,.resume-reader-guide nav a:hover{background:#f7e7d0}
+@media(max-width:800px){
+  .site-header .mobile-menu nav{background:#fffaf2;border-color:#dfc9ae}
+  .mobile-menu[open] summary{background:#192c3d;color:#fff}
+}
+@media(prefers-reduced-motion:reduce){
+  .button-primary,.meeting-submit,.portfolio-card{transition:none}
+  .button-primary:hover,.meeting-submit:hover,.portfolio-card:hover{transform:none}
+}
