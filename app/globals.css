@@ -495,3 +495,33 @@ footer{background:#192c3d}
   .button-primary,.meeting-submit,.portfolio-card{transition:none}
   .button-primary:hover,.meeting-submit:hover,.portfolio-card:hover{transform:none}
 }
+
+/* Release 32: intentional portrait framing, not a mismatched image canvas. */
+.hero.hero .hero-photo{
+  width:100%;
+  max-width:440px;
+  height:auto;
+  min-height:0;
+  aspect-ratio:1076 / 1366;
+  justify-self:center;
+  align-self:center;
+  padding:8px;
+  background:#fff8eb;
+  border:3px solid #192c3d;
+  border-radius:8px;
+  box-shadow:0 0 0 5px #dfaa55,14px 17px 0 #d8b58b;
+  overflow:visible;
+}
+.hero.hero .hero-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-height:none;
+  object-fit:cover;
+  object-position:center;
+  border-radius:2px;
+}
+@media(max-width:800px){.hero.hero .hero-photo{max-width:360px}}
+@media(max-width:600px){
+  .hero.hero .hero-photo{max-width:min(100% - 20px,340px);box-shadow:0 0 0 4px #dfaa55,8px 10px 0 #d8b58b}
+}
