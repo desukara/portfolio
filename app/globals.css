@@ -428,3 +428,11 @@ main,section,article,footer{min-width:0}
 .home-employer-links a span{font-size:12px;line-height:1.6;color:var(--muted)}
 .home-employer-links a:focus-visible{outline:3px solid var(--coral);outline-offset:-3px}
 @media(max-width:800px){.home-employer-path{grid-template-columns:1fr;gap:15px;padding-block:42px 55px}.home-employer-links a{min-height:75px}}
+
+/* Email addresses are selectable text, not nonfunctional mailto links. */
+.meeting-contact-shortcut .meeting-contact-address{flex-shrink:0;max-width:100%;background:#edf2ec;border:1px solid var(--line);color:var(--ink);padding:17px 22px;font-size:16px;font-weight:700;overflow-wrap:anywhere;user-select:text}
+.meeting-contact-address span{display:block;margin-top:7px;font-size:12px;line-height:1.5;font-weight:400;color:var(--muted)}
+.contact-email{overflow-wrap:anywhere;user-select:text}
+
+/* Restore readable mobile gutters to the full-width career stories. */
+@media(max-width:700px){.career-example-section .career-example{width:100%;max-width:850px;padding-inline:max(20px,env(safe-area-inset-left)) max(20px,env(safe-area-inset-right))}.career-example-section .career-example h3{overflow-wrap:break-word}.career-example-section .career-example p{overflow-wrap:break-word}}
