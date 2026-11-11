@@ -428,3 +428,4 @@ main,section,article,footer{min-width:0}
 .home-employer-links a span{font-size:12px;line-height:1.6;color:var(--muted)}
 .home-employer-links a:focus-visible{outline:3px solid var(--coral);outline-offset:-3px}
 @media(max-width:800px){.home-employer-path{grid-template-columns:1fr;gap:15px;padding-block:42px 55px}.home-employer-links a{min-height:75px}}
+\n/* Email addresses are selectable text, not nonfunctional mailto links. */\n.meeting-contact-shortcut .meeting-contact-address{flex-shrink:0;max-width:100%;background:#edf2ec;border:1px solid var(--line);color:var(--ink);padding:17px 22px;font-size:16px;font-weight:700;overflow-wrap:anywhere;user-select:text}\n.meeting-contact-address span{display:block;margin-top:7px;font-size:12px;line-height:1.5;font-weight:400;color:var(--muted)}\n.contact-email{overflow-wrap:anywhere;user-select:text}\n
