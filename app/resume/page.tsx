@@ -85,7 +85,7 @@ export default function ResumePage() {
 
       <section className="cv-certification">
         <h2>CERTIFICATION</h2>
-        <p>TEFL Certificate</p>
+        <p>TEFL Certificate — MyTEFL</p>
       </section>
     </article>
     <div className="resume-postscript shell">
