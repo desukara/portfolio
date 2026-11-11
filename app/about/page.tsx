@@ -43,7 +43,7 @@ export default function AboutPage() {
       </section>
       <section className="about-next shell">
         <div><span className="kicker">03 / NEXT UP</span><h2>Get to know my <em>teaching in practice.</em></h2></div>
-        <div><p>From a young learner discovering a new way to participate to adults building confidence in spoken English, I value the small moments that make a lesson work. Explore the classroom examples behind my approach, along with my experience and résumé.</p><div className="about-next-links"><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link><Link href="/resume/download" className="button-link" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></div>
+        <div><p>From a young learner discovering a new way to participate to working with adults in English classes, I value the small moments that make a lesson work. Explore the classroom examples behind my approach, along with my experience and résumé.</p><div className="about-next-links"><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link><Link href="/resume/download" className="button-link" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></div>
       </section>
       <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage ↗</Link></div></footer>
     </main>
