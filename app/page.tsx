@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </section>
       <section className="home-proof shell" aria-label="Teaching experience at a glance"><div><strong>TEFL</strong><span>Certified English teacher</span></div><div><strong>Japan + online</strong><span>Classroom and remote teaching</span></div><div><strong>Ages 3 to retirement</strong><span>Current learners at Shane</span></div></section>
-      <section className="intro-band">
+      <section className="home-employer-path shell" aria-labelledby="employer-path-heading"><div><span className="kicker">FOR SCHOOL DIRECTORS &amp; HIRING TEAMS</span><h2 id="employer-path-heading">Everything you need to <em>get to know my teaching.</em></h2><p>Start with my experience, inspect how I approach a lesson, or download the approved résumé. If there’s a possible fit, I’d be glad to talk.</p></div><div className="home-employer-links"><a href="/experience"><strong>01 / Teaching experience</strong><span>Roles in Japan, online, and classroom instruction ↗</span></a><a href="/portfolio"><strong>02 / Classroom evidence</strong><span>A real reflection and an illustrative lesson sample ↗</span></a><a href="/resume/download" download="J_Simmons_Resume_2026.pdf"><strong>03 / Approved résumé</strong><span>Download the PDF ↓</span></a></div></section><section className="intro-band">
         <div className="shell intro-grid"><p>HOW I TEACH</p><h2>A clear learning goal.<br />An approach that fits the learner.</h2></div>
       </section>
       <section className="section shell" id="approach">
