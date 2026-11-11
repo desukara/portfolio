@@ -18,8 +18,8 @@ export default function Home() {
       <SiteHeader current="/" />
       <section className="hero shell" id="home">
         <div className="hero-copy" id="main-content" tabIndex={-1}>
-          <div className="eyebrow"><span className="status-dot" /> JACOB SIMMONS · ENGLISH TEACHER IN TOKYO</div>
-          <h1>I’m Jacob Simmons.<br /><em>I teach English.</em><span className="period">.</span></h1>
+          <div className="eyebrow"><span className="status-dot" /> TEFL-CERTIFIED · ENGLISH TEACHER IN TOKYO</div>
+          <h1>I teach<br /><em>English.</em></h1>
           <p className="hero-lead">Welcome to my personal teaching portfolio. I&apos;m a <strong>TEFL-certified English teacher based in Tokyo</strong>, with classroom experience in Japan, online teaching, and full-time kindergarten homeroom instruction. I currently teach learners from age three through retirement.</p>
           <p className="hero-detail">Currently working as a cover teacher with Shane English Corporation. I&apos;m seeking a full-time teaching role in Tokyo and can consider new opportunities. Unavailable during Shabbat (Friday sunset through Saturday sunset).</p>
           <div className="actions">
