@@ -400,3 +400,18 @@ main,section,article,footer{min-width:0}
 @media(max-width:800px){.resume-reader-guide{grid-template-columns:1fr;gap:22px}.meeting-contact-shortcut{align-items:flex-start;flex-direction:column;gap:18px}}
 @media(max-width:480px){.resume-reader-guide nav{grid-template-columns:1fr}.resume-reader-guide{padding-block:30px}.meeting-contact-shortcut{padding-block:28px}}
 @media print{.resume-reader-guide,.meeting-contact-shortcut{display:none!important}}
+
+
+/* Release 24: an editorial contents guide and readable classroom story. */
+.portfolio-jump-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:35px}
+.portfolio-jump-nav a{display:flex;align-items:flex-start;gap:13px;min-width:0;min-height:120px;background:#fffdf9;border:1px solid var(--line);padding:20px 17px;font-size:13px;font-weight:700;line-height:1.5}
+.portfolio-jump-nav a:hover{border-color:var(--deep);background:#edf2ec}
+.portfolio-jump-nav a>strong{font-size:11px;letter-spacing:.1em;color:#9c4c33;padding-top:2px}
+.portfolio-jump-nav a>span{flex:1;min-width:0}
+.portfolio-jump-nav small{display:block;margin-top:9px;font-size:12px;line-height:1.55;font-weight:400;color:var(--muted)}
+.reflection-story{border-top:1px solid var(--line);margin-top:28px;padding-top:24px}
+.reflection-story h3{font-family:'Playfair Display',Georgia,serif;font-size:clamp(23px,2.6vw,31px);line-height:1.25;margin:28px 0 11px}
+.reflection-story p{max-width:790px;line-height:1.9}
+#lesson-preview-title,#evidence-heading{scroll-margin-top:28px}
+@media(max-width:850px){.portfolio-jump-nav{grid-template-columns:1fr}.portfolio-jump-nav a{min-height:0;padding:17px}}
+@media(max-width:600px){.portfolio-jump-nav{margin-top:25px;gap:9px}.reflection-story{padding-top:12px}}
