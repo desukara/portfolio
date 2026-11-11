@@ -415,3 +415,16 @@ main,section,article,footer{min-width:0}
 #lesson-preview-title,#evidence-heading{scroll-margin-top:28px}
 @media(max-width:850px){.portfolio-jump-nav{grid-template-columns:1fr}.portfolio-jump-nav a{min-height:0;padding:17px}}
 @media(max-width:600px){.portfolio-jump-nav{margin-top:25px;gap:9px}.reflection-story{padding-top:12px}}
+
+
+/* Release 25: a direct employer review path on the homepage. */
+.home-employer-path{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(30px,5vw,80px);padding-top:55px;padding-bottom:75px;border-top:1px solid var(--line)}
+.home-employer-path h2{font-size:clamp(32px,4vw,49px);line-height:1.18;letter-spacing:-.04em;margin:18px 0}
+.home-employer-path p{max-width:520px;font-size:15px;line-height:1.85;color:var(--muted)}
+.home-employer-links{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.home-employer-links a{display:flex;flex-direction:column;justify-content:center;gap:9px;min-height:92px;padding:18px 16px;border-bottom:1px solid var(--line)}
+.home-employer-links a:hover{background:#edf2ec}
+.home-employer-links a strong{font-size:14px}
+.home-employer-links a span{font-size:12px;line-height:1.6;color:var(--muted)}
+.home-employer-links a:focus-visible{outline:3px solid var(--coral);outline-offset:-3px}
+@media(max-width:800px){.home-employer-path{grid-template-columns:1fr;gap:15px;padding-block:42px 55px}.home-employer-links a{min-height:75px}}
