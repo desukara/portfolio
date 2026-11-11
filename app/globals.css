@@ -525,3 +525,15 @@ footer{background:#192c3d}
 @media(max-width:600px){
   .hero.hero .hero-photo{max-width:min(100% - 20px,340px);box-shadow:0 0 0 4px #dfaa55,8px 10px 0 #d8b58b}
 }
+
+/* JS teaching identity — header, footer and small-screen wordmark. */
+.site-header .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:normal;flex-shrink:0}
+.site-header .brand>img{display:block;width:48px;height:48px;flex-shrink:0}
+.brand-wordmark{display:flex;flex-direction:column;font-family:'Playfair Display',Georgia,serif;font-size:23px;font-weight:700;letter-spacing:-.045em;line-height:1.05;color:var(--deep)}
+.brand-wordmark>span{display:inline}
+.brand-wordmark span{color:#a84428}
+.brand-wordmark small{font-family:'DM Sans',Arial,sans-serif;font-size:9px;letter-spacing:.19em;font-weight:700;margin-top:5px;color:#52606a}
+.footer-brand{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.08em;font-weight:700;color:#f7e4c4}
+.footer-brand img{width:36px;height:36px}
+@media(max-width:700px){.site-header .brand>img{width:40px;height:40px}.brand-wordmark{font-size:18px}.brand-wordmark small{font-size:7px;letter-spacing:.12em}.site-header .brand{gap:7px}}
+@media(max-width:380px){.brand-wordmark{font-size:15px}.brand-wordmark small{font-size:6px}}
