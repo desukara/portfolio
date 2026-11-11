@@ -26,7 +26,7 @@ export default function LessonSample() {
       <h1>Ask clearly.<br/><em>Confirm the details.</em></h1>
       <p className="lesson-lead">A practical lesson about asking for repetition and checking the details of a meeting.</p>
       <p className="lesson-disclosure">Newly prepared for this portfolio. This is an illustrative lesson design, not a report of a lesson already delivered or of measured student outcomes. All scenarios are fictional.</p>
-      <div className="lesson-screen-only lesson-actions"><PrintSampleButton /><Link className="button-link" href="/meeting">Discuss this lesson →</Link></div>
+      <div className="lesson-screen-only lesson-actions"><a className="button-primary" href="/lesson-sample.pdf" download="James_Simmons_Lesson_Sample.pdf">Download lesson PDF ↓</a><PrintSampleButton /><Link className="button-link" href="/meeting">Discuss this lesson →</Link></div>
     </section>
     <section className="shell lesson-sheet">
       <div className="lesson-folio">JAMES SIMMONS / LESSON DESIGN <span>01 / TEACHER PLAN</span></div>
@@ -58,7 +58,7 @@ export default function LessonSample() {
       <div className="lesson-model"><h3>Final check / teacher card</h3><p>Suggest <strong>Wednesday at 3 p.m., outside the library’s south entrance</strong>. First say “outside the library,” leaving the entrance unspecified. Answer the learner’s clarification question. Accept any relevant, understandable wording, not only a memorized phrase.</p></div>
       <h3>Observation checklist</h3><table className="lesson-checklist"><caption>Complete during the final role-play. Leave blank until observed.</caption><thead><tr><th scope="col">Look for</th><th scope="col">Observed / support needed</th></tr></thead><tbody><tr><th scope="row">Requests the missing or unclear detail</th><td>________________________</td></tr><tr><th scope="row">Confirms the meeting aloud</th><td>________________________</td></tr><tr><th scope="row">Records the correct day, time and place</th><td>________________________</td></tr></tbody></table>
       <p className="lesson-note">If a detail is wrong, ask the learner to identify it by comparing the cards, then repeat the exchange with support. A successful rehearsal is useful practice; it is not a measured claim of lasting improvement.</p>
-      <div className="lesson-screen-only lesson-actions"><PrintSampleButton /><Link href="/portfolio" className="button-link">Back to portfolio →</Link></div>
+      <div className="lesson-screen-only lesson-actions"><a className="button-primary" href="/lesson-sample.pdf" download="James_Simmons_Lesson_Sample.pdf">Download lesson PDF ↓</a><PrintSampleButton /><Link href="/portfolio" className="button-link">Back to portfolio →</Link></div>
     </section>
     <footer className="mini-footer lesson-screen-only"><div className="shell mini-footer-inner"><span>James Simmons / Teaching Portfolio</span><Link href="/meeting">Discuss my teaching approach →</Link></div></footer>
   </main>;
