@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="about-hero shell" id="main-content" tabIndex={-1}>
         <div>
           <span className="kicker">01 / THE PERSON BEHIND THE LESSONS</span>
-          <h1>Understand the learner.<br/><em>Then teach.</em></h1>
+          <h1>Start with curiosity.<br/><em>Build a connection.</em></h1>
           <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also served as a full-time U.S. Army classroom instructor in Hawaii from 2000 to 2004.</p>
           <p className="about-muted">At Shane, I teach learners from age three through retirement, using the school’s textbooks and teacher’s guides while adapting activities and pacing to the students in front of me. My strength is recognizing individual learners’ interests and abilities and building a connection that helps them participate.</p>
           <p className="about-muted"><strong>Additional background:</strong> customer-facing work across several U.S. cities and web development studies at Harvard Extension School since 2022. My certificate is in progress.</p>
@@ -42,8 +42,8 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="about-next shell">
-        <div><span className="kicker">03 / NEXT UP</span><h2>A profile backed by <em>real work.</em></h2></div>
-        <div><p>Explore my English teaching roles in Japan and online, and my classroom instruction experience in Hawaii. My approved résumé is available to view, download, and print.</p><div className="about-next-links"><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link><Link href="/resume/download" className="button-link" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></div>
+        <div><span className="kicker">03 / NEXT UP</span><h2>Get to know my <em>teaching in practice.</em></h2></div>
+        <div><p>From a young learner discovering a new way to participate to adults building confidence in spoken English, I value the small moments that make a lesson work. Explore the classroom examples behind my approach, along with my experience and résumé.</p><div className="about-next-links"><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link><Link href="/resume/download" className="button-link" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></div>
       </section>
       <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage ↗</Link></div></footer>
     </main>
