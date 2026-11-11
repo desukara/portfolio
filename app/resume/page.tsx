@@ -1,4 +1,3 @@
-import SiteHeader from "../components/site-header";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { PrintResumeButton } from "./print-button";
@@ -25,7 +24,7 @@ export default function ResumePage() {
       <span>JAMES SIMMONS / RÉSUMÉ</span>
       <div className="resume-toolbar-actions"><a className="resume-print-button" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a><PrintResumeButton /></div>
     </div>
-    <article className="resume-document cv" aria-label="James Simmons professional résumé">
+    <div className="resume-reader-guide shell"><div><span className="kicker">FOR HIRING TEAMS</span><h2>A clear picture of my <em>teaching experience.</em></h2><p>Read the expanded résumé below, download the original PDF, or explore classroom evidence before arranging an interview.</p></div><nav aria-label="Résumé quick links"><a href="#resume-teaching">Teaching roles ↓</a><a href="#resume-training">Training ↓</a><Link href="/portfolio#classroom-reflection">Classroom reflection ↗</Link><Link href="/meeting">Request an interview ↗</Link></nav></div><article className="resume-document cv" id="main-content" tabIndex={-1} aria-label="James Simmons professional résumé">
       <header className="cv-header">
         <h1>JAMES SIMMONS</h1>
         <p className="cv-subtitle">ENGLISH TEACHER / TOKYO, JAPAN</p>
@@ -43,7 +42,7 @@ export default function ResumePage() {
       </section>
 
       <section>
-        <h2>ENGLISH TEACHING EXPERIENCE</h2>
+        <h2 id="resume-teaching">ENGLISH TEACHING EXPERIENCE</h2>
         {teaching.map(position => <ResumePosition key={position.employer} {...position} />)}
       </section>
 
@@ -53,7 +52,7 @@ export default function ResumePage() {
       </section>
 
       <section>
-        <h2>EDUCATION &amp; PROFESSIONAL TRAINING</h2>
+        <h2 id="resume-training">EDUCATION &amp; PROFESSIONAL TRAINING</h2>
         <div className="cv-position">
           <div className="cv-position-top"><h3>Harvard Extension School <span className="cv-separator">|</span> Web Development</h3><span className="cv-date">2022–PRESENT</span></div>
           <p className="cv-location">Cambridge, Massachusetts</p>
@@ -90,7 +89,7 @@ export default function ResumePage() {
     </article>
     <div className="resume-postscript shell">
       <p>Choose <strong>Download résumé</strong> for the original approved PDF, or <strong>Print</strong> for this expanded web version. The web version includes additional role details and classroom responsibilities.</p>
-      <Link href="/experience">Explore professional experience →</Link>
+      <div className="resume-next-actions"><Link href="/experience">Explore professional experience →</Link><Link href="/meeting">Request an interview →</Link></div>
     </div>
   </main>;
 }
