@@ -18,8 +18,8 @@ export default function Home() {
       <SiteHeader current="/" />
       <section className="hero shell" id="home">
         <div className="hero-copy" id="main-content" tabIndex={-1}>
-          <div className="eyebrow"><span className="status-dot" /> SEEKING FULL-TIME TEACHING WORK IN TOKYO</div>
-          <h1>English teaching<br /><em>in Tokyo</em><span className="period">.</span></h1>
+          <div className="eyebrow"><span className="status-dot" /> JAMES SIMMONS · ENGLISH TEACHER IN TOKYO</div>
+          <h1>Helping learners<br /><em>find their voice</em><span className="period">.</span></h1>
           <p className="hero-lead">I&apos;m a <strong>TEFL-certified English teacher based in Tokyo</strong>, with classroom experience in Japan, online teaching, and full-time kindergarten homeroom instruction. I currently teach learners from age three through retirement.</p>
           <p className="hero-detail">Currently working as a cover teacher with Shane English Corporation. I&apos;m seeking a full-time teaching role in Tokyo and can consider new opportunities. Unavailable during Shabbat (Friday sunset through Saturday sunset).</p>
           <div className="actions">
@@ -36,12 +36,12 @@ export default function Home() {
         <div className="shell intro-grid"><p>HOW I TEACH</p><h2>A clear learning goal.<br />An approach that fits the learner.</h2></div>
       </section>
       <section className="section shell" id="approach">
-        <div className="section-heading"><div><span className="kicker">01 / MY APPROACH</span><h2>Connection first.<br /><em>Teaching with purpose.</em></h2></div><p>A practical approach developed across English teaching, early childhood education, and adult classroom instruction.</p></div>
+        <div className="section-heading"><div><span className="kicker">01 / MY APPROACH</span><h2>Every learner brings<br /><em>something to the lesson.</em></h2></div><p>A practical approach developed across English teaching, early childhood education, and adult classroom instruction.</p></div>
         <div className="skills-grid">{skills.map((skill) => <article className="skill-card" key={skill.number}><span>{skill.number} /</span><h3>{skill.title}</h3><p>{skill.description}</p><a className="practice-link" href={skill.href}>{skill.link} →</a></article>)}</div>
       </section>
       <section className="section portfolio-section" id="portfolio">
         <div className="shell">
-          <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>Experience, evidence<br /><em>and next steps.</em></h2></div><p>See where I have taught, read a specific classroom example, and review the qualifications listed on my résumé.</p></div>
+          <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>See the thinking<br /><em>behind my teaching.</em></h2></div><p>See where I have taught, read a specific classroom example, and review the qualifications listed on my résumé.</p></div>
           <div className="portfolio-grid">{portfolioSections.map((item) => <a className="portfolio-card" href={item.href} key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">↗</span></a>)}</div>
           <p className="work-note">The classroom reflection is a real, anonymized example—not a claim of measured outcomes. An original illustrative lesson plan and learner materials are also available to inspect.</p>
         </div>
