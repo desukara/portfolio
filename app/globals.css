@@ -376,3 +376,6 @@ main,section,article,footer{min-width:0}
 }
 @media(max-width:390px){.site-header{padding-inline:18px}.brand{font-size:25px}.top-strip{letter-spacing:.08em}.career-jump-links a{flex-basis:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Override older full-width header-nav mobile rules for the dropdown. */
+@media(max-width:800px){.site-header .mobile-menu nav{order:initial;width:min(310px,calc(100vw - 36px));justify-content:initial;flex-wrap:nowrap;gap:0;font-size:14px}.site-header .mobile-menu nav a{font-size:14px;min-height:51px}.site-header .mobile-menu{order:initial}}
