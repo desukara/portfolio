@@ -49,17 +49,17 @@ story = [
     p("meet@eastokyo.com  ·  Authorized to work in Japan without employer sponsorship  ·  Available any day of the week", "Contact"),
     HRFlowable(width="100%", thickness=1, color=LINE, spaceBefore=5, spaceAfter=2),
     p("PROFESSIONAL PROFILE", "Section"),
-    p("TEFL-certified English teacher with Japanese classroom teaching roles in 2020, 2021, and 2026–present, plus online instruction. Experienced with early-childhood, school-age, and adult learners. Completed U.S. Army certification as a Division PM Instructor during active duty in the Regular Army, followed by four years of classroom instruction in Hawaii."),
+    p("TEFL-certified English teacher with teaching experience in Japan dating back to 2020, plus online instruction. Experienced with early-childhood, school-age, and adult learners. Completed U.S. Army classroom instructor training and certification on active duty in the Regular Army, followed by four years of classroom instruction in Hawaii."),
     p("ENGLISH TEACHING EXPERIENCE", "Section"),
 ]
-story += role("Shane English Corporation  |  English Teacher — Cover / Substitute", "2026–PRESENT", "Tokyo, Japan", "Teach learners from toddlers to retired adults, using the school’s curriculum and adapting activities, explanations, and pacing to each assigned class.")
+story += role("Shane English Corporation  |  English Teacher — Cover / Substitute", "CURRENT", "Tokyo, Japan", "Teach learners from toddlers to retired adults, using the school’s curriculum and adapting activities, explanations, and pacing to each assigned class.")
 story += role("Kanda Institute of Foreign Languages (KIFL)  |  English Teacher", "2021", "Kanda, Tokyo", "Evaluated spoken English examinations and supported oral practice in an interactive virtual environment.")
 story += role("BCA English School  |  Full-Time Kindergarten Homeroom Teacher", "2020", "Saitama, Japan", "Planned and taught an English-immersion curriculum across subjects for children ages 5–7.")
 story += role("Panda ABC  |  Online English Teacher", "2019", "Online", "Delivered online English lessons, primarily to elementary-aged learners, in one-to-one and larger classes.")
 story += [p("U.S. ARMY CLASSROOM INSTRUCTION", "Section")]
-story += role("United States Army — Active Duty, Regular Army  |  Division PM Instructor", "2000–2004", "Hawaii, USA", "Earned U.S. Army certification as a Division PM Instructor. Taught field sanitation and preventive medicine, and administered written and practical assessments.")
+story += role("United States Army — Active Duty, Regular Army  |  Classroom Instructor", "2000–2004", "Hawaii, USA", "Completed U.S. Army classroom instructor training and certification. Taught field sanitation and preventive medicine, and administered written and practical assessments.")
 story += [p("CERTIFICATIONS &amp; ADDITIONAL TRAINING", "Section")]
-story += role("U.S. Army Division PM Instructor Certification", "", "Active duty, Regular Army", "Military certification and training in preventive-medicine classroom instruction.")
+story += role("U.S. Army Classroom Instructor Training &amp; Certification", "", "Active duty, Regular Army", "Formal military training and certification for classroom instruction.")
 story += role("TEFL Certificate — MyTEFL", "CERTIFIED", "", "")
 story += role("U.S. Army Medical Department Center and School  |  Preventive Medicine Training", "2000", "Fort Sam Houston, Texas", "")
 story += [p("ADDITIONAL EXPERIENCE", "Section")]

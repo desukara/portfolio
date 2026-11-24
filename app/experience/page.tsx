@@ -32,8 +32,7 @@ export default function ExperiencePage(){
   <section className="communication-section shell">
    <div><span className="kicker">02 / CUSTOMER SERVICE</span><h2>Experience working <em>with people.</em></h2></div>
    <div>
-     <p>Customer service, kitchen operations, and professional communication experience in New York City and other U.S. locations.</p>
-     <ul className="experience-nyc-list">{careerRoles.slice(5,8).map(item=><li key={item.slug}><Link href={`/experience/${item.slug}`}><strong>{item.name}</strong><span>{item.location} ↗</span></Link></li>)}</ul>
+     <p>Customer-service and hospitality roles in New York City and other U.S. locations (approximately 2005–2018). The work involved guest communication, coordinated service, and resolving customer concerns in fast-paced settings.</p>
      <p><Link className="career-role-link" href="/experience/independent-transportation">Owner / Operator · Simmons Taxi (2022–2025) →</Link><br/>U.S. taxi business and customer service.</p>
    </div>
   </section>

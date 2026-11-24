@@ -77,11 +77,7 @@ export default function ResumePage() {
         <h2>CUSTOMER SERVICE &amp; PROFESSIONAL COMMUNICATION</h2>
         <div className="cv-position cv-customer">
           <div className="cv-position-top"><h3>New York City and other U.S. locations</h3><span className="cv-date">APPROX. 2005–2018</span></div>
-          <div className="cv-employers">
-            <p><strong>2nd Avenue Deli</strong><span>Upper East Side, Manhattan</span></p>
-            <p><strong>Olympic Pita</strong><span>Midtown Manhattan</span></p>
-            <p><strong>Sunflower Kosher Diner</strong><span>Upper West Side, Manhattan</span></p>
-          </div>
+          <p>Hospitality and customer-service work across New York City.</p>
         </div>
         <div className="cv-position">
           <div className="cv-position-top"><h3>Simmons Taxi <span className="cv-separator">|</span> Owner / Operator</h3><span className="cv-date">2022–2025</span></div>
