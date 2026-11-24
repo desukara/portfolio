@@ -1,5 +1,5 @@
 # Premium Hybrid — English Teaching Portfolio
-Status: approved visual direction. All CV, experience, credentials, testimonials, and lesson samples must be genuine and verified before publication.
+Status: approved visual direction. All CV, experience, credentials, testimonials, and teaching materials must be genuine and verified before publication.
 
 ## Visual system
 - Audience: Tokyo-based eikaiwa hiring teams, private and international schools, corporate English programs.

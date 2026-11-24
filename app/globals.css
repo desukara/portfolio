@@ -291,7 +291,7 @@ main,section,article,footer{min-width:0}
 .meeting-optional .meeting-form-row+.meeting-form-row{margin-top:19px}
 @media(max-width:600px){.meeting-email a{display:inline-flex;align-items:center;min-height:44px}}
 
-/* Original lesson sample: inspectable online and printable as three handouts. */
+/* Portfolio reading layouts */
 .lesson-preview{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-block:48px 60px;border-top:1px solid var(--line)}
 .lesson-preview h2{font-size:clamp(30px,4vw,48px);line-height:1.2;margin:15px 0}.lesson-preview p{max-width:690px;line-height:1.8;color:var(--muted)}
 .lesson-preview .button-primary{flex-shrink:0;gap:12px}.lesson-note{font-size:12px!important;line-height:1.7;color:var(--muted)}
