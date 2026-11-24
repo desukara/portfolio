@@ -33,7 +33,7 @@ export default function ResumePage() {
 
       <section>
         <h2>PROFESSIONAL PROFILE</h2>
-        <p>TEFL-certified English teacher with teaching experience in Japan dating back to 2020, plus online instruction. I have taught learners from early childhood through adulthood and adapt lessons to learners’ needs while following established curricula. I also completed U.S. Army classroom instructor training and certification during active-duty service in the Regular Army, then taught for four years in Hawaii (2000–2004).</p>
+        <p>TEFL-certified English teacher with classroom teaching roles in Japan in 2020, 2021, and 2026–present, plus online instruction. I have taught learners from early childhood through adulthood and adapt lessons to learners’ needs while following established curricula. I also earned U.S. Army certification as a Division PM Instructor during active-duty Regular Army service and taught for four years in Hawaii (2000–2004).</p>
       </section>
 
       <section>
@@ -48,15 +48,15 @@ export default function ResumePage() {
 
       <section>
         <h2>U.S. ARMY CLASSROOM INSTRUCTION</h2>
-        <ResumePosition employer="United States Army · Active Duty, Regular Army" role="Classroom Instructor" location="Hawaii, USA" dates="2000–2004" summary="Completed U.S. Army classroom instructor training and certification, then taught field sanitation and preventive medicine for four years. Administered written and practical assessments. This role is separate from English-language teaching." />
+        <ResumePosition employer="United States Army · Active Duty, Regular Army" role="Division PM Instructor" location="Hawaii, USA" dates="2000–2004" summary="Earned U.S. Army certification as a Division PM Instructor. Taught field sanitation and preventive medicine for four years and administered written and practical assessments. This role is separate from English-language teaching." />
       </section>
 
       <section>
         <h2 id="resume-training">PROFESSIONAL TRAINING &amp; ADDITIONAL STUDY</h2>
         <div className="cv-position">
-          <div className="cv-position-top"><h3>U.S. Army Classroom Instructor Training &amp; Certification</h3><span className="cv-date">ACTIVE DUTY · 2000–2004</span></div>
+          <div className="cv-position-top"><h3>U.S. Army Division PM Instructor Certification</h3><span className="cv-date">ACTIVE DUTY · 2000–2004</span></div>
           <p className="cv-location">Regular Army · Hawaii, USA</p>
-          <p>Completed formal military training and certification for classroom instruction while serving on active duty in the Regular Army.</p>
+          <p>Military certification and training in preventive-medicine classroom instruction while serving on active duty in the Regular Army.</p>
         </div>
         <div className="cv-position">
           <div className="cv-position-top"><h3>TEFL Certificate <span className="cv-separator">|</span> MyTEFL</h3><span className="cv-date">CERTIFIED</span></div>
