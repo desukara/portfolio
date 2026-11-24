@@ -28,17 +28,17 @@ export default function ResumePage() {
       <header className="cv-header">
         <h1>JAMES SIMMONS</h1>
         <p className="cv-subtitle">ENGLISH TEACHER / TOKYO, JAPAN</p>
-        <p className="cv-status">Seeking full-time English teaching work <span aria-hidden="true">•</span> Currently employed at Shane English Corporation</p>
+        <p className="cv-status">Seeking full-time English teaching work <span aria-hidden="true">•</span> Authorized to work in Japan without employer sponsorship <span aria-hidden="true">•</span> Available any day of the week</p>
       </header>
 
       <section>
         <h2>PROFESSIONAL PROFILE</h2>
-        <p>TEFL-certified English teacher working with learners from age three through retirement. Experienced in curriculum-guided instruction, rapport-building, and adapting activities to individual learners. Previous English teaching in Tokyo, Saitama, and online instruction. Previously served as a full-time U.S. Army classroom instructor in Hawaii (2000–2004). Additional customer service experience supporting clear communication with people from diverse backgrounds.</p>
+        <p>TEFL-certified English teacher with classroom teaching roles in Japan in 2020, 2021, and 2026–present, plus online instruction. I have taught learners from early childhood through adulthood and adapt lessons to learners’ needs while following established curricula. I also earned U.S. Army certification as a Division PM Instructor during active-duty Regular Army service and taught for four years in Hawaii (2000–2004).</p>
       </section>
 
       <section>
         <h2>CURRENT EMPLOYMENT &amp; AVAILABILITY</h2>
-        <p><strong>Current:</strong> Shane English Corporation, Tokyo. <strong>Seeking:</strong> Full-time English teaching in Tokyo. My current contract provides flexibility to accept new work at my discretion. <strong>Schedule:</strong> Not available during Shabbat (Friday sunset through Saturday sunset).</p>
+        <p><strong>Current:</strong> Shane English Corporation, Tokyo. <strong>Seeking:</strong> Full-time English teaching in Tokyo. <strong>Work authorization:</strong> Authorized to work in Japan without employer sponsorship. <strong>Availability:</strong> Any day of the week.</p>
       </section>
 
       <section>
@@ -48,11 +48,19 @@ export default function ResumePage() {
 
       <section>
         <h2>U.S. ARMY CLASSROOM INSTRUCTION</h2>
-        <ResumePosition employer="United States Army" role="Full-Time Classroom Instructor" location="Hawaii, USA" dates="2000–2004" summary="Delivered full-time instruction in field sanitation and preventive medicine, and administered written and practical assessments. This role is separate from English-language teaching." />
+        <ResumePosition employer="United States Army · Active Duty, Regular Army" role="Division PM Instructor" location="Hawaii, USA" dates="2000–2004" summary="Earned U.S. Army certification as a Division PM Instructor. Taught field sanitation and preventive medicine for four years and administered written and practical assessments. This role is separate from English-language teaching." />
       </section>
 
       <section>
-        <h2 id="resume-training">EDUCATION &amp; PROFESSIONAL TRAINING</h2>
+        <h2 id="resume-training">PROFESSIONAL TRAINING &amp; ADDITIONAL STUDY</h2>
+        <div className="cv-position">
+          <div className="cv-position-top"><h3>U.S. Army Division PM Instructor Certification</h3><span className="cv-date">ACTIVE DUTY · 2000–2004</span></div>
+          <p className="cv-location">Regular Army · Hawaii, USA</p>
+          <p>Military certification and training in preventive-medicine classroom instruction while serving on active duty in the Regular Army.</p>
+        </div>
+        <div className="cv-position">
+          <div className="cv-position-top"><h3>TEFL Certificate <span className="cv-separator">|</span> MyTEFL</h3><span className="cv-date">CERTIFIED</span></div>
+        </div>
         <div className="cv-position">
           <div className="cv-position-top"><h3>Harvard Extension School <span className="cv-separator">|</span> Web Development</h3><span className="cv-date">2022–PRESENT</span></div>
           <p className="cv-location">Cambridge, Massachusetts</p>
@@ -69,26 +77,18 @@ export default function ResumePage() {
         <h2>CUSTOMER SERVICE &amp; PROFESSIONAL COMMUNICATION</h2>
         <div className="cv-position cv-customer">
           <div className="cv-position-top"><h3>New York City and other U.S. locations</h3><span className="cv-date">APPROX. 2005–2018</span></div>
-          <div className="cv-employers">
-            <p><strong>2nd Avenue Deli</strong><span>Upper East Side, Manhattan</span></p>
-            <p><strong>Olympic Pita</strong><span>Midtown Manhattan</span></p>
-            <p><strong>Sunflower Kosher Diner</strong><span>Upper West Side, Manhattan</span></p>
-          </div>
+          <p>Hospitality and customer-service work across New York City.</p>
         </div>
         <div className="cv-position">
-          <div className="cv-position-top"><h3>Independent Contractor <span className="cv-separator">|</span> Taxi Services</h3><span className="cv-date">2022–2025</span></div>
+          <div className="cv-position-top"><h3>Simmons Taxi <span className="cv-separator">|</span> Owner / Operator</h3><span className="cv-date">2022–2025</span></div>
           <p className="cv-location">Boston · South Florida · Charlotte · Atlanta · Pittsburgh</p>
-          <p>Customer-facing transportation services across multiple U.S. cities.</p>
+          <p>Owned and operated a U.S. taxi company, managing daily operations, routes, scheduling, and passenger service across multiple markets.</p>
         </div>
       </section>
 
-      <section className="cv-certification">
-        <h2>CERTIFICATION</h2>
-        <p>TEFL Certificate — MyTEFL</p>
-      </section>
     </article>
     <div className="resume-postscript shell">
-      <p>Choose <strong>Download résumé</strong> for the original approved PDF, or <strong>Print</strong> for this expanded web version. The web version includes additional role details and classroom responsibilities.</p>
+      <p>Choose <strong>Download résumé</strong> for the one-page PDF, or <strong>Print</strong> for the expanded web version with additional role details.</p>
       <div className="resume-next-actions"><Link href="/experience">Explore professional experience →</Link><Link href="/meeting">Request an interview →</Link></div>
     </div>
   </main>;

@@ -15,12 +15,12 @@ export default function ExperiencePage(){
   <section className="experience-hero shell" id="main-content" tabIndex={-1}>
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>
    <h1>Teaching across <em>classrooms, cultures &amp; borders.</em></h1>
-   <p className="experience-lead">TEFL-certified English teacher currently working in a cover teaching role at Shane English Corporation in Tokyo, with learners from age three through retirement. I work within established curricula while adapting my delivery to learners’ strengths and personalities. My background also includes English teaching in Japan and online, and U.S. Army classroom instruction in Hawaii.</p>
+   <p className="experience-lead">TEFL-certified English teacher currently working in Tokyo. My English-teaching roles in Japan include BCA English School (2020), KIFL (2021), and Shane English Corporation (2026–present). My background also includes online English teaching and U.S. Army training and certification as a Division PM Instructor, followed by four years of active-duty classroom instruction in Hawaii.</p>
    <p className="experience-guide">Looking for a particular teaching skill? Start with the setting most relevant to your school, then explore a real classroom reflection and an inspectable lesson sample.</p><nav className="experience-paths" aria-label="Find experience for your school"><Link href="/experience/shane-english">Curriculum-guided cover teaching →</Link><Link href="/experience/bca-english-school">Kindergarten homeroom teaching →</Link><Link href="/experience/kifl">Oral assessment and spoken practice →</Link><Link href="/experience/panda-abc">Online English teaching →</Link><Link href="/experience/us-army">U.S. Army classroom instruction →</Link></nav><div className="experience-evidence"><Link href="/portfolio#classroom-reflection">Read a classroom reflection →</Link><Link href="/portfolio/lesson-sample">Inspect a complete lesson sample →</Link></div>
    <div className="experience-highlights">
     <div><strong>TEFL</strong><span>Certified</span></div>
     <div><strong>Japan + Online</strong><span>English teaching</span></div>
-    <div><strong>2000–2004</strong><span>Army classroom instruction</span></div>
+    <div><strong>4 years</strong><span>Army Division PM Instructor &amp; classroom teaching</span></div>
    </div>
   </section>
   <section className="experience-section"><div className="shell">
@@ -32,12 +32,11 @@ export default function ExperiencePage(){
   <section className="communication-section shell">
    <div><span className="kicker">02 / CUSTOMER SERVICE</span><h2>Experience working <em>with people.</em></h2></div>
    <div>
-     <p>Customer service, kitchen operations, and professional communication experience in New York City and other U.S. locations.</p>
-     <ul className="experience-nyc-list">{careerRoles.slice(5,8).map(item=><li key={item.slug}><Link href={`/experience/${item.slug}`}><strong>{item.name}</strong><span>{item.location} ↗</span></Link></li>)}</ul>
-     <p><Link className="career-role-link" href="/experience/independent-transportation">Independent Contractor · Taxi Services (2022–2025) →</Link><br/>Boston · South Florida · Charlotte · Atlanta · Pittsburgh.</p>
+     <p>Customer-service and hospitality roles in New York City and other U.S. locations (approximately 2005–2018). The work involved guest communication, coordinated service, and resolving customer concerns in fast-paced settings.</p>
+     <p><Link className="career-role-link" href="/experience/independent-transportation">Owner / Operator · Simmons Taxi (2022–2025) →</Link><br/>U.S. taxi business and customer service.</p>
    </div>
   </section>
-  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently employed at Shane English Corporation in Tokyo. My contract provides flexibility to accept new work at my discretion. Not available during Shabbat (Friday sunset through Saturday sunset).</p><Link className="button-primary" href="/meeting">Request an interview ↗</Link> <Link className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></section>
+  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently teaching in Tokyo. Authorized to work in Japan without employer sponsorship and available any day of the week.</p><Link className="button-primary" href="/meeting">Request an interview ↗</Link> <Link className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></section>
   <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Homepage ↗</Link></div></footer>
  </main>;
 }

@@ -1,11 +1,11 @@
-# English Teaching Portfolio
+# James Simmons — English Teaching Portfolio
 
-Professional English teaching portfolio for full-time teaching opportunities in Tokyo, Japan.
+Professional portfolio for full-time English teaching opportunities in Tokyo, Japan. The site includes teaching experience, classroom reflections, an illustrative lesson sample, a résumé, and an interview request form.
 
-Built with Next.js, hosted on Vercel, and connected to Supabase.
+Built with Next.js, hosted on Vercel, and connected to Supabase for interview requests.
 
 ## Setup
 
 Install dependencies with `npm install`, then run `npm run dev`.
 
-The homepage contains editable placeholder text until personal teaching details, CV, and lesson samples are added.
+Regenerate the downloadable résumé PDF with `python scripts/build_resume_pdf.py`.
