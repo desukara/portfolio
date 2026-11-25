@@ -16,10 +16,22 @@ export default function HomeMotion() {
     }
 
     page.classList.add("home-motion-ready");
-    const revealItems = Array.from(page.querySelectorAll<HTMLElement>("[data-home-reveal], [data-home-scroll-reveal]"));
+    const heroItems = Array.from(page.querySelectorAll<HTMLElement>("[data-home-reveal]"));
+    const revealItems = Array.from(page.querySelectorAll<HTMLElement>("[data-home-scroll-reveal]"));
+    heroItems.forEach((item) => {
+      const delay = Number(item.dataset.homeDelay ?? 0);
+      item.style.setProperty("--home-delay", Math.max(0, Math.min(delay, 500)) + "ms");
+    });
     revealItems.forEach((item) => {
       const delay = Number(item.dataset.homeDelay ?? 0);
       item.style.setProperty("--home-delay", Math.max(0, Math.min(delay, 500)) + "ms");
+    });
+
+    // Hero elements are already on the first screen. Reveal them directly so
+    // the lead portrait cannot remain hidden if an observer misses its first entry.
+    let heroFrame = window.requestAnimationFrame(() => {
+      heroItems.forEach((item) => item.classList.add("is-home-visible"));
+      heroFrame = 0;
     });
 
     let observer: IntersectionObserver | undefined;
@@ -77,6 +89,7 @@ export default function HomeMotion() {
       window.removeEventListener("scroll", requestProgressUpdate);
       window.removeEventListener("resize", requestProgressUpdate);
       if (frame) window.cancelAnimationFrame(frame);
+      if (heroFrame) window.cancelAnimationFrame(heroFrame);
       if (photo && finePointer.matches) {
         photo.removeEventListener("pointermove", onPointerMove);
         photo.removeEventListener("pointerleave", resetPointer);
