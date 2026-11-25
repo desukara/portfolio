@@ -685,3 +685,94 @@ footer{background:#202f3b;color:var(--paper)}
  .hero.hero .hero-photo{width:min(100%,280px)}
  .business-ownership-link{width:100%}
 }
+
+/* Recruiter review: put role facts first and cut repeated filler blocks. */
+footer{padding-top:72px}
+.footer-grid{padding-bottom:56px}
+.experience-page .experience-hero{padding-block:64px 48px}
+.experience-page .experience-hero h1{font-size:clamp(42px,4.8vw,64px);line-height:1.08;margin:18px 0 22px}
+.experience-page .experience-lead{max-width:900px;font-size:17px;line-height:1.65}
+.experience-page .experience-guide{max-width:900px;margin:12px 0 0;font-size:13px;line-height:1.6}
+.experience-page .experience-section{padding-block:54px}
+.experience-page .section-heading{margin-bottom:22px}
+.experience-page .section-heading h2{font-size:clamp(38px,4vw,54px)}
+.experience-page .role-row{grid-template-columns:54px minmax(0,1fr);padding-block:24px;gap:16px}
+.experience-page .role-row h3{font-size:27px;margin:7px 0 5px}
+.experience-page .role-row .role-org{margin-bottom:10px}
+.communication-section{align-items:center;padding-block:54px;gap:48px}
+.communication-section h2{font-size:clamp(34px,3.6vw,48px);margin-top:12px}
+.communication-section p{margin:0}
+.experience-page .experience-cta{padding-block:54px}
+.about-hero{min-height:0;padding-block:76px;align-items:start;gap:clamp(36px,5vw,64px)}
+.about-copy h1{font-size:clamp(42px,4.5vw,62px);line-height:1.08;margin:20px 0 22px}
+.about-copy h1 em{font-style:normal;color:var(--deep)}
+.about-intro{max-width:680px;font-size:18px;line-height:1.7}
+.about-muted{max-width:680px;color:var(--muted);font-size:15px;line-height:1.75}
+.about-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;margin-top:24px}
+.about-proof-panel{display:flex;flex-direction:column;gap:0;padding:28px 30px;border-left:4px solid var(--deep);background:var(--panel-blue)}
+.about-proof-panel>.kicker{margin-bottom:10px;color:var(--deep)}
+.about-proof-panel>div{display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid #c7d3d9}
+.about-proof-panel>div span{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--muted)}
+.about-proof-panel>div strong{font-size:16px;line-height:1.45;color:var(--ink)}
+.career-breadcrumb{padding-top:18px;font-size:11px}
+.career-hero{padding-block:48px 40px}
+.career-hero h1{font-size:clamp(40px,6vw,72px);line-height:1.06;margin:16px 0 14px}
+.career-hero .experience-lead{font-size:16px;margin-bottom:9px}
+.career-summary{max-width:780px;font-size:15px;line-height:1.65;margin-bottom:0}
+.career-jump-links{margin-top:20px}
+#role-details.experience-section{padding-block:58px}
+.career-content{grid-template-columns:minmax(0,1fr);gap:0;max-width:1150px}
+.career-content>div{max-width:1060px}
+.career-content h2{font-size:clamp(34px,4vw,48px);margin:12px 0 20px}
+.career-content ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:52px;row-gap:0;margin:0;padding-left:20px}
+.career-content li{font-size:15px;line-height:1.7;margin-bottom:10px}
+.career-example-section{padding-block:52px 58px}
+.career-example-section .career-example h2{font-size:clamp(30px,4vw,46px);line-height:1.15;letter-spacing:-.025em;max-width:800px;margin:16px 0 20px}
+.career-example-section .career-example p{font-size:16px;line-height:1.7;margin-bottom:14px}
+.career-example-section .career-example p:last-child{border:0;padding:0;margin:0}
+.career-next{padding-block:30px}
+.career-navigation{margin-top:12px}
+.career-hero~.experience-cta{padding-block:54px}
+.portfolio-page .experience-hero{padding-block:64px 54px}
+.portfolio-page .experience-hero h1{margin-block:18px 20px}
+.portfolio-page .experience-lead{max-width:780px}
+.reflection-roadmap{display:none}
+.reflection-story h3{font-size:20px;margin:25px 0 8px}
+.reflection-story p{margin-bottom:12px}
+.case-study .case-note{margin-top:20px}
+.portfolio-evidence{padding-block:64px 70px}
+.portfolio-page .about-next{display:none}
+@media(max-width:900px){
+ .about-hero{grid-template-columns:minmax(0,1fr);padding-block:54px;gap:32px}
+ .about-proof-panel{width:100%;max-width:640px}
+}
+@media(max-width:700px){
+ footer{padding-top:48px}
+ .footer-grid{padding-bottom:36px}
+ .experience-page .experience-hero{padding-block:44px 34px}
+ .experience-page .experience-lead{font-size:16px}
+ .experience-page .experience-section{padding-block:42px}
+ .experience-page .role-row{grid-template-columns:32px minmax(0,1fr);gap:10px;padding-block:19px}
+ .experience-page .role-row h3{font-size:23px}
+ .communication-section{grid-template-columns:minmax(0,1fr);gap:10px;padding-block:38px}
+ .communication-section h2{font-size:36px}
+ .experience-page .experience-cta{padding-block:42px}
+ .about-hero{padding-block:42px;gap:25px}
+ .about-copy h1{font-size:clamp(38px,10vw,52px)}
+ .about-intro{font-size:16px}
+ .about-muted{font-size:14px}
+ .about-proof-panel{padding:22px 20px}
+ .about-proof-panel>div{padding:13px 0}
+ .career-breadcrumb{padding-top:14px}
+ .career-hero{padding-block:35px 30px}
+ .career-hero h1{font-size:clamp(38px,10vw,54px)}
+ #role-details.experience-section{padding-block:40px}
+ .career-content ul{grid-template-columns:minmax(0,1fr);gap:0}
+ .career-content li{font-size:14px;margin-bottom:8px}
+ .career-example-section{padding-block:38px 42px}
+ .career-example-section .career-example h2{font-size:32px}
+ .career-example-section .career-example p{font-size:15px;line-height:1.65}
+ .career-next{padding-block:24px}
+ .portfolio-page .experience-hero{padding-block:42px 36px}
+ .portfolio-evidence{padding-block:44px}
+}
