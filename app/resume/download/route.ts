@@ -4,7 +4,7 @@ import { join } from "node:path";
 
 export const runtime = "nodejs";
 
-const OFFICIAL_SHA256 = "fd3709e9df7a74b4b64255b684ffb05d92721ac6003ffb2bdafc6d920fc7c34f";
+const OFFICIAL_SHA256 = "d5130de3f503b51b2cfe39c1a4859bffa5137e48694db01b0e789f37eb82fa4e";
 
 export async function GET() {
   try {
