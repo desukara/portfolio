@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 
 export default function ExperiencePage(){
- return <main>
+ return <main className="experience-page">
   <SiteHeader current="/experience" />
   <section className="experience-hero shell" id="main-content" tabIndex={-1}>
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>

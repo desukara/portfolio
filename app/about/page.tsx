@@ -15,13 +15,13 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <main>
+      <main className="about-page">
       <SiteHeader current="/about" />
       <section className="about-hero shell" id="main-content" tabIndex={-1}>
         <div>
           <span className="kicker">01 / THE PERSON BEHIND THE LESSONS</span>
           <h1>Start with curiosity.<br/><em>Build a connection.</em></h1>
-          <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. I also completed U.S. Army classroom instructor training and certification while on active duty in the Regular Army, then served four years as a classroom instructor in Hawaii (2000–2004).</p>
+          <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. While on active duty in the Regular Army, I earned U.S. Army certification as a Division PM Instructor and taught for four years in Hawaii (2000–2004).</p>
           <p className="about-muted">At Shane, I teach learners from age three through retirement, using the school’s textbooks and teacher’s guides while adapting activities and pacing to the students in front of me. My strength is recognizing individual learners’ interests and abilities and building a connection that helps them participate.</p>
           <p className="about-muted"><strong>Additional background:</strong> customer-facing work across several U.S. cities and web development studies at Harvard Extension School since 2022. My certificate is in progress.</p>
           <Link href="/portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">↗</span></Link>

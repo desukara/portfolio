@@ -31,7 +31,7 @@ export default function Home() {
           <img src="/homepage-photo.jpeg" width={1076} height={1366} fetchPriority="high" alt="James Simmons, English teacher in Tokyo" loading="eager" />
         </div>
       </section>
-      <section className="home-proof shell" aria-label="Teaching experience at a glance"><div><strong>TEFL</strong><span>Certified English teacher</span></div><div><strong>Japan since 2020</strong><span>Classroom teaching experience</span></div><div><strong>U.S. Army</strong><span>Classroom instructor training &amp; certification</span></div></section>
+      <section className="home-proof shell" aria-label="Teaching experience at a glance"><div><strong>TEFL</strong><span>Certified English teacher</span></div><div><strong>Japan</strong><span>BCA 2020 · KIFL 2021 · Shane 2026–present</span></div><div><strong>U.S. Army</strong><span>Division PM Instructor certification</span></div></section>
       <section className="home-employer-path shell" aria-labelledby="employer-path-heading"><div><span className="kicker">INSIDE MY PERSONAL PORTFOLIO</span><h2 id="employer-path-heading">My experience and <em>my approach.</em></h2><p>I built this portfolio to share who I am as a teacher, the classrooms I have worked in, and how I reflect on teaching.</p></div><div className="home-employer-links"><a href="/experience"><strong>01 / Teaching experience</strong><span>Roles in Japan, online, and classroom instruction ↗</span></a><a href="/portfolio"><strong>02 / Classroom evidence</strong><span>An anonymized classroom reflection ↗</span></a><a href="/resume/download" download="J_Simmons_Resume_2026.pdf"><strong>03 / Approved résumé</strong><span>Download the PDF ↓</span></a></div></section><section className="intro-band">
         <div className="shell intro-grid"><p>HOW I TEACH</p><h2>A clear learning goal.<br />An approach that fits the learner.</h2></div>
       </section>
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>See the thinking<br /><em>behind my teaching.</em></h2></div><p>See where I have taught, read a specific classroom example, and review the qualifications listed on my résumé.</p></div>
           <div className="portfolio-grid">{portfolioSections.map((item) => <a className="portfolio-card" href={item.href} key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">↗</span></a>)}</div>
-          <p className="work-note">The classroom reflection is a real, anonymized example—not a claim of measured outcomes. An original illustrative lesson plan and learner materials are also available to inspect.</p>
+          <p className="work-note">The classroom reflection is a real, anonymized example—not a claim of measured outcomes.</p>
         </div>
       </section>
       <footer id="contact">
