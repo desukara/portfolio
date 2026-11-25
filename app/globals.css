@@ -462,8 +462,9 @@ body{background:var(--paper);color:var(--ink)}
 .desktop-navigation a[aria-current="page"],.mobile-menu a[aria-current="page"]{color:var(--deep)}
 .nav-cta{border-bottom:2px solid var(--coral);color:var(--ink)}
 .nav-cta:hover{color:var(--coral)}
-.brand-wordmark,.brand-wordmark span{color:var(--ink)}
-.brand-wordmark small{color:var(--muted)}
+.site-header .brand-wordmark,.site-header .brand-wordmark span{color:var(--ink)}
+.site-header .brand-wordmark{display:flex;flex-direction:column;align-items:flex-start;white-space:nowrap;gap:4px}
+.site-header .brand-wordmark small{display:block;color:var(--muted);margin-top:0}
 .kicker,.eyebrow{color:var(--deep)}
 .status-dot{background:#6b8e83;box-shadow:0 0 0 5px #e3ebe5}
 :focus-visible{outline-color:var(--coral);box-shadow:0 0 0 2px var(--paper-white)}

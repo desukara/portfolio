@@ -24,7 +24,7 @@ export default function AboutPage() {
           <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. I&apos;m a TEFL-certified English teacher with experience at BCA in Saitama, KIFL in Kanda, Tokyo, and online with Panda ABC. While on active duty in the Regular Army, I earned U.S. Army certification as a Division PM Instructor and taught for four years in Hawaii (2000–2004).</p>
           <p className="about-muted">At Shane, I teach learners from age three through retirement, using the school’s textbooks and teacher’s guides while adapting activities and pacing to the students in front of me. My strength is recognizing individual learners’ interests and abilities and building a connection that helps them participate.</p>
           <p className="about-muted"><strong>Additional background:</strong> customer-facing work across several U.S. cities and web development studies at Harvard Extension School since 2022. My certificate is in progress.</p>
-          <Link href="/portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">↗</span></Link>
+          <Link href="/portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">→</span></Link>
         </div>
         <div className="about-feature" aria-label="Abstract illustration of an open book and dialogue">
           <div className="feature-disc"></div>
@@ -45,7 +45,7 @@ export default function AboutPage() {
         <div><span className="kicker">03 / NEXT UP</span><h2>Get to know my <em>teaching in practice.</em></h2></div>
         <div><p>From a young learner discovering a new way to participate to working with adults in English classes, I value the small moments that make a lesson work. Explore the classroom examples behind my approach, along with my experience and résumé.</p><div className="about-next-links"><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link><Link href="/resume/download" className="button-link" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></div>
       </section>
-      <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage ↗</Link></div></footer>
+      <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage →</Link></div></footer>
     </main>
   );
 }
