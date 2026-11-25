@@ -76,6 +76,6 @@ export default function MeetingRequestForm() {
     <p className="meeting-form-hint">Please choose a date from today through 180 days ahead (based on Tokyo’s calendar). For an alternate proposal, enter both a date and a time. The time you enter is in the time zone selected above. I’m flexible across all days of the week.</p>
     <p className="meeting-privacy">Your contact details, meeting format, time zone, and one proposed date and time are required. Your details will be used to review and respond to this request. Times are proposals, not confirmed bookings.</p>
     {state==="error"&&<div className="meeting-error" role="alert" ref={feedback} tabIndex={-1}>{error} Your entries are still here. Try again or <strong>email meet@eastokyo.com</strong>.</div>}
-    <button className="button-primary meeting-submit" type="submit" disabled={state==="sending"}>{state==="sending"?"Sending request…":"Send meeting request"} <span aria-hidden="true">↗</span></button>
+    <button className="button-primary meeting-submit" type="submit" disabled={state==="sending"}>{state==="sending"?"Sending request…":"Send meeting request"} <span aria-hidden="true">→</span></button>
   </form>;
 }

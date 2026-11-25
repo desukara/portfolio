@@ -1,2 +1,2 @@
 "use client";
-export function PrintResumeButton(){return <button className="resume-print-button" type="button" onClick={()=>window.print()}>Print ↗</button>;}
+export function PrintResumeButton(){return <button className="resume-print-button" type="button" onClick={()=>window.print()}>Print →</button>;}
