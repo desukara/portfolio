@@ -16,7 +16,7 @@ export default function ExperiencePage(){
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>
    <h1>Teaching across <em>classrooms, cultures &amp; borders.</em></h1>
    <p className="experience-lead">TEFL-certified English teacher currently working in Tokyo. My English-teaching roles in Japan include BCA English School (2020), KIFL (2021), and Shane English Corporation (2026–present). My background also includes online English teaching and U.S. Army training and certification as a Division PM Instructor, followed by four years of active-duty classroom instruction in Hawaii.</p>
-   <p className="experience-guide">Looking for a particular teaching skill? Start with the setting most relevant to your school, then explore a classroom reflection.</p><nav className="experience-paths" aria-label="Find experience for your school"><Link href="/experience/shane-english">Curriculum-guided cover teaching →</Link><Link href="/experience/bca-english-school">Kindergarten homeroom teaching →</Link><Link href="/experience/kifl">Oral assessment and spoken practice →</Link><Link href="/experience/panda-abc">Online English teaching →</Link><Link href="/experience/us-army">U.S. Army classroom instruction →</Link></nav><div className="experience-evidence"><Link href="/portfolio#classroom-reflection">Read a classroom reflection →</Link></div>
+   <p className="experience-guide">Teaching positions are listed by setting below. Japan-based roles show their employer and year; U.S. business ownership is separated from the teaching timeline.</p><p className="experience-path-label">Jump to a role</p><nav className="experience-paths" aria-label="Jump to an experience"><Link href="/experience/shane-english"><strong>Shane</strong><span>Cover teaching · Tokyo</span></Link><Link href="/experience/bca-english-school"><strong>BCA</strong><span>Kindergarten homeroom · Saitama</span></Link><Link href="/experience/kifl"><strong>KIFL</strong><span>Oral assessment · Tokyo</span></Link><Link href="/experience/panda-abc"><strong>Panda ABC</strong><span>Online English teaching</span></Link><Link href="/experience/us-army"><strong>U.S. Army</strong><span>Instructor training and classroom instruction</span></Link></nav><div className="experience-evidence"><Link href="/portfolio#classroom-reflection">Read a classroom reflection →</Link></div>
    <div className="experience-highlights">
     <div><strong>TEFL</strong><span>Certified</span></div>
     <div><strong>Japan + Online</strong><span>English teaching</span></div>
@@ -29,11 +29,14 @@ export default function ExperiencePage(){
      <span className="role-number">{String(i+1).padStart(2,"0")}</span><div><span className="kicker">{role.category.toUpperCase()}</span><h3>{role.title}</h3><p className="role-org">{role.name} <span>· {role.location} · {role.dates}</span></p><p>{role.summary}</p><Link className="career-role-link" href={`/experience/${role.slug}`}>Read about this role →</Link></div>
     </article>)}</div>
    </div></section>
+  <section className="business-ownership shell" aria-labelledby="business-ownership-heading">
+   <div><span className="kicker">U.S. BUSINESS OWNERSHIP · 2022–2025</span><h2 id="business-ownership-heading">Simmons Taxi</h2><p>Owner / Operator of a U.S.-based taxi company. This business experience is shown separately from my Japan and online teaching roles.</p></div>
+   <Link className="business-ownership-link" href="/experience/independent-transportation">Review U.S. business experience <span aria-hidden="true">→</span></Link>
+  </section>
   <section className="communication-section shell">
    <div><span className="kicker">02 / CUSTOMER SERVICE</span><h2>Experience working <em>with people.</em></h2></div>
    <div>
      <p>Customer-service and hospitality roles in New York City and other U.S. locations (approximately 2005–2018). The work involved guest communication, coordinated service, and resolving customer concerns in fast-paced settings.</p>
-     <p><Link className="career-role-link" href="/experience/independent-transportation">Owner / Operator · Simmons Taxi (2022–2025) →</Link><br/>U.S. taxi business and customer service.</p>
    </div>
   </section>
   <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently teaching in Tokyo. Authorized to work in Japan without employer sponsorship and available any day of the week.</p><Link className="button-primary" href="/meeting">Request an interview →</Link> <Link className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></section>

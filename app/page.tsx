@@ -1,15 +1,8 @@
 import SiteHeader from "./components/site-header";
 const skills = [
-  { number: "01", title: "Recognize strengths", description: "Look for what each learner already knows and the conditions in which they can show it.", href: "/portfolio#classroom-reflection", link: "See a classroom reflection" },
-  { number: "02", title: "Build connection", description: "In unfamiliar cover classes, I adjust explanations, activities and pacing to the learners I meet.", href: "/experience/shane-english", link: "Explore cover teaching" },
-  { number: "03", title: "Adapt with purpose", description: "Use the school’s curriculum and teacher guides to keep activities focused on the lesson’s learning goals.", href: "/experience/shane-english", link: "Read about lesson preparation" },
-];
-
-const portfolioSections = [
-  { title: "About me", href: "/about", tag: "01 / PROFILE", text: "My teaching background across Japan, online learning, and classroom instruction." },
-  { title: "Teaching experience", href: "/experience", tag: "02 / EXPERIENCE", text: "Teaching experience in Japan, online, and during U.S. Army service." },
-  { title: "Teaching portfolio", href: "/portfolio", tag: "03 / WORK", text: "Read a classroom reflection and explore my teaching experience." },
-  { title: "Request a meeting", href: "/meeting", tag: "04 / CONNECT", text: "Schools and hiring teams can propose an online interview directly through my website." },
+  { number: "01", title: "Recognize strengths", description: "Look for what each learner already knows and the conditions in which they can show it." },
+  { number: "02", title: "Build connection", description: "In unfamiliar cover classes, I adjust explanations, activities and pacing to the learners I meet." },
+  { number: "03", title: "Adapt with purpose", description: "Use the school’s curriculum and teacher guides to keep activities focused on the lesson’s learning goals." },
 ];
 
 export default function Home() {
@@ -23,7 +16,7 @@ export default function Home() {
           <p className="hero-lead">Welcome to my personal teaching portfolio. I&apos;m a <strong>TEFL-certified English teacher based in Tokyo</strong>, with classroom experience in Japan, online teaching, and full-time kindergarten homeroom instruction. I currently teach learners from age three through retirement.</p>
           <p className="hero-detail">Currently working as a cover teacher with Shane English Corporation. I&apos;m seeking a full-time teaching role in Tokyo. I&apos;m authorized to work in Japan without employer sponsorship and am available any day of the week.</p>
           <div className="actions">
-            <a className="button-primary" href="/portfolio">Explore my teaching <span aria-hidden="true">→</span></a>
+            <a className="button-primary" href="/experience">Review teaching experience <span aria-hidden="true">→</span></a>
             <a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé <span aria-hidden="true">↓</span></a>
           </div>
         </div>
@@ -31,20 +24,13 @@ export default function Home() {
           <img src="/homepage-photo.jpeg" width={1076} height={1366} fetchPriority="high" alt="James Simmons, English teacher in Tokyo" loading="eager" />
         </div>
       </section>
-      <section className="home-proof shell" aria-label="Teaching experience at a glance"><div><strong>TEFL</strong><span>Certified English teacher</span></div><div><strong>Japan</strong><span>BCA 2020 · KIFL 2021 · Shane 2026–present</span></div><div><strong>U.S. Army</strong><span>Division PM Instructor certification</span></div></section>
-      <section className="home-employer-path shell" aria-labelledby="employer-path-heading"><div><span className="kicker">INSIDE MY PERSONAL PORTFOLIO</span><h2 id="employer-path-heading">My experience and <em>my approach.</em></h2><p>I built this portfolio to share who I am as a teacher, the classrooms I have worked in, and how I reflect on teaching.</p></div><div className="home-employer-links"><a href="/experience"><strong>01 / Teaching experience</strong><span>Roles in Japan, online, and classroom instruction →</span></a><a href="/portfolio"><strong>02 / Classroom evidence</strong><span>An anonymized classroom reflection →</span></a><a href="/resume/download" download="J_Simmons_Resume_2026.pdf"><strong>03 / Approved résumé</strong><span>Download the PDF ↓</span></a></div></section><section className="intro-band">
+      <section className="home-proof shell" aria-label="Teaching experience at a glance"><div><strong>TEFL</strong><span>Certified English teacher</span></div><div><strong>Japan teaching roles</strong><span>BCA (2020) · KIFL (2021) · Shane (2026–present)</span></div><div><strong>U.S. Army</strong><span>Division PM Instructor certification</span></div></section>
+      <section className="home-employer-path shell" aria-labelledby="employer-path-heading"><div><span className="kicker">FOR SCHOOL HIRING TEAMS</span><h2 id="employer-path-heading">A clear view of <em>my teaching.</em></h2><p>Review my teaching timeline, see one anonymized classroom reflection, or download the one-page résumé.</p></div><div className="home-employer-links"><a href="/experience"><strong>Teaching experience</strong><span>Japan, online, and U.S. Army instruction →</span></a><a href="/portfolio#classroom-reflection"><strong>Classroom reflection</strong><span>An anonymized example of adapting an activity →</span></a><a href="/resume/download" download="J_Simmons_Resume_2026.pdf"><strong>One-page résumé (PDF)</strong><span>Download the résumé ↓</span></a></div></section><section className="intro-band">
         <div className="shell intro-grid"><p>HOW I TEACH</p><h2>A clear learning goal.<br />An approach that fits the learner.</h2></div>
       </section>
       <section className="section shell" id="approach">
         <div className="section-heading"><div><span className="kicker">01 / MY APPROACH</span><h2>Every learner brings<br /><em>something to the lesson.</em></h2></div><p>A practical approach developed across English teaching, early childhood education, and adult classroom instruction.</p></div>
-        <div className="skills-grid">{skills.map((skill) => <article className="skill-card" key={skill.number}><span>{skill.number} /</span><h3>{skill.title}</h3><p>{skill.description}</p><a className="practice-link" href={skill.href}>{skill.link} →</a></article>)}</div>
-      </section>
-      <section className="section portfolio-section" id="portfolio">
-        <div className="shell">
-          <div className="section-heading"><div><span className="kicker">02 / THE PORTFOLIO</span><h2>See the thinking<br /><em>behind my teaching.</em></h2></div><p>See where I have taught, read a specific classroom example, and review the qualifications listed on my résumé.</p></div>
-          <div className="portfolio-grid">{portfolioSections.map((item) => <a className="portfolio-card" href={item.href} key={item.title}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow" aria-hidden="true">→</span></a>)}</div>
-          <p className="work-note">The classroom reflection is a real, anonymized example—not a claim of measured outcomes.</p>
-        </div>
+        <div className="skills-grid">{skills.map((skill) => <article className="skill-card" key={skill.number}><span>{skill.number} /</span><h3>{skill.title}</h3><p>{skill.description}</p></article>)}</div>
       </section>
       <footer id="contact">
         <div className="shell footer-grid"><div><span className="kicker">03 / CONTACT</span><h2>Interested in my<br /><em>teaching experience?</em></h2><p>I’m James Simmons, an English teacher in Tokyo. If my experience fits an opening at your school, I’d welcome a conversation. You can also <strong className="contact-email">email meet@eastokyo.com</strong>.</p><div className="footer-actions"><a className="button-primary" href="/meeting">Invite me to interview <span aria-hidden="true">→</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
