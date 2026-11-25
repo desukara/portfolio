@@ -84,6 +84,7 @@
 .home-page .home-employer-links a:focus-visible > span { transform: translateX(2px); }
 .home-page .hero-photo {
   position: relative;
+  margin: 0;
   transform-style: preserve-3d;
 }
 .home-page .hero-photo::after {
@@ -146,8 +147,8 @@
 }
 .home-page .home-proof-range.is-home-visible .home-range-rail i { width: 100%; }
 .home-page .home-proof-range .home-range-labels { margin-top: 2px; }
-.home-page .home-motion-ready [data-home-reveal="hero"],
-.home-page .home-motion-ready [data-home-scroll-reveal] {
+.home-page.home-motion-ready [data-home-reveal="hero"],
+.home-page.home-motion-ready [data-home-scroll-reveal] {
   opacity: 0;
   transform: translateY(14px);
   transition:
@@ -222,4 +223,17 @@
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* Progressive enhancement: browsers without native navigation transitions keep normal navigation. */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: home-route-out 160ms ease both; }
+::view-transition-new(root) { animation: home-route-in 220ms cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes home-route-out { to { opacity: 0; } }
+@keyframes home-route-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .home-progress { display: none; }
+  .home-page .home-range-rail i { width: 100% !important; transition: none !important; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none !important; }
 }
