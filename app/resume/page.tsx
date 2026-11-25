@@ -33,7 +33,7 @@ export default function ResumePage() {
 
       <section>
         <h2>PROFESSIONAL PROFILE</h2>
-        <p>TEFL-certified English teacher with classroom teaching roles in Japan in 2020, 2021, and 2026–present, plus online instruction. I have taught learners from early childhood through adulthood and adapt lessons to learners’ needs while following established curricula. I also earned U.S. Army certification as a Division PM Instructor during active-duty Regular Army service and taught for four years in Hawaii (2000–2004).</p>
+        <p>TEFL-certified English teacher with Japan teaching roles at BCA English School, Saitama (2020); KIFL, Tokyo (2021); and Shane English Corporation, Tokyo (2026–present), plus online instruction. I teach learners from early childhood through adulthood and adapt lessons while following established curricula. During active-duty Regular Army service, I earned U.S. Army certification as a Division PM Instructor and taught for four years in Hawaii (2000–2004).</p>
       </section>
 
       <section>
@@ -64,7 +64,7 @@ export default function ResumePage() {
         <div className="cv-position">
           <div className="cv-position-top"><h3>Harvard Extension School <span className="cv-separator">|</span> Web Development</h3><span className="cv-date">2022–PRESENT</span></div>
           <p className="cv-location">Cambridge, Massachusetts</p>
-          <p>Web Development studies; certificate in progress.</p>
+          <p>Online coursework through Harvard Extension School, Cambridge, Massachusetts; certificate in progress.</p>
         </div>
         <div className="cv-position">
           <div className="cv-position-top"><h3>U.S. Army Medical Department Center and School</h3><span className="cv-date">2000</span></div>
@@ -81,7 +81,7 @@ export default function ResumePage() {
         </div>
         <div className="cv-position">
           <div className="cv-position-top"><h3>Simmons Taxi <span className="cv-separator">|</span> Owner / Operator</h3><span className="cv-date">2022–2025</span></div>
-          <p className="cv-location">Boston · South Florida · Charlotte · Atlanta · Pittsburgh</p>
+          <p className="cv-location">United States · Boston · South Florida · Charlotte · Atlanta · Pittsburgh</p>
           <p>Owned and operated a U.S. taxi company, managing daily operations, routes, scheduling, and passenger service across multiple markets.</p>
         </div>
       </section>
