@@ -1,10 +1,122 @@
-export type CareerRole={slug:string;name:string;title:string;location:string;dates:string;category:string;summary:string;responsibilities:string[];relevance:string;personalize:string};
-export const careerRoles:CareerRole[]=[
-{slug:"shane-english",name:"Shane English Corporation",title:"English Teacher — Cover / Substitute Teaching",location:"Tokyo, Japan",dates:"2026–present",category:"English teaching",summary:"I began working as a cover teacher at Shane English Corporation in 2026, providing English instruction when regular teachers are absent. I move between teaching locations and teach learners from toddlers to retired adults.",responsibilities:["Receive teaching assignments usually one to several days in advance, sometimes with more notice; the actual class schedule generally arrives the day before.","Arrive early at the assigned location to review materials and prepare lesson plans before classes begin.","Teach across different classrooms and age groups, from toddlers to retired adults.","Work within Shane's established curriculum, textbooks, and teacher guides while adapting activities, explanations, pacing, and lesson plans as needed.","Establish rapport quickly with students I may be meeting for the first time and maintain clear lesson objectives."],relevance:"In my current role, cover teaching requires me to enter unfamiliar classrooms and become effective quickly, often with limited advance knowledge of the schedule. I apply the extensive teacher training I have received at Shane to these changing environments. My day-to-day work demonstrates adaptability, efficient lesson preparation, classroom confidence, and an ability to connect with learners across generations.",personalize:"Add a specific example of adapting a lesson or building rapport while covering an unfamiliar class."},
-{slug:"kifl",name:"Kanda Institute of Foreign Languages (KIFL)",title:"English Teacher",location:"Kanda, Tokyo",dates:"2021",category:"English teaching",summary:"At Kanda Institute of Foreign Languages, I evaluated face-to-face spoken English examinations and taught through an immersive, avatar-based learning environment. My learners ranged from upper elementary school through college age, alongside adults seeking conversational English practice.",responsibilities:["Evaluated face-to-face English oral examinations using the institute's established assessment standards.","Assessed pronunciation and articulation, including R and L sound distinctions, katakana-influenced pronunciation, and students' ability to communicate without reverting to Japanese.","Worked with learners from upper elementary school through college age, as well as adults seeking English conversation practice.","Taught in an interactive virtual environment developed by my department, where students and I each controlled avatars, explored imaginary worlds, completed missions, and progressed through levels.","Used headsets for real-time spoken interaction within an English-language interface, making English essential to communication, collaboration, and completing shared objectives."],relevance:"My work at KIFL combined structured oral-language assessment with interactive, technology-supported teaching. It strengthened my ability to recognize pronunciation challenges, evaluate spoken English consistently, and encourage meaningful communication among learners of different ages and abilities. The experience reinforced an important principle of my teaching approach: language accuracy matters, but students also need engaging reasons to use English confidently and naturally.",personalize:""},
-{slug:"bca-english-school",name:"BCA English School",title:"Full-Time Kindergarten Homeroom Teacher",location:"Saitama, Japan",dates:"2020",category:"English-immersion teaching",summary:"I worked as a full-time kindergarten homeroom teacher at BCA English School, a private international school in Saitama. I independently planned and taught the daily curriculum for a regular class of children ages 5–7, from early morning until approximately 3 p.m. All classroom instruction was conducted in English.",responsibilities:["Independently designed and prepared lessons across the kindergarten curriculum, including mathematics, history, science, art, and other age-appropriate subjects.","Delivered subject instruction entirely in English in accordance with the school’s English-only environment.","Served as the sole homeroom teacher for the same group of children throughout the full school day.","Led daily classroom learning without a dedicated teaching assistant; school-wide staff provided interpretation and practical childcare support when needed.","Choreographed and rehearsed a Sports Day dance performance, using the preparation process to encourage cooperation and teamwork."],relevance:"This role developed my experience in full-time homeroom teaching, independent curriculum planning, and multidisciplinary instruction through English. Working with the same young learners each day allowed me to build continuity across subjects and create opportunities for children to develop confidence, communication, and cooperation.",personalize:""},
-{slug:"panda-abc",name:"Panda ABC",title:"Online English Teacher",location:"Online · China-based education company",dates:"2019",category:"Online teaching",summary:"I taught English online through Panda ABC’s purpose-built learning platform, working with students from toddlers through adults, primarily early-elementary and elementary-aged learners. The company provided the curriculum, and I brought lessons to life through clear communication, expressive gestures, and an upbeat, playful teaching style.",responsibilities:["Delivered company-developed English lessons through Panda ABC’s dedicated online teaching platform.","Taught students across a broad age range, with most lessons focused on early-elementary and elementary-aged children.","Led mostly one-on-one lessons, sometimes with a parent assisting a younger learner.","Also taught large classes of 30 or more students who could see and hear me through a classroom screen, supported by an on-site Chinese-speaking assistant when students needed help.","Used animated facial expressions, gestures, and cheerful, playful delivery to sustain attention and encourage participation.","Spoke slowly and enunciated clearly to make spoken English easier to follow, especially for younger learners."],relevance:"At Panda ABC, I learned to create meaningful connections with students through a screen. Young learners could request teachers they enjoyed, and I quickly developed a schedule of returning students who specifically requested my lessons. The returning learners gave me opportunities to build rapport across repeated lessons. The experience strengthened my ability to adapt my delivery between individual learners and large groups, communicate clearly, and build trust in a technology-supported classroom.",personalize:""},
-{slug:"us-army",name:"United States Army · Active Duty, Regular Army",title:"Division PM Instructor",location:"Hawaii, USA",dates:"2000–2004",category:"Military classroom instruction",summary:"I earned U.S. Army certification as a Division PM Instructor while serving on active duty in the Regular Army. I then taught field sanitation and preventive medicine for four years as a full-time classroom instructor in Hawaii.",responsibilities:["Completed U.S. Army training and certification as a Division PM Instructor.","Delivered full-time classroom instruction in field sanitation, preventive medicine, disease prevention, and the prevention of non-battle injuries.","Taught adult military personnel across different ranks, including soldiers who outranked me.","Instructed new groups of soldiers appointed by their units to attend formal certification training.","Prepared students to serve as certified field sanitation and preventive medicine representatives at company level and, in some cases, squad level.","Personally administered and graded written examinations assessing knowledge of course material.","Conducted and evaluated practical examinations at multiple stations where students demonstrated required skills.","Worked alongside a small team of military instructors supporting soldiers through training and certification."],relevance:"My Army service gave me a foundation in professional classroom instruction, adult education, and standards-based assessment. I was responsible for explaining course material and evaluating whether students could apply it in practice. This experience continues to shape how I teach: communicate clearly, assess understanding carefully, and help learners use what they have learned.",personalize:""},
-{slug:"independent-transportation",name:"Simmons Taxi",title:"Owner / Operator",location:"United States · Boston, South Florida, Charlotte, Atlanta, and Pittsburgh",dates:"2022–2025",category:"Business ownership & customer service",summary:"I owned and operated Simmons Taxi, a U.S.-based taxi company, from 2022 to 2025. I managed daily operations, scheduling, routes, and passenger service across several U.S. markets.",responsibilities:["Owned and operated Simmons Taxi, managing day-to-day transportation services.","Planned schedules and routes and maintained dependable service across several U.S. markets.","Assisted passengers with luggage, directions, and individual requests.","Communicated with passengers from varied backgrounds and adapted service to their needs.","Handled complaints and challenging interactions with patience, sound judgment, and attention to safety.","Managed customer service in a business where passenger feedback and reliability mattered."],relevance:"Running Simmons Taxi strengthened my ability to manage responsibilities independently, communicate with people from varied backgrounds, and respond calmly to changing situations. These skills support the patience, reliability, and rapport-building I bring to teaching.",personalize:""}
+export type CareerRole = {
+  slug: string;
+  name: string;
+  title: string;
+  location: string;
+  dates: string;
+  category: string;
+  summary: string;
+  responsibilities: string[];
+};
+
+export const careerRoles: CareerRole[] = [
+  {
+    slug: "shane-english",
+    name: "Shane English Corporation",
+    title: "English Teacher — Cover / Substitute Teaching",
+    location: "Tokyo, Japan",
+    dates: "2026–present",
+    category: "English teaching",
+    summary:
+      "I began working as a cover teacher at Shane English Corporation in 2026, teaching when regular teachers are absent. I move between teaching locations and work with learners from toddlers to retired adults.",
+    responsibilities: [
+      "Receive cover assignments, usually one or more days ahead; the class schedule often arrives the day before.",
+      "Arrive early to review the assigned materials and prepare before classes begin.",
+      "Teach different classes and age groups, from toddlers to retired adults.",
+      "Follow Shane’s curriculum, textbooks, and teacher guides while adjusting activities, explanations, and pacing for the class.",
+      "Establish rapport with students I may be meeting for the first time and keep lessons focused on their objectives.",
+    ],
+  },
+  {
+    slug: "kifl",
+    name: "Kanda Institute of Foreign Languages (KIFL)",
+    title: "English Teacher",
+    location: "Kanda, Tokyo",
+    dates: "2021",
+    category: "English teaching",
+    summary:
+      "At KIFL, I assessed face-to-face spoken English exams and taught in an avatar-based learning environment. My learners ranged from upper elementary school through college age, as well as adults practicing conversational English.",
+    responsibilities: [
+      "Evaluate face-to-face English oral exams against the institute’s assessment standards.",
+      "Assess pronunciation and articulation, including R/L distinctions, katakana-influenced pronunciation, and whether students could sustain communication in English.",
+      "Teach learners from upper elementary school through college age, as well as adults practicing conversation.",
+      "Use a virtual learning environment where students and I controlled avatars, explored worlds, and completed missions together.",
+      "Guide real-time spoken interaction through headsets in an English-language interface.",
+    ],
+  },
+  {
+    slug: "bca-english-school",
+    name: "BCA English School",
+    title: "Full-Time Kindergarten Homeroom Teacher",
+    location: "Saitama, Japan",
+    dates: "2020",
+    category: "English-immersion teaching",
+    summary:
+      "I was the full-time homeroom teacher for a class of children aged 5–7 at BCA English School, a private international school in Saitama. I planned and taught their daily curriculum in English from early morning to about 3 p.m.",
+    responsibilities: [
+      "Plan and prepare lessons across kindergarten subjects, including mathematics, history, science, and art.",
+      "Teach subject lessons in English within the school’s English-immersion environment.",
+      "Lead the same class through its full school day as its homeroom teacher.",
+      "Manage daily classroom instruction; school-wide staff provided interpretation and practical childcare support when needed.",
+      "Choreograph and rehearse a Sports Day dance performance with the class.",
+    ],
+  },
+  {
+    slug: "panda-abc",
+    name: "Panda ABC",
+    title: "Online English Teacher",
+    location: "Online · China-based education company",
+    dates: "2019",
+    category: "Online teaching",
+    summary:
+      "I taught company-provided English lessons on Panda ABC’s online platform, mainly to early-elementary and elementary-aged children, and also to toddlers and adults. Lessons included one-to-one classes and groups of 30 or more students joining through a classroom screen.",
+    responsibilities: [
+      "Deliver company-developed lessons through Panda ABC’s online teaching platform.",
+      "Teach mostly early-elementary and elementary-aged learners, with some toddler and adult students.",
+      "Lead one-to-one lessons, sometimes with a parent assisting a younger learner.",
+      "Teach large classes of 30 or more students, supported by an on-site Chinese-speaking assistant when needed.",
+      "Use clear speech, gestures, and expressive delivery to invite participation and help younger learners follow spoken English.",
+      "Build rapport with returning students; several requested my lessons again.",
+    ],
+  },
+  {
+    slug: "us-army",
+    name: "U.S. Army — Regular Army, Active Duty",
+    title: "Division PM Instructor",
+    location: "Hawaii, USA",
+    dates: "2000–2004",
+    category: "Military classroom instruction",
+    summary:
+      "I completed U.S. Army training and certification as a Division PM Instructor, then taught field sanitation and preventive medicine full-time in Hawaii for four years while serving on active duty in the Regular Army.",
+    responsibilities: [
+      "Teach field sanitation, preventive medicine, disease prevention, and prevention of non-battle injuries.",
+      "Instruct adult military personnel across ranks, including soldiers senior to me.",
+      "Train soldiers assigned by their units to formal certification courses.",
+      "Prepare students for field sanitation and preventive medicine duties at company and, in some cases, squad level.",
+      "Administer and grade written exams on course material.",
+      "Conduct and assess practical exams at stations where students demonstrate required skills.",
+      "Work with a small team of instructors supporting training and certification.",
+    ],
+  },
+  {
+    slug: "independent-transportation",
+    name: "Simmons Taxi",
+    title: "Owner / Operator",
+    location: "United States · Boston, South Florida, Charlotte, Atlanta, and Pittsburgh",
+    dates: "2022–2025",
+    category: "U.S. business ownership",
+    summary:
+      "I owned and operated Simmons Taxi, a U.S.-based taxi company, from 2022 to 2025. I managed day-to-day operations, scheduling, routes, and passenger service across several U.S. markets.",
+    responsibilities: [
+      "Manage daily operations and passenger transportation.",
+      "Plan schedules and routes across several U.S. markets.",
+      "Assist passengers with luggage, directions, and individual requests.",
+      "Communicate with passengers from varied backgrounds and respond to service issues.",
+      "Make day-to-day decisions with attention to reliability and passenger safety.",
+    ],
+  },
 ];
-export function careerIndex(slug:string){return careerRoles.findIndex(role=>role.slug===slug)}
+
+export function careerIndex(slug: string) {
+  return careerRoles.findIndex((role) => role.slug === slug);
+}

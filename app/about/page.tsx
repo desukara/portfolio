@@ -1,51 +1,72 @@
-import SiteHeader from "../components/site-header";
 import type { Metadata } from "next";
 import Link from "next/link";
+import SiteHeader from "../components/site-header";
 
 export const metadata: Metadata = {
-  title: "About | English Teacher Portfolio",
-  description: "Learn about the approach and professional aspirations behind this Tokyo English teaching portfolio.",
+  title: "About | James Simmons, English Teacher",
+  description:
+    "James Simmons is a TEFL-certified English teacher in Tokyo with U.S. Army classroom instructor training and experience in Japan and online.",
 };
-
-const values = [
-  { id: "01", title: "Notice strengths", description: "A quiet response does not always mean a learner lacks knowledge. I look for other ways they can show what they know." },
-  { id: "02", title: "Adapt with purpose", description: "I use established learning goals and teacher guidance while adjusting the delivery to suit the learner." },
-  { id: "03", title: "Build rapport", description: "Knowing what engages an individual learner helps create opportunities for meaningful participation." },
-];
 
 export default function AboutPage() {
   return (
-      <main className="about-page">
+    <main className="about-page">
       <SiteHeader current="/about" />
+
       <section className="about-hero shell" id="main-content" tabIndex={-1}>
-        <div>
-          <span className="kicker">01 / THE PERSON BEHIND THE LESSONS</span>
-          <h1>Start with curiosity.<br/><em>Build a connection.</em></h1>
-          <p className="about-intro">I&apos;m currently teaching at Shane English Corporation in Tokyo. My Japan teaching roles include BCA English School in Saitama (2020), KIFL in Tokyo (2021), and Shane (2026–present); I also taught online with Panda ABC. During active-duty Regular Army service, I earned U.S. Army certification as a Division PM Instructor and taught for four years in Hawaii (2000–2004).</p>
-          <p className="about-muted">At Shane, I teach learners from age three through retirement, using the school’s textbooks and teacher’s guides while adapting activities and pacing to the students in front of me. My strength is recognizing individual learners’ interests and abilities and building a connection that helps them participate.</p>
-          <p className="about-muted"><strong>Additional background:</strong> customer-facing work across several U.S. cities and online web-development coursework through Harvard Extension School (2022–present; certificate in progress).</p>
-          <Link href="/portfolio" className="button-primary">Explore the portfolio <span aria-hidden="true">→</span></Link>
-        </div>
-        <div className="about-feature" aria-label="Abstract illustration of an open book and dialogue">
-          <div className="feature-disc"></div>
-          <div className="feature-book"><span>HELLO</span><strong>Learn.<br/>Connect.<br/><i>Grow.</i></strong></div>
-          <span className="feature-caption">TOKYO · ENGLISH EDUCATION</span>
-        </div>
-      </section>
-      <section className="about-values">
-        <div className="shell">
-          <div className="section-heading">
-            <div><span className="kicker">02 / TEACHING MINDSET</span><h2>What matters<br/><em>in the classroom.</em></h2></div>
-            <p>Principles informed by my experience teaching students with different ages, personalities, and goals.</p>
+        <div className="about-copy">
+          <span className="kicker">PROFESSIONAL PROFILE</span>
+          <h1>English teacher in Tokyo.<br /><em>Four years of Army instruction.</em></h1>
+          <p className="about-intro">
+            I&apos;m TEFL-certified and currently work as a cover teacher at
+            Shane English Corporation. My English-teaching experience includes
+            a full-day kindergarten homeroom at BCA in Saitama (2020), spoken
+            English assessment and teaching at KIFL in Tokyo (2021), and online
+            lessons with Panda ABC.
+          </p>
+          <p className="about-muted">
+            During active-duty Regular Army service, I completed U.S. Army
+            training and certification as a Division PM Instructor. I taught
+            field sanitation and preventive medicine in Hawaii for four years
+            (2000–2004), including written and practical assessments.
+          </p>
+          <div className="about-actions">
+            <Link href="/portfolio" className="button-primary">Read a classroom example →</Link>
+            <Link href="/experience" className="button-link">View all experience →</Link>
           </div>
-          <div className="skills-grid">{values.map(item => <article className="skill-card" key={item.id}><span>{item.id} /</span><h3>{item.title}</h3><p>{item.description}</p>{item.id === "03" && <Link className="practice-link" href="/portfolio#classroom-reflection">See a classroom reflection →</Link>}</article>)}</div>
         </div>
+
+        <aside className="about-proof-panel" aria-label="Hiring information">
+          <span className="kicker">AT A GLANCE</span>
+          <div>
+            <span>TEACHING</span>
+            <strong>Japan · Online · U.S. Army classroom</strong>
+          </div>
+          <div>
+            <span>INSTRUCTOR EXPERIENCE</span>
+            <strong>4 years · Division PM Instructor</strong>
+          </div>
+          <div>
+            <span>WORK AUTHORIZATION</span>
+            <strong>Can work in Japan without employer sponsorship</strong>
+          </div>
+          <div>
+            <span>AVAILABILITY</span>
+            <strong>Any day of the week</strong>
+          </div>
+          <div>
+            <span>ADDITIONAL STUDY</span>
+            <strong>Harvard Extension School · Online web-development coursework · 2022–present; certificate in progress</strong>
+          </div>
+        </aside>
       </section>
-      <section className="about-next shell">
-        <div><span className="kicker">03 / NEXT UP</span><h2>Get to know my <em>teaching in practice.</em></h2></div>
-        <div><p>From a young learner discovering a new way to participate to working with adults in English classes, I value the small moments that make a lesson work. Explore the classroom examples behind my approach, along with my experience and résumé.</p><div className="about-next-links"><Link href="/experience" className="button-link">View teaching experience <span aria-hidden="true">→</span></Link><Link href="/resume/download" className="button-link" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></div>
-      </section>
-      <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Back to homepage →</Link></div></footer>
+
+      <footer className="mini-footer">
+        <div className="shell mini-footer-inner">
+          <span>© {new Date().getFullYear()} English Teaching Portfolio</span>
+          <Link href="/">Back to homepage →</Link>
+        </div>
+      </footer>
     </main>
   );
 }
