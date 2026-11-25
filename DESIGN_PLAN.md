@@ -1,12 +1,13 @@
 # Premium Hybrid — English Teaching Portfolio
-Status: approved visual direction. All CV, experience, credentials, testimonials, and teaching materials must be genuine and verified before publication.
+Status: recruiter-focused visual direction, superseding the earlier palette. All CV, experience, credentials, testimonials, and teaching materials must be genuine and verified before publication.
 
 ## Visual system
 - Audience: Tokyo-based eikaiwa hiring teams, private and international schools, corporate English programs.
-- Mood: sophisticated editorial layout for recruiters, playful visual flourishes for teaching demonstrations.
-- Palette: deep evergreen #153b3c, warm ivory #faf9f5, soft sage #e8eee7, muted coral #e67a57.
-- Typography: DM Sans for functional UI; Playfair Display for editorial headings (with local/system fallbacks).
-- Style: strong readability, ample whitespace, clear job-focused calls to action, responsive and accessible.
+- Mood: composed competence and scanability, with human warmth in the personal story and concrete teaching evidence in the portfolio.
+- Palette: ink #232a31 and Prussian blue #244c66 for structure; warm paper #f4efe6 for the canvas; vermilion #c14d34 reserved for interview actions; aged brass #a98247 reserved for the Army instructor credential. Retire the repeated sage and peach panels.
+- Page roles: home communicates candidate fit; experience reads like a cool-toned chronology; about uses a warmer clay accent; portfolio reads like a documentary case file; résumé stays paper-white; contact makes the interview action salient.
+- Typography: DM Sans for recruiter scanning and actions; Playfair Display only where a reflective/editorial voice helps, with local/system fallbacks.
+- Style: one strongest action per view, clear evidence hierarchy, readable contrast, responsive layout, keyboard-visible focus.
 
 ## Main pages — build one at a time
 1. Home — professional introduction, employer value, featured sections, contact CTA. Initial draft committed.

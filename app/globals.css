@@ -437,138 +437,205 @@ main,section,article,footer{min-width:0}
 /* Restore readable mobile gutters to the full-width career stories. */
 @media(max-width:700px){.career-example-section .career-example{width:100%;max-width:850px;padding-inline:max(20px,env(safe-area-inset-left)) max(20px,env(safe-area-inset-right))}.career-example-section .career-example h3{overflow-wrap:break-word}.career-example-section .career-example p{overflow-wrap:break-word}}
 
-/* Release 31 — warm, confident editorial design refresh.
-   Preserve layout, form behavior, and mobile story gutters. */
+/* 2026 recruiter-focused visual system
+   Ink and Prussian blue carry competence and scanability. Warm paper softens
+   the document feel. Vermilion is reserved for interview actions; brass marks
+   the Army instructor credential. Each page gets a different visual mode. */
 :root{
-  --ink:#202b38;
-  --muted:#52606a;
-  --paper:#fff9f0;
-  --deep:#192c3d;
-  --coral:#bd4d2b;
-  --line:#dfd2bf;
-  --gold:#dfaa55;
+  --ink:#232a31;
+  --muted:#58636d;
+  --paper:#f4efe6;
+  --deep:#244c66;
+  --coral:#c14d34;
+  --line:#d7d2c8;
+  --gold:#a98247;
+  --panel-blue:#e6edf0;
+  --panel-clay:#eee2d8;
+  --paper-white:#fffdf9;
 }
-body{background:var(--paper)}
-.top-strip{background:#142535;color:#f4d7a8}
-.site-header{border-bottom-color:#d8c8b3}
-.brand{letter-spacing:-.065em}
-.brand span,.period{color:var(--coral)}
-.nav-cta{border-bottom:2px solid var(--coral)}
+html{background:var(--paper)}
+body{background:var(--paper);color:var(--ink)}
+.top-strip{background:var(--deep);color:#f4efe6}
+.site-header{border-bottom-color:var(--line)}
+.site-header nav a{color:#394651}
+.site-header nav a:hover,.site-header nav a[aria-current="page"]{color:var(--deep)}
+.desktop-navigation a[aria-current="page"],.mobile-menu a[aria-current="page"]{color:var(--deep)}
+.nav-cta{border-bottom:2px solid var(--coral);color:var(--ink)}
 .nav-cta:hover{color:var(--coral)}
-.eyebrow,.kicker{color:#98502e}
-.status-dot{background:#b87a36;box-shadow:0 0 0 5px #f9e7c9}
-h1,h2{letter-spacing:-.045em}
-.hero h1{color:var(--deep);text-wrap:balance}
-.hero h1 em,.section-heading h2 em{color:#a84428}
-.hero-lead{color:#283746}
-.button-primary,.meeting-submit{background:var(--coral);color:#fff;border-radius:5px;box-shadow:4px 4px 0 #eac48d;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
-.button-primary:hover,.meeting-submit:hover{background:#96391f;transform:translateY(-2px);box-shadow:5px 6px 0 #eac48d}
-.button-primary:active,.meeting-submit:active{transform:none;box-shadow:2px 2px 0 #eac48d}
-.hero-art{background:#e8d5b9}
-.art-sun{background:#efb86b}
-.art-card{background:#fffaf0;box-shadow:20px 22px 1px #d4a978}
-.art-card>span,.skill-card>span,.portfolio-card>span:first-child{color:#99502c}
-.art-orbit{border-color:#bd7043}
-.intro-band{background:#f1dfc6;border-top:1px solid #dfc39e;border-bottom:1px solid #dfc39e}
-.portfolio-section{background:#f3e7d5}
-.portfolio-card{background:#fffaf2;border-color:#e2cdb2;border-radius:8px;box-shadow:0 5px 0 #e6d4bb;transition:transform .18s ease,box-shadow .18s ease}
-.portfolio-card:hover{transform:translateY(-3px);box-shadow:0 8px 0 #e6d4bb}
-.skill-card h3{color:var(--deep)}
-footer{background:#192c3d}
-.footer-grid h2 em{color:#f2b66e}
-.footer-grid p{color:#e4d8c8}
-.footer-grid .button-primary{background:#f4bd72;color:#192c3d;box-shadow:4px 4px 0 #9c552f}
-.footer-grid .button-primary:hover{background:#ffce8b}
-.footer-right span{color:#edc48e}
-.footer-bottom{border-top-color:#52606a}
-:focus-visible{outline-color:#b24a28}
-.skip-link{background:#192c3d}
-.meeting-form-hint{background:#fff3e2}
-.meeting-contact-shortcut .meeting-contact-address{background:#f6e6d1}
-.portfolio-jump-nav a,.resume-reader-guide nav a{background:#fffaf2}
-.portfolio-jump-nav a:hover,.home-employer-links a:hover,.resume-reader-guide nav a:hover{background:#f7e7d0}
+.site-header .brand-wordmark,.site-header .brand-wordmark span{color:var(--ink)}
+.site-header .brand-wordmark{display:flex;flex-direction:column;align-items:flex-start;white-space:nowrap;gap:4px}
+.site-header .brand-wordmark small{display:block;color:var(--muted);margin-top:0}
+.kicker,.eyebrow{color:var(--deep)}
+.status-dot{background:#6b8e83;box-shadow:0 0 0 5px #e3ebe5}
+:focus-visible{outline-color:var(--coral);box-shadow:0 0 0 2px var(--paper-white)}
+.skip-link{background:var(--deep);color:#fff}
+
+/* Keep the personal wordmark horizontal and compact in the shared header. */
+.site-header .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:normal;flex-shrink:0}
+.site-header .brand>img{display:block;width:48px;height:48px;flex-shrink:0}
+.site-header .brand-wordmark{font-family:'Playfair Display',Georgia,serif;font-size:clamp(16px,1.8vw,23px);font-weight:700;letter-spacing:-.035em;line-height:1.05}
+.site-header .brand-wordmark small{font-family:'DM Sans',Arial,sans-serif;font-size:clamp(7px,.72vw,9px);font-weight:700;letter-spacing:.12em;margin-top:4px}
+@media(max-width:700px){.site-header .brand{gap:7px}.site-header .brand>img{width:40px;height:40px}.site-header .brand-wordmark{font-size:17px}.site-header .brand-wordmark small{font-size:7px;letter-spacing:.08em}}
+@media(max-width:380px){.site-header .brand-wordmark{font-size:15px}.site-header .brand-wordmark small{font-size:6px}}
+
+/* Home: answer fit and readiness before asking the recruiter to explore. */
+.hero h1{font-family:'DM Sans',Arial,sans-serif;font-weight:700;letter-spacing:-.065em;line-height:1.02;color:var(--ink);text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--deep);font-weight:700}
+.hero-lead{color:#303b43}
+.hero-detail{color:var(--muted)}
+.hero.hero .hero-photo{padding:0;background:var(--paper-white);border:1px solid #c6ccd0;border-radius:2px;box-shadow:12px 14px 0 var(--panel-blue);overflow:hidden}
+.hero.hero .hero-photo img{border-radius:0}
+@media(max-width:600px){.hero.hero .hero-photo{padding:0;border:1px solid #c6ccd0;border-radius:2px;background:var(--paper-white);box-shadow:8px 9px 0 var(--panel-blue);overflow:hidden}}
+.home-proof{border-color:var(--line)}
+.home-proof>div+div{border-left-color:var(--line)}
+.home-proof strong{font-family:'DM Sans',Arial,sans-serif;color:var(--deep);font-weight:700}
+.home-proof span{color:var(--muted)}
+.home-employer-path{border-color:var(--line)}
+.home-employer-links{border-color:var(--line)}
+.home-employer-links a{border-color:var(--line)}
+.home-employer-links a:hover{background:var(--panel-blue)}
+.intro-band{background:transparent;border-block:1px solid var(--line)}
+.intro-grid p{color:var(--deep)}
+.section-heading h2,.home-employer-path h2{color:var(--ink)}
+.section-heading h2 em,.home-employer-path h2 em{color:var(--deep)}
+.skill-card>span,.portfolio-card>span:first-child{color:var(--deep)}
+.skill-card h3{color:var(--ink)}
+.skill-card p,.portfolio-card p,.section-heading>p{color:var(--muted)}
+.skills-grid{border-color:var(--line)}
+.skill-card:not(:first-child){border-left-color:var(--line)}
+.button-primary{background:var(--deep);color:#fff;border-radius:2px;box-shadow:none;transition:background .18s ease,transform .18s ease}
+.button-primary:hover{background:#18394f;transform:translateY(-1px);box-shadow:none}
+.button-primary:active{transform:none;box-shadow:none}
+.button-link,.practice-link,.career-role-link,.experience-evidence a,.career-evidence-actions a{color:var(--deep)}
+.button-link:hover,.practice-link:hover,.career-role-link:hover{color:var(--coral)}
+.portfolio-section{background:#ebe6db}
+.portfolio-card{background:var(--paper-white);border-color:#d7d0c4;border-radius:2px;box-shadow:none}
+.portfolio-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px #232a3110}
+.work-note{color:var(--muted)}
+footer{background:#202f3b;color:var(--paper)}
+.footer-grid h2 em{color:#e2c797}
+.footer-grid p{color:#d5dce0}
+.footer-grid .button-primary{background:var(--coral);color:#fff;box-shadow:none}
+.footer-grid .button-primary:hover{background:#9e3928}
+.footer-right span{color:#d3bc91}
+.footer-bottom{border-top-color:#53616b;color:#c4cdd2}
+.footer-brand{color:var(--paper)}
+
+/* About: warmth belongs in the portrait-side story and materials. */
+.about-hero h1{font-family:'Playfair Display',Georgia,serif;color:var(--ink)}
+.about-hero h1 em{color:#785444}
+.about-intro{color:#35414a}
+.about-muted{color:var(--muted)}
+.about-feature{background:var(--panel-clay);border-radius:2px}
+.feature-disc{background:#c8a06a}
+.feature-book{background:var(--paper-white);box-shadow:-14px 15px 0 #d3c1ae;border:1px solid #e3d8cc}
+.feature-book span,.feature-caption{color:#785444}
+.feature-book i{color:#785444}
+.about-values{background:#e9e2d6}
+.about-values .skills-grid,.about-values .skill-card:not(:first-child){border-color:#d3c9ba}
+.about-next{border-top:1px solid var(--line)}
+.about-next h2 em{color:#785444}
+.mini-footer{background:#202f3b;color:var(--paper)}
+
+/* Experience: a cool ledger-like field makes chronology and proof easy to scan. */
+.experience-page .experience-hero h1{font-family:'DM Sans',Arial,sans-serif;font-size:clamp(44px,5.4vw,72px);font-weight:700;letter-spacing:-.06em;color:var(--ink);line-height:1.07}
+.experience-page .experience-hero h1 em{font-style:normal;color:var(--deep)}
+.experience-lead,.experience-guide{color:var(--muted)}
+.experience-highlights{border-color:var(--line)}
+.experience-highlights strong{font-family:'DM Sans',Arial,sans-serif;color:var(--deep);font-weight:700}
+.experience-highlights span{color:var(--muted)}
+.experience-section{background:var(--panel-blue)}
+.experience-section .section-heading{margin-bottom:35px}
+.role-list{border-color:#c5d1d7}
+.role-row{border-color:#c5d1d7}
+.role-number{color:var(--deep)}
+.role-row h3{color:var(--ink)}
+.role-row p{color:#3e4951}
+.role-org span,.role-pending{color:var(--muted)!important}
+.role-row:last-child{background:#f1eadc;border-left:3px solid var(--gold);padding-left:18px}
+.role-row:last-child .role-number,.role-row:last-child .kicker{color:#715728}
+.communication-section h2 em{color:var(--deep)}
+.experience-cta{background:var(--deep);color:#fff;padding-block:72px}
+.experience-cta .kicker,.experience-cta p{color:#d7e1e6}
+.experience-cta h2{color:#fff}
+.experience-cta h2 em{color:#e2c797}
+.experience-cta .button-primary{background:var(--coral)}
+.experience-cta .button-link{color:#fff}
+.career-personalize{background:var(--panel-blue);border-left-color:var(--deep)}
+.career-breadcrumb{color:var(--muted)}
+.career-content h2{color:var(--ink)}
+.career-navigation a{border-color:var(--line)}
+
+/* Portfolio: documentary white space; vermilion isolates the teaching decision. */
+.portfolio-page .experience-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(48px,6vw,78px);font-weight:500;line-height:1.08;color:var(--ink)}
+.portfolio-page .experience-hero h1 em{color:var(--deep)}
+.portfolio-page .experience-section{background:#eee9df}
+.case-study{background:var(--paper-white);padding:clamp(26px,5vw,62px);border-top:4px solid var(--deep)}
+.case-study h2{color:var(--ink)}
+.case-study h2 em{color:var(--deep)}
+.case-study .case-lead{color:#394651}
+.reflection-roadmap>div{background:#fff;border-color:#d8d5ce;border-left:3px solid var(--deep)}
+.reflection-roadmap>div:nth-child(2){border-left-color:var(--coral);background:#fbf0eb}
+.reflection-roadmap span{color:var(--deep)}
+.reflection-roadmap>div:nth-child(2) span{color:#963b2b}
+.reflection-roadmap strong{color:var(--ink)}
+.reflection-story{border-color:var(--line)}
+.reflection-story h3{color:var(--deep)}
+.case-study .case-note{border-color:var(--line)}
+.portfolio-evidence{background:var(--paper)}
+.portfolio-evidence-grid article{background:var(--paper-white);border-color:var(--line)}
+.portfolio-evidence-grid h3{color:var(--ink)}
+.portfolio-evidence-grid a{color:var(--deep)}
+.portfolio-jump-nav a{background:var(--paper-white);border-color:var(--line)}
+.portfolio-jump-nav a:hover{border-color:var(--deep);background:#f0f4f5}
+.portfolio-jump-nav a>strong{color:var(--deep)}
+
+/* Contact: clear low-friction email first, form second, action in vermilion. */
+.meeting-hero h1{font-family:'DM Sans',Arial,sans-serif;font-weight:700;letter-spacing:-.055em;color:var(--ink)}
+.meeting-hero h1 em{font-style:normal;color:var(--deep)}
+.meeting-hero p{color:var(--muted)}
+.meeting-contact-shortcut{border-block:1px solid var(--line)}
+.meeting-contact-address{background:var(--paper-white)!important;border-color:var(--line)!important;color:var(--deep)!important}
+.meeting-panel{background:var(--panel-blue)}
+.meeting-layout aside h2 em{color:var(--deep)}
+.meeting-form-card{background:var(--paper-white);border:1px solid #d4dce0;box-shadow:0 14px 34px #244c6612}
+.meeting-form-card h2{color:var(--ink)}
+.meeting-form label{color:#34414b}
+.meeting-form input,.meeting-form select,.meeting-form textarea{border-color:#bdc8cf;background:#fff;color:var(--ink)}
+.meeting-form input:focus,.meeting-form select:focus,.meeting-form textarea:focus{outline:2px solid var(--deep);border-color:var(--deep)}
+.meeting-form-hint{background:#f5ebe5;border-left-color:var(--coral);color:#54443d}
+.meeting-submit{background:var(--coral);color:#fff;border-radius:2px;box-shadow:none}
+.meeting-submit:hover{background:#9e3928;box-shadow:none}
+.meeting-submit:disabled{opacity:.65}
+.meeting-privacy{color:var(--muted)}
+.meeting-success{background:var(--paper-white);border-color:var(--deep)}
+
+/* Résumé: separate professional record, clean paper and blue navigation. */
+.resume-route{background:#e6edf0}
+.resume-document,.resume-document.cv{background:#fff;color:var(--ink)}
+.resume-document header,.cv-header{border-color:var(--deep)}
+.resume-document section h2,.cv section h2{color:var(--deep);border-color:#c5d1d7}
+.resume-document h3,.cv h3{color:var(--ink)}
+.resume-document header p,.resume-document h3 span,.cv-date,.cv-location{color:var(--muted)}
+.resume-print-button,.resume-download-primary{background:var(--deep);color:#fff}
+.resume-print-button:hover,.resume-download-primary:hover{background:#18394f}
+.resume-reader-guide nav a{background:var(--paper-white);border-color:var(--line)}
+.resume-reader-guide nav a:hover{border-color:var(--deep);background:#f0f4f5}
+.cv-status,.resume-availability{background:#edf3f5;border-left-color:var(--deep)}
+
+/* Keep the palette readable and the page-specific distinctions on small screens. */
 @media(max-width:800px){
-  .site-header .mobile-menu nav{background:#fffaf2;border-color:#dfc9ae}
-  .mobile-menu[open] summary{background:#192c3d;color:#fff}
+  .site-header .mobile-menu summary{background:var(--paper-white);border-color:var(--line)}
+  .mobile-menu[open] summary{background:var(--deep);color:#fff}
+  .site-header .mobile-menu nav{background:var(--paper-white);border-color:var(--line);box-shadow:0 18px 35px #232a3120}
+  .site-header .mobile-menu nav a{border-color:var(--line)}
+  .experience-section .role-row:last-child{padding-left:14px}
 }
 @media(prefers-reduced-motion:reduce){
   .button-primary,.meeting-submit,.portfolio-card{transition:none}
   .button-primary:hover,.meeting-submit:hover,.portfolio-card:hover{transform:none}
 }
-
-/* Release 32: intentional portrait framing, not a mismatched image canvas. */
-.hero.hero .hero-photo{
-  width:100%;
-  max-width:440px;
-  height:auto;
-  min-height:0;
-  aspect-ratio:1076 / 1366;
-  justify-self:center;
-  align-self:center;
-  padding:8px;
-  background:#fff8eb;
-  border:3px solid #192c3d;
-  border-radius:8px;
-  box-shadow:0 0 0 5px #dfaa55,14px 17px 0 #d8b58b;
-  overflow:visible;
-}
-.hero.hero .hero-photo img{
-  display:block;
-  width:100%;
-  height:100%;
-  max-height:none;
-  object-fit:cover;
-  object-position:center;
-  border-radius:2px;
-}
-@media(max-width:800px){.hero.hero .hero-photo{max-width:360px}}
-@media(max-width:600px){
-  .hero.hero .hero-photo{max-width:min(100% - 20px,340px);box-shadow:0 0 0 4px #dfaa55,8px 10px 0 #d8b58b}
-}
-
-/* JS teaching identity — header, footer and small-screen wordmark. */
-.site-header .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:normal;flex-shrink:0}
-.site-header .brand>img{display:block;width:48px;height:48px;flex-shrink:0}
-.brand-wordmark{display:flex;flex-direction:column;font-family:'Playfair Display',Georgia,serif;font-size:23px;font-weight:700;letter-spacing:-.045em;line-height:1.05;color:var(--deep)}
-.brand-wordmark>span{display:inline}
-.brand-wordmark span{color:#a84428}
-.brand-wordmark small{font-family:'DM Sans',Arial,sans-serif;font-size:9px;letter-spacing:.19em;font-weight:700;margin-top:5px;color:#52606a}
-.footer-brand{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.08em;font-weight:700;color:#f7e4c4}
-.footer-brand img{width:36px;height:36px}
-@media(max-width:700px){.site-header .brand>img{width:40px;height:40px}.brand-wordmark{font-size:18px}.brand-wordmark small{font-size:7px;letter-spacing:.12em}.site-header .brand{gap:7px}}
-@media(max-width:380px){.brand-wordmark{font-size:15px}.brand-wordmark small{font-size:6px}}
-
-/* Keep EASTOKYO on one line; tagline alone sits below. */
-.brand-wordmark{display:block;white-space:nowrap}
-.brand-wordmark small{display:block}
-
-/* Preferred-name wordmark: keep the full name readable across screen sizes. */
-.site-header .brand-wordmark{font-size:clamp(16px,1.8vw,23px);letter-spacing:-.035em}
-.site-header .brand-wordmark small{font-size:clamp(7px,.72vw,9px);letter-spacing:.12em}
-@media(max-width:700px){.site-header .brand-wordmark{font-size:17px}.site-header .brand-wordmark small{font-size:7px;letter-spacing:.08em}}
-@media(max-width:380px){.site-header .brand-wordmark{font-size:15px}.site-header .brand-wordmark small{font-size:6px}}
-
-
-/* Mobile homepage portrait: restrained scale and a clean, balanced frame. */
-@media (max-width: 600px) {
-  .hero.hero .hero-photo {
-    width: min(100% - 36px, 270px);
-    max-width: 270px;
-    height: auto;
-    aspect-ratio: 1076 / 1366;
-    margin: 8px auto 24px;
-    padding: 4px;
-    border: 1px solid #d4c1a6;
-    border-radius: 6px;
-    background: #fff8eb;
-    box-shadow: 0 5px 16px rgba(25, 44, 61, 0.10);
-    overflow: hidden;
-  }
-  .hero.hero .hero-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 3px;
-  }
+@media print{
+  .resume-route{background:#fff!important}
+  .resume-document,.resume-document.cv{color:#111}
 }

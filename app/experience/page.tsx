@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 
 export default function ExperiencePage(){
- return <main>
+ return <main className="experience-page">
   <SiteHeader current="/experience" />
   <section className="experience-hero shell" id="main-content" tabIndex={-1}>
    <span className="kicker">02 / PROFESSIONAL BACKGROUND</span>
@@ -36,7 +36,7 @@ export default function ExperiencePage(){
      <p><Link className="career-role-link" href="/experience/independent-transportation">Owner / Operator · Simmons Taxi (2022–2025) →</Link><br/>U.S. taxi business and customer service.</p>
    </div>
   </section>
-  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently teaching in Tokyo. Authorized to work in Japan without employer sponsorship and available any day of the week.</p><Link className="button-primary" href="/meeting">Request an interview ↗</Link> <Link className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></section>
-  <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Homepage ↗</Link></div></footer>
+  <section className="experience-cta"><div className="shell"><span className="kicker">03 / EMPLOYMENT</span><h2>Seeking a full-time <em>teaching role.</em></h2><p>Currently teaching in Tokyo. Authorized to work in Japan without employer sponsorship and available any day of the week.</p><Link className="button-primary" href="/meeting">Request an interview →</Link> <Link className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download official résumé ↓</Link></div></section>
+  <footer className="mini-footer"><div className="shell mini-footer-inner"><span>© {new Date().getFullYear()} English Teaching Portfolio</span><Link href="/">Homepage →</Link></div></footer>
  </main>;
 }

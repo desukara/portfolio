@@ -24,7 +24,7 @@ export default function ResumePage() {
       <span>JAMES SIMMONS / RÉSUMÉ</span>
       <div className="resume-toolbar-actions"><a className="resume-print-button" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a><PrintResumeButton /></div>
     </div>
-    <div className="resume-reader-guide shell"><div><span className="kicker">FOR HIRING TEAMS</span><h2>A clear picture of my <em>teaching experience.</em></h2><p>Read the expanded résumé below, download the original PDF, or explore classroom evidence before arranging an interview.</p></div><nav aria-label="Résumé quick links"><a href="#resume-teaching">Teaching roles ↓</a><a href="#resume-training">Training ↓</a><Link href="/portfolio#classroom-reflection">Classroom reflection ↗</Link><Link href="/meeting">Request an interview ↗</Link></nav></div><article className="resume-document cv" id="main-content" tabIndex={-1} aria-label="James Simmons professional résumé">
+    <div className="resume-reader-guide shell"><div><span className="kicker">FOR HIRING TEAMS</span><h2>A clear picture of my <em>teaching experience.</em></h2><p>Read the expanded résumé below, download the original PDF, or explore classroom evidence before arranging an interview.</p></div><nav aria-label="Résumé quick links"><a href="#resume-teaching">Teaching roles ↓</a><a href="#resume-training">Training ↓</a><Link href="/portfolio#classroom-reflection">Classroom reflection →</Link><Link href="/meeting">Request an interview →</Link></nav></div><article className="resume-document cv" id="main-content" tabIndex={-1} aria-label="James Simmons professional résumé">
       <header className="cv-header">
         <h1>JAMES SIMMONS</h1>
         <p className="cv-subtitle">ENGLISH TEACHER / TOKYO, JAPAN</p>
