@@ -54,6 +54,10 @@ export default function AboutPage() {
             <span>AVAILABILITY</span>
             <strong>Any day of the week</strong>
           </div>
+          <div>
+            <span>ADDITIONAL STUDY</span>
+            <strong>Harvard Extension School · Online web-development coursework · 2022–present; certificate in progress</strong>
+          </div>
         </aside>
       </section>
 

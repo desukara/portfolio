@@ -54,6 +54,15 @@ export default function ResumePage() {
       </section>
 
       <section>
+        <h2>HARVARD EXTENSION SCHOOL COURSEWORK</h2>
+        <div className="cv-position">
+          <div className="cv-position-top"><h3>Web Development</h3><span className="cv-date">2022–PRESENT</span></div>
+          <p className="cv-location">Online · Harvard Extension School</p>
+          <p>Online coursework; certificate in progress.</p>
+        </div>
+      </section>
+
+      <section>
         <h2>CUSTOMER SERVICE</h2>
         <div className="cv-position cv-customer">
           <div className="cv-position-top"><h3>New York City and other U.S. locations</h3><span className="cv-date">APPROX. 2005–2018</span></div>
