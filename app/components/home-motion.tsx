@@ -18,11 +18,7 @@ export default function HomeMotion() {
     page.classList.add("home-motion-ready");
     const heroItems = Array.from(page.querySelectorAll<HTMLElement>("[data-home-reveal]"));
     const revealItems = Array.from(page.querySelectorAll<HTMLElement>("[data-home-scroll-reveal]"));
-    heroItems.forEach((item) => {
-      const delay = Number(item.dataset.homeDelay ?? 0);
-      item.style.setProperty("--home-delay", Math.max(0, Math.min(delay, 500)) + "ms");
-    });
-    revealItems.forEach((item) => {
+    [...heroItems, ...revealItems].forEach((item) => {
       const delay = Number(item.dataset.homeDelay ?? 0);
       item.style.setProperty("--home-delay", Math.max(0, Math.min(delay, 500)) + "ms");
     });
@@ -35,6 +31,15 @@ export default function HomeMotion() {
     });
 
     let observer: IntersectionObserver | undefined;
+    const revealPassedItems = () => {
+      revealItems.forEach((item) => {
+        if (item.classList.contains("is-home-visible")) return;
+        if (item.getBoundingClientRect().top >= window.innerHeight * 0.92) return;
+        item.classList.add("is-home-visible");
+        observer?.unobserve(item);
+      });
+    };
+
     if ("IntersectionObserver" in window) {
       observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -47,10 +52,12 @@ export default function HomeMotion() {
     } else {
       revealItems.forEach((item) => item.classList.add("is-home-visible"));
     }
+    revealPassedItems();
 
     let frame = 0;
     const updateProgress = () => {
       frame = 0;
+      revealPassedItems();
       if (!progressFill) return;
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       const amount = scrollable > 0 ? Math.max(0, Math.min(1, window.scrollY / scrollable)) : 0;
