@@ -1348,3 +1348,63 @@
 .home-page .home-proof .home-proof-range .home-range-labels { color: #fff8eb !important; }
 .home-page .home-proof .home-range-rail { background: #fff8eb30; }
 .home-page .home-proof .home-range-rail i { background: #e5b879; }
+
+/* Keep the photograph, inner edge and nameplate in one frame. */
+.home-page #home .hero.hero .hero-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 0;
+  height: auto;
+  aspect-ratio: auto;
+  padding: 3px !important;
+  border: 6px solid #281b17 !important;
+  background: #bd9160 !important;
+  box-shadow: 8px 14px 22px #281b1738 !important;
+}
+.home-page #home .hero-photo::before { content: none; }
+.home-page #home .home-photo-window { height: auto; }
+.home-page #home .hero-photo .home-photo-window img { height: auto; }
+.home-page #home .home-photo-caption {
+  position: static;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 3px 8px;
+}
+.home-page .actions a.button-link, .home-page .footer-actions a.button-link {
+  text-decoration: none;
+}
+.home-page .button-link .resume-label {
+  color: inherit;
+  transform: none;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.home-page .home-employer-links a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: center;
+  gap: 4px 14px;
+  min-height: 64px;
+  padding-block: 10px;
+}
+.home-page .home-employer-links a > :not(.hiring-arrow) { grid-column: 1; }
+.home-page .home-employer-links a > .hiring-arrow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  color: #e2bd8e;
+  font-size: 16px;
+}
+.home-page #contact .footer-availability-beacon {
+  margin-top: 12px;
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: #f8dfb3;
+}
+@media (max-width: 800px) {
+  .site-header .mobile-menu-trigger {
+    padding: 5px 7px 5px 11px;
+    box-shadow: none;
+  }
+}

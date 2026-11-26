@@ -26,7 +26,7 @@ export default function Home() {
         <div className="hero-followup">
           <div className="actions">
             <a className="button-primary" href="/portfolio"><span>See my teaching in action</span><span className="button-icon" aria-hidden="true">→</span></a>
-            <a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé <span aria-hidden="true">↓</span></a>
+            <a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf"><span className="resume-label">Download résumé</span> <span aria-hidden="true">↓</span></a>
           </div>
           <p className="hero-detail" data-home-reveal="hero" data-home-delay="350">Currently teaching with Shane English Corporation, I’m seeking a full-time teaching role in Tokyo. I’m authorized to work in Japan without employer sponsorship.</p>
         </div>
@@ -44,14 +44,14 @@ export default function Home() {
       <section className="home-employer-path shell" aria-labelledby="employer-path-heading">
         <div data-home-scroll-reveal data-home-delay="0"><span className="kicker">FOR SCHOOL HIRING TEAMS</span><h2 id="employer-path-heading">My teaching <em>background.</em></h2><p>Review my experience, read a classroom example, or download the one-page résumé.</p></div>
         <div className="home-employer-links">
-          <a href="/experience" data-home-scroll-reveal data-home-delay="80"><strong>Teaching experience</strong><span>Japan, online, and U.S. Army classroom instruction →</span></a>
-          <a href="/portfolio#classroom-reflection" data-home-scroll-reveal data-home-delay="150"><strong>Classroom example</strong><span>A lesson adjusted for a young learner →</span></a>
-          <a href="/resume/download" download="J_Simmons_Resume_2026.pdf" data-home-scroll-reveal data-home-delay="220"><strong>One-page résumé (PDF)</strong><span>Download the résumé ↓</span></a>
+          <a href="/experience" data-home-scroll-reveal data-home-delay="80"><strong>Teaching experience</strong><span>Japan, online, and U.S. Army classroom instruction</span><span className="hiring-arrow" aria-hidden="true">→</span></a>
+          <a href="/portfolio#classroom-reflection" data-home-scroll-reveal data-home-delay="150"><strong>Classroom example</strong><span>A lesson adjusted for a young learner</span><span className="hiring-arrow" aria-hidden="true">→</span></a>
+          <a href="/resume/download" download="J_Simmons_Resume_2026.pdf" data-home-scroll-reveal data-home-delay="220"><strong>One-page résumé (PDF)</strong><span>Download the résumé</span><span className="hiring-arrow" aria-hidden="true">↓</span></a>
         </div>
       </section>
       <footer id="contact">
-        <div className="shell footer-grid"><div data-home-scroll-reveal><span className="kicker">CONTACT</span><h2>Interested in my<br /> <em>teaching experience?</em></h2><p>I’m James Simmons, an English teacher in Tokyo. If my experience fits an opening at your school, I’d welcome a conversation. You can also email <a className="contact-email" href="mailto:meet@eastokyo.com">meet@eastokyo.com</a>.</p><div className="footer-actions"><a className="button-primary" href="/meeting"><span>Invite me to interview</span><span className="button-icon" aria-hidden="true">→</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right" data-home-scroll-reveal data-home-delay="100"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
-        <div className="shell footer-bottom"><span className="footer-brand"><img src="/brand/js-mark.svg" width={36} height={36} alt="" aria-hidden="true" /> JS · EASTOKYO</span><span>© {new Date().getFullYear()} James Simmons · Personal Teaching Portfolio</span><span className="footer-availability-beacon">AVAILABLE NOW FOR THE RIGHT TEACHING ROLE</span></div>
+        <div className="shell footer-grid"><div data-home-scroll-reveal><span className="kicker">CONTACT</span><h2>Interested in my<br /> <em>teaching experience?</em></h2><p>I’m James Simmons, an English teacher in Tokyo. If my experience fits an opening at your school, I’d welcome a conversation. You can also email <a className="contact-email" href="mailto:meet@eastokyo.com">meet@eastokyo.com</a>.</p><div className="footer-actions"><a className="button-primary" href="/meeting"><span>Invite me to interview</span><span className="button-icon" aria-hidden="true">→</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf"><span className="resume-label">Download résumé</span> <span aria-hidden="true">↓</span></a></div><span className="footer-availability-beacon">AVAILABLE NOW FOR THE RIGHT TEACHING ROLE</span></div><div className="footer-right" data-home-scroll-reveal data-home-delay="100"><span>BASED IN</span><strong>Tokyo, Japan</strong></div></div>
+        <div className="shell footer-bottom"><span className="footer-brand"><img src="/brand/js-mark.svg" width={36} height={36} alt="" aria-hidden="true" /> JS · EASTOKYO</span><span>© {new Date().getFullYear()} James Simmons · Personal Teaching Portfolio</span></div>
       </footer>
     </main>
   );
