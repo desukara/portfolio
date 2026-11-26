@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const links = [
   { index: "01", label: "About me", href: "/about" },
@@ -8,6 +11,8 @@ const links = [
 ];
 
 export default function SiteHeader({ current }: { current?: string }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to main content</a>
@@ -31,22 +36,40 @@ export default function SiteHeader({ current }: { current?: string }) {
         <Link className="nav-cta" href="/meeting">
           <span>Invite me to interview</span><span className="nav-cta-arrow" aria-hidden="true">→</span>
         </Link>
-        <details className="mobile-menu">
-          <summary>Explore <span className="menu-toggle" aria-hidden="true">☰</span></summary>
-          <nav aria-label="Mobile navigation">
+        <div className={`mobile-menu${menuOpen ? " is-open" : ""}`}>
+          <button
+            type="button"
+            className="mobile-menu-trigger"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMenuOpen((isOpen) => !isOpen)}
+          >
+            Explore <span className="menu-toggle" aria-hidden="true">☰</span>
+          </button>
+          <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!menuOpen}>
             {links.map(({ index, label, href }) => (
-              <Link key={href} href={href} aria-current={current === href ? "page" : undefined}>
+              <Link
+                key={href}
+                href={href}
+                aria-current={current === href ? "page" : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
                 <span className="nav-index" aria-hidden="true">{index}</span>
                 <span className="nav-label">{label}</span>
                 <span className="nav-arrow" aria-hidden="true">→</span>
               </Link>
             ))}
-            <Link className="mobile-menu-cta" href="/meeting" aria-current={current === "/meeting" ? "page" : undefined}>
+            <Link
+              className="mobile-menu-cta"
+              href="/meeting"
+              aria-current={current === "/meeting" ? "page" : undefined}
+              onClick={() => setMenuOpen(false)}
+            >
               <span className="nav-label">Invite me to interview</span>
               <span className="nav-arrow" aria-hidden="true">→</span>
             </Link>
           </nav>
-        </details>
+        </div>
       </header>
     </>
   );
