@@ -764,3 +764,8 @@
   .home-page .status-dot { animation: none; opacity: 1; }
   .home-page .status-dot { box-shadow: 0 0 0 6px rgba(216, 255, 53, .32), 0 0 22px rgba(216, 255, 53, .9); }
 }
+
+@media (max-width: 800px) {
+  /* Keep the compact header uncluttered; the animated interview CTA lives in Explore. */
+  .site-header .nav-cta { display: none; }
+}
