@@ -29,7 +29,7 @@ export default function SiteHeader({ current }: { current?: string }) {
           ))}
         </nav>
         <Link className="nav-cta" href="/meeting">
-          <span>Invite me to interview</span><span className="nav-cta-arrow" aria-hidden="true">↗</span>
+          <span>Invite me to interview</span><span className="nav-cta-arrow" aria-hidden="true">→</span>
         </Link>
         <details className="mobile-menu">
           <summary>Explore <span className="menu-toggle" aria-hidden="true">☰</span></summary>
@@ -38,12 +38,12 @@ export default function SiteHeader({ current }: { current?: string }) {
               <Link key={href} href={href} aria-current={current === href ? "page" : undefined}>
                 <span className="nav-index" aria-hidden="true">{index}</span>
                 <span className="nav-label">{label}</span>
-                <span className="nav-arrow" aria-hidden="true">↗</span>
+                <span className="nav-arrow" aria-hidden="true">→</span>
               </Link>
             ))}
             <Link className="mobile-menu-cta" href="/meeting" aria-current={current === "/meeting" ? "page" : undefined}>
               <span className="nav-label">Invite me to interview</span>
-              <span className="nav-arrow" aria-hidden="true">↗</span>
+              <span className="nav-arrow" aria-hidden="true">→</span>
             </Link>
           </nav>
         </details>
