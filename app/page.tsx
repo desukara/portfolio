@@ -9,19 +9,19 @@ export default function Home() {
       <SiteHeader current="/" />
       <section className="hero shell" id="home">
         <div className="hero-copy" id="main-content" tabIndex={-1}>
-          <div className="eyebrow" data-home-reveal="hero" data-home-delay="0"><span className="status-dot" aria-hidden="true" /> TEFL-CERTIFIED · ENGLISH TEACHER IN TOKYO</div>
+          <div className="eyebrow" data-home-reveal="hero" data-home-delay="0"><span className="status-dot" aria-hidden="true" /> TEFL-CERTIFIED</div>
           <h1 aria-label="Tokyo, let’s make English click.">
             <span className="home-title-mask" data-home-reveal="title" data-home-delay="70"><span>Tokyo, let’s</span></span>
             <span className="home-title-mask" data-home-reveal="title" data-home-delay="150"><em>make English</em></span>
             <span className="home-title-mask home-title-mask-last" data-home-reveal="title" data-home-delay="230"><span>click.</span></span>
           </h1>
-          <p className="hero-lead" data-home-reveal="hero" data-home-delay="290">I’m a <strong>TEFL-certified English teacher in Tokyo</strong>, bringing classroom experience in Japan and online to learners from age three through retirement.</p>
+          <p className="hero-lead" data-home-reveal="hero" data-home-delay="290">I’m a <strong>English teacher</strong>, bringing classroom experience in Japan and online to learners from age three through retirement.</p>
         </div>
         <figure className="hero-art hero-photo">
           <div className="home-photo-window">
             <img src="/homepage-photo.jpeg" width={1076} height={1366} fetchPriority="high" alt="James Simmons, English teacher in Tokyo" loading="eager" />
           </div>
-          <figcaption className="home-photo-caption"><span>JAMES SIMMONS</span><span>ENGLISH TEACHER · TOKYO</span></figcaption>
+          <figcaption className="home-photo-caption"><span>JAMES SIMMONS</span><span>TEACHING PORTFOLIO</span></figcaption>
         </figure>
         <div className="hero-followup">
           <div className="actions">
