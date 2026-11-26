@@ -16,18 +16,20 @@ export default function Home() {
             <span className="home-title-mask home-title-mask-last" data-home-reveal="title" data-home-delay="230"><span>click.</span></span>
           </h1>
           <p className="hero-lead" data-home-reveal="hero" data-home-delay="290">I’m a <strong>TEFL-certified English teacher in Tokyo</strong>, bringing classroom experience in Japan and online to learners from age three through retirement.</p>
-          <p className="hero-detail" data-home-reveal="hero" data-home-delay="350">Currently teaching with Shane English Corporation, I’m seeking a full-time teaching role in Tokyo. I’m authorized to work in Japan without employer sponsorship.</p>
-          <div className="actions" data-home-reveal="hero" data-home-delay="420">
-            <a className="button-primary" href="/portfolio"><span>See my teaching in action</span><span className="button-icon" aria-hidden="true">→</span></a>
-            <a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé <span aria-hidden="true">↓</span></a>
-          </div>
         </div>
-        <figure className="hero-art hero-photo" data-home-reveal="photo" data-home-delay="160">
+        <figure className="hero-art hero-photo">
           <div className="home-photo-window">
             <img src="/homepage-photo.jpeg" width={1076} height={1366} fetchPriority="high" alt="James Simmons, English teacher in Tokyo" loading="eager" />
           </div>
           <figcaption className="home-photo-caption"><span>JAMES SIMMONS</span><span>ENGLISH TEACHER · TOKYO</span></figcaption>
         </figure>
+        <div className="hero-followup">
+          <div className="actions">
+            <a className="button-primary" href="/portfolio"><span>See my teaching in action</span><span className="button-icon" aria-hidden="true">→</span></a>
+            <a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé <span aria-hidden="true">↓</span></a>
+          </div>
+          <p className="hero-detail" data-home-reveal="hero" data-home-delay="350">Currently teaching with Shane English Corporation, I’m seeking a full-time teaching role in Tokyo. I’m authorized to work in Japan without employer sponsorship.</p>
+        </div>
       </section>
       <section className="home-proof shell" aria-label="Teaching experience at a glance">
         <div data-home-scroll-reveal data-home-delay="0"><strong>TEFL</strong><span>Certified English teacher</span></div>
@@ -48,7 +50,7 @@ export default function Home() {
         </div>
       </section>
       <footer id="contact">
-        <div className="shell footer-grid"><div data-home-scroll-reveal><span className="kicker">03 / CONTACT</span><h2>Interested in my<br /><em>teaching experience?</em></h2><p>I’m James Simmons, an English teacher in Tokyo. If my experience fits an opening at your school, I’d welcome a conversation. You can also <strong className="contact-email">email meet@eastokyo.com</strong>.</p><div className="footer-actions"><a className="button-primary" href="/meeting"><span>Invite me to interview</span><span className="button-icon" aria-hidden="true">→</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right" data-home-scroll-reveal data-home-delay="100"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
+        <div className="shell footer-grid"><div data-home-scroll-reveal><span className="kicker">03 / CONTACT</span><h2>Interested in my<br /> <em>teaching experience?</em></h2><p>I’m James Simmons, an English teacher in Tokyo. If my experience fits an opening at your school, I’d welcome a conversation. You can also email <a className="contact-email" href="mailto:meet@eastokyo.com">meet@eastokyo.com</a>.</p><div className="footer-actions"><a className="button-primary" href="/meeting"><span>Invite me to interview</span><span className="button-icon" aria-hidden="true">→</span></a><a className="button-link" href="/resume/download" download="J_Simmons_Resume_2026.pdf">Download résumé ↓</a></div></div><div className="footer-right" data-home-scroll-reveal data-home-delay="100"><span>BASED IN</span><strong>Tokyo, Japan</strong><span>AVAILABLE FOR</span><strong>Full-time teaching opportunities</strong></div></div>
         <div className="shell footer-bottom"><span className="footer-brand"><img src="/brand/js-mark.svg" width={36} height={36} alt="" aria-hidden="true" /> JS · EASTOKYO</span><span>© {new Date().getFullYear()} James Simmons · Personal Teaching Portfolio</span><span className="footer-availability-beacon">AVAILABLE NOW FOR THE RIGHT TEACHING ROLE</span></div>
       </footer>
     </main>

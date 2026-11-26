@@ -1225,3 +1225,111 @@
 .home-page .footer-actions .button-link:focus-visible::after {
   background: #f0c98c;
 }
+
+/* One portrait composition and action hierarchy across screen sizes. */
+.home-page #home {
+  grid-template: "intro portrait" auto "followup portrait" auto / minmax(0, 1.15fr) minmax(0, 1fr);
+  align-content: center;
+  min-height: 0;
+  gap: 16px clamp(32px, 5vw, 68px);
+  padding-block: clamp(34px, 6vh, 70px);
+}
+.home-page #home::before { content: none; }
+.home-page .hero-copy { grid-area: intro; align-self: end; }
+.home-page .hero-followup { grid-area: followup; align-self: start; min-width: 0; }
+.home-page .hero-followup .actions { margin: 0 0 16px; }
+.home-page .hero-followup .hero-detail { margin-bottom: 0; }
+.home-page .hero-lead { margin-bottom: 0; }
+.home-page .hero.hero .hero-photo {
+  grid-area: portrait;
+  isolation: isolate;
+  width: min(86%, 344px);
+  margin: 0;
+  border: 5px solid #281b17 !important;
+  background: #79513b !important;
+  padding: 6px !important;
+  box-shadow: 0 16px 30px #281b1733, inset 0 0 0 1px #bd9160 !important;
+  transform: none;
+  translate: none;
+  perspective: none;
+  will-change: auto;
+}
+.home-page .hero.hero .hero-photo::before {
+  inset: auto -13% 12% auto;
+  width: 64%;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: #bd3026;
+  transform: none;
+  translate: none;
+}
+.home-page .hero-photo::after, .home-page .home-photo-window::after { content: none; }
+.home-page .hero-photo .home-photo-window { overflow: hidden; border: 0; }
+.home-page #home .hero-photo .home-photo-window img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  translate: none;
+  will-change: auto;
+  transition: none;
+}
+.home-page .home-photo-caption {
+  inset: auto 6px 6px;
+  padding: 8px;
+  background: #281b17;
+  color: #fff0d9;
+  box-shadow: none;
+  translate: none;
+}
+.home-page .actions .button-primary, .home-page footer .button-primary {
+  box-shadow: 0 2px 0 #752b26, 0 6px 14px #281b1724;
+}
+.home-page .actions .button-link, .home-page .footer-actions .button-link {
+  text-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.home-page .actions .button-link::after, .home-page .footer-actions .button-link::after { content: none; }
+.home-page .home-proof > div, .home-page .home-proof > div:first-child {
+  min-height: 76px;
+  padding: 13px 15px;
+  box-shadow: 0 3px 0 #281b1720;
+}
+.home-page .home-proof > div:nth-child(3) > span { color: #fff8eb; }
+.home-page .home-proof .home-range-labels { color: #281b17 !important; }
+.home-page .home-employer-path {
+  width: min(calc(100% - 40px), 1220px);
+  box-shadow: 4px 5px 0 var(--nav-electric);
+}
+.home-page.home-motion-ready [data-home-reveal="hero"],
+.home-page.home-motion-ready [data-home-scroll-reveal] { filter: none; }
+.home-page.home-motion-ready [data-home-scroll-reveal]:focus-within {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.home-page .footer-availability-beacon { animation: none; opacity: 1; text-shadow: none; }
+@media (max-width: 800px) {
+  .site-header { min-height: 0; padding-block: 10px; }
+  .site-header .mobile-menu-trigger { min-width: 0; min-height: 44px; gap: 8px; }
+  .home-page #home {
+    grid-template: "intro" auto "portrait" auto "followup" auto / minmax(0, 1fr);
+    gap: 22px;
+    padding-block: 28px 36px;
+    overflow-x: clip;
+  }
+  .home-page #home h1 { margin-block: 17px 14px; }
+  .home-page .hero.hero .hero-photo { width: min(78%, 310px); }
+  .home-page .footer-grid h2 { font-size: clamp(32px, 9vw, 46px); line-height: 1.13; }
+  .home-page .footer-grid h2 br { display: none; }
+  .home-page .footer-right { padding-top: 8px; gap: 6px; }
+  .home-page .footer-right span { margin-top: 12px; }
+  .home-page .footer-actions { flex-flow: row wrap; align-items: center; gap: 8px 16px; }
+}
+@media (min-width: 480px) and (max-width: 800px) {
+  .home-page .home-proof { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 479px) {
+  .home-page .home-proof { grid-template-columns: minmax(0, 1fr); }
+}
