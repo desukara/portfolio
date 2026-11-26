@@ -1455,7 +1455,14 @@
 .home-page .home-proof .home-proof-range .home-range-labels { font-size: 12px !important; }
 
 @media (max-width: 800px) {
-  .home-page .top-strip { background: #281b17; }
+  .home-page .top-strip {
+    position: sticky;
+    top: 0;
+    z-index: 110;
+    background-color: #281b17;
+    scroll-margin-top: 0;
+  }
+  .home-page :is(#main-content, #contact) { scroll-margin-top: 48px; }
   .home-page .top-strip span:first-child {
     animation: none;
     background: none;
