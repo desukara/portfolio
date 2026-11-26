@@ -1408,3 +1408,10 @@
     box-shadow: none;
   }
 }
+
+.home-page .home-proof > .home-proof-range:nth-child(4) { background: #503226; }
+.home-page .home-proof .home-proof-range .home-range-labels > span {
+  color: #fff8eb !important;
+  opacity: 1;
+  font-size: 11px;
+}
