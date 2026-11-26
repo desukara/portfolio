@@ -823,7 +823,7 @@
 /* Mediterranean Tokyo finish: wine, ink, warm stone, and emerald. */
 :root {
   --nav-electric: #1d5f82;
-  --nav-lime: #00a94f;
+  --nav-lime: #c99d5c;
   --nav-coral: #c94b3b;
   --nav-ink: #211b20;
   --nav-paper: #f4ecdf;
@@ -869,8 +869,8 @@
   animation: tokyo-portfolio-sheen 5.2s ease-in-out infinite;
 }
 .top-strip span:first-child::before {
-  background: var(--nav-lime);
-  -webkit-text-fill-color: var(--nav-lime);
+  background: #00a94f;
+  -webkit-text-fill-color: #00a94f;
   box-shadow: 0 0 0 2px rgba(0, 169, 79, .2), 0 0 12px rgba(0, 169, 79, .88);
 }
 .top-strip span:first-child::after {
