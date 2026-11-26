@@ -814,3 +814,7 @@
   }
   .site-header .nav-cta { display: none; }
 }
+
+@media (max-width: 800px) {
+  .site-header .desktop-navigation { display: none; }
+}
