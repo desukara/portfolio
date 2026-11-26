@@ -18,12 +18,12 @@ export default function SiteHeader({ current }: { current?: string }) {
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <div className="top-strip">
         <span>PERSONAL TEACHING PORTFOLIO</span>
-        <span>TOKYO · JAPAN</span>
+        <span>{current === "/" ? "JAPAN" : "TOKYO · JAPAN"}</span>
       </div>
       <header className="site-header shell">
         <Link className="brand" href="/" aria-label="James Simmons — homepage">
           <img src="/brand/js-mark.svg" width={48} height={48} alt="" aria-hidden="true" />
-          <span className="brand-wordmark">JAMES SIMMONS<small>ENGLISH TEACHER · TOKYO</small></span>
+          <span className="brand-wordmark">JAMES SIMMONS<small>ENGLISH TEACHER{current === "/" ? "" : " · TOKYO"}</small></span>
         </Link>
         <nav className="desktop-navigation" aria-label="Main navigation">
           {links.map(({ index, label, href }) => (
