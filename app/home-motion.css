@@ -1415,3 +1415,33 @@
   opacity: 1;
   font-size: 11px;
 }
+
+@media (max-width: 800px) {
+  .home-page #home .hero.hero .hero-photo {
+    justify-self: center;
+    width: min(100%, 310px);
+    max-width: 100%;
+  }
+  .home-page #home .hero-followup {
+    justify-self: center;
+    width: 100%;
+  }
+  .home-page #home .hero-followup .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .home-page #home .hero-followup .button-primary {
+    max-width: 100%;
+    text-align: center;
+  }
+  .home-page #home .hero-followup .hero-detail { margin-inline: auto; }
+  .home-page #contact .footer-actions { justify-content: center; }
+  .home-page .site-header .mobile-menu-trigger {
+    background: #6b2630;
+    color: #fff8eb;
+  }
+}
+.home-page #home .hero.hero .hero-photo::before { display: none; }
+.home-page .hero-lead strong { text-decoration: none; }
+.home-page .home-proof .home-proof-range .home-range-labels { font-size: 12px !important; }
