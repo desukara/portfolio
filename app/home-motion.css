@@ -1453,3 +1453,14 @@
 .home-page #home .hero.hero .hero-photo::before { display: none; }
 .home-page .hero-lead strong { text-decoration: none; }
 .home-page .home-proof .home-proof-range .home-range-labels { font-size: 12px !important; }
+
+@media (max-width: 800px) {
+  .home-page .top-strip { background: #281b17; }
+  .home-page .top-strip span:first-child {
+    animation: none;
+    background: none;
+    color: #fff8eb;
+    -webkit-text-fill-color: currentColor;
+  }
+  .home-page .top-strip span:first-child::after { display: none; }
+}
