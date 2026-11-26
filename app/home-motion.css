@@ -1342,3 +1342,9 @@
   transform: none;
   transition: none;
 }
+
+/* Match the learner range card to the other credentials. */
+.home-page .home-proof > .home-proof-range:nth-child(4) { background: #694634; color: #fff8eb; }
+.home-page .home-proof .home-proof-range .home-range-labels { color: #fff8eb !important; }
+.home-page .home-proof .home-range-rail { background: #fff8eb30; }
+.home-page .home-proof .home-range-rail i { background: #e5b879; }
