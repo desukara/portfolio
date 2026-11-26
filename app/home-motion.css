@@ -165,20 +165,6 @@
   transition: transform 820ms var(--home-delay, 0ms) cubic-bezier(.16, 1, .3, 1);
 }
 .home-page.home-motion-ready #home .home-title-mask.is-home-visible > span { transform: translateY(0); }
-.home-page.home-motion-ready #home .hero-photo {
-  opacity: 0;
-  clip-path: inset(0 0 100% 0);
-  transform: translateY(12px);
-  transition:
-    clip-path 920ms var(--home-delay, 0ms) cubic-bezier(.16, 1, .3, 1),
-    opacity 700ms var(--home-delay, 0ms) ease,
-    transform 920ms var(--home-delay, 0ms) cubic-bezier(.16, 1, .3, 1);
-}
-.home-page.home-motion-ready #home .hero-photo.is-home-visible {
-  opacity: 1;
-  clip-path: inset(0);
-  transform: translateY(0);
-}
 .home-page.home-motion-ready [data-home-scroll-reveal] { transform: translateY(12px); }
 .home-page.home-motion-ready [data-home-scroll-reveal].is-home-visible { transform: translateY(0); }
 @media (hover: hover) and (pointer: fine) {
@@ -200,8 +186,6 @@
   .home-page .home-photo-caption { right: 8px; bottom: 8px; left: 8px; padding: 8px; font-size: 8px; }
   .home-page .hero-photo::after { inset: 8px; }
   .home-page .hero-photo img { transform: none !important; }
-  .home-page.home-motion-ready #home .hero-photo { transform: translateY(8px); }
-  .home-page.home-motion-ready #home .hero-photo.is-home-visible { transform: none; }
   .home-page .home-employer-links a:hover,
   .home-page .home-employer-links a:focus-visible { padding-left: 16px; }
   .home-page .home-range-labels { font-size: 9px !important; }
@@ -217,12 +201,6 @@
   .home-page.home-motion-ready [data-home-reveal],
   .home-page.home-motion-ready [data-home-scroll-reveal],
   .home-page.home-motion-ready .home-title-mask > span,
-  .home-page.home-motion-ready #home .hero-photo {
-    opacity: 1 !important;
-    clip-path: none !important;
-    transform: none !important;
-    transition: none !important;
-  }
 }
 
 /* Progressive enhancement: browsers without native navigation transitions keep normal navigation. */
@@ -1144,17 +1122,6 @@
 .home-page.home-motion-ready #home .home-title-mask > span {
   transition: transform 1050ms var(--home-delay, 0ms) cubic-bezier(.16, 1, .3, 1);
 }
-.home-page.home-motion-ready #home .hero-photo {
-  filter: blur(8px) saturate(.82);
-  clip-path: inset(0 0 100% 0 round 3px);
-  transition: clip-path 1100ms var(--home-delay, 0ms) cubic-bezier(.16, 1, .3, 1),
-    filter 940ms var(--home-delay, 0ms) ease,
-    opacity 700ms var(--home-delay, 0ms) ease;
-}
-.home-page.home-motion-ready #home .hero-photo.is-home-visible {
-  filter: blur(0) saturate(1);
-  clip-path: inset(0 round 3px);
-}
 @media (hover: hover) and (pointer: fine) {
   .home-page .hero-photo:hover .home-photo-window img { transform: perspective(1400px) rotateX(var(--home-tilt-y, 0deg)) rotateY(var(--home-tilt-x, 0deg)) scale(1.24); }
   .home-page .hero-photo:hover { box-shadow: 23px 24px 0 var(--nav-coral), 0 34px 76px rgba(43, 25, 22, .26) !important; }
@@ -1196,14 +1163,6 @@
   .home-page.home-motion-ready [data-home-scroll-reveal],
   .home-page.home-motion-ready #home .home-title-mask > span,
   .home-page.home-motion-ready #home .hero-photo,
-  .home-page.home-motion-ready #home .hero-photo.is-home-visible {
-    opacity: 1 !important;
-    filter: none !important;
-    clip-path: none !important;
-    transform: none !important;
-    translate: none !important;
-    transition: none !important;
-  }
 }
 
 
