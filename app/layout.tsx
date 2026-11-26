@@ -1,6 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./home-motion.css";
+
+export const viewport: Viewport = {
+  themeColor: [{ media: "(max-width: 800px)", color: "#f3e9da" }],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eastokyo.com"),
