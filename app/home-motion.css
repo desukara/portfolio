@@ -1205,3 +1205,23 @@
     transition: none !important;
   }
 }
+
+
+/* Keep the Italian palette consistent through the footer, with a clear résumé action. */
+.home-page footer {
+  background: #271815 !important;
+  color: #f3e9da;
+}
+.home-page .footer-actions .button-link {
+  color: #fff0d9;
+}
+.home-page .footer-actions .button-link::after {
+  background: #bd9160;
+}
+.home-page .footer-actions .button-link > span {
+  color: #e7b77f;
+}
+.home-page .footer-actions .button-link:hover::after,
+.home-page .footer-actions .button-link:focus-visible::after {
+  background: #f0c98c;
+}
