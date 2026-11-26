@@ -769,3 +769,7 @@
   /* Keep the compact header uncluttered; the animated interview CTA lives in Explore. */
   .site-header .nav-cta { display: none; }
 }
+
+@media (max-width: 800px) {
+  .site-header .mobile-menu:not([open]) nav { display: none; }
+}
