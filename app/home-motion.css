@@ -922,3 +922,9 @@
   .home-page .status-dot { animation: none; opacity: 1; }
   .home-page .status-dot { box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px rgba(0, 169, 79, .58), 0 0 15px 2px rgba(0, 169, 79, .56); }
 }
+
+@media (max-width: 800px) {
+  .site-header .mobile-menu-trigger {
+    box-shadow: 0 4px 0 #8f6533, 0 8px 18px rgba(33, 27, 32, .16);
+  }
+}
