@@ -1333,3 +1333,12 @@
 @media (max-width: 479px) {
   .home-page .home-proof { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* The still portrait renders immediately, independently of text reveals. */
+.home-page.home-motion-ready #home .hero-photo {
+  opacity: 1;
+  clip-path: none;
+  filter: none;
+  transform: none;
+  transition: none;
+}
