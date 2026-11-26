@@ -54,10 +54,28 @@ export default function HomeMotion() {
     }
     revealPassedItems();
 
+    const photo = page.querySelector<HTMLElement>(".hero-photo");
+    const updatePhotoDepth = () => {
+      if (!photo) return;
+      const rect = photo.getBoundingClientRect();
+      const range = (window.innerHeight + rect.height) / 2;
+      const distance = range > 0
+        ? Math.max(-1, Math.min(1, (rect.top + rect.height / 2 - window.innerHeight / 2) / range))
+        : 0;
+      const narrowScreen = window.matchMedia("(max-width: 600px)").matches;
+      const imageTravel = narrowScreen ? 48 : 68;
+      const plateTravel = narrowScreen ? 34 : 52;
+      photo.style.setProperty("--home-parallax-image-y", (-distance * imageTravel).toFixed(1) + "px");
+      photo.style.setProperty("--home-parallax-plate-y", (distance * plateTravel).toFixed(1) + "px");
+      photo.style.setProperty("--home-parallax-inner-y", (-distance * plateTravel * 0.42).toFixed(1) + "px");
+      photo.style.setProperty("--home-parallax-caption-y", (-distance * (narrowScreen ? 10 : 14)).toFixed(1) + "px");
+    };
+
     let frame = 0;
     const updateProgress = () => {
       frame = 0;
       revealPassedItems();
+      updatePhotoDepth();
       if (!progressFill) return;
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       const amount = scrollable > 0 ? Math.max(0, Math.min(1, window.scrollY / scrollable)) : 0;
@@ -72,7 +90,6 @@ export default function HomeMotion() {
     window.addEventListener("scroll", requestProgressUpdate, { passive: true });
     window.addEventListener("resize", requestProgressUpdate);
 
-    const photo = page.querySelector<HTMLElement>(".hero-photo");
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
     const onPointerMove = (event: PointerEvent) => {
       const rect = photo?.getBoundingClientRect();
