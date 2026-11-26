@@ -818,3 +818,113 @@
 @media (max-width: 800px) {
   .site-header .desktop-navigation { display: none; }
 }
+
+
+/* Mediterranean Tokyo finish: wine, ink, warm stone, and emerald. */
+:root {
+  --nav-electric: #1d5f82;
+  --nav-lime: #c99d5c;
+  --nav-coral: #c94b3b;
+  --nav-ink: #211b20;
+  --nav-paper: #f4ecdf;
+}
+.home-page {
+  --ink: #211b20;
+  --muted: #655d5d;
+  --paper: #f4ecdf;
+  --deep: #76283c;
+  --coral: #c94b3b;
+  --line: #d8c9bd;
+  --gold: #bf945b;
+  --panel-blue: #d5e2e8;
+  --panel-clay: #ead2c8;
+  --paper-white: #fff9f0;
+}
+.home-page .top-strip {
+  background: linear-gradient(105deg, #211b20 0%, #76283c 58%, #1d5f82 100%);
+}
+.home-page #home::before {
+  background:
+    radial-gradient(circle at 48% 46%, rgba(0, 169, 79, .2) 0 21%, transparent 22%),
+    radial-gradient(circle at 56% 54%, rgba(118, 40, 60, .15) 0 43%, transparent 44%);
+}
+.home-page .status-dot {
+  background: #00a94f;
+  box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px rgba(0, 169, 79, .68), 0 0 16px 3px rgba(0, 169, 79, .62);
+  animation: tokyo-status-beacon 1.15s ease-in-out infinite;
+}
+@keyframes tokyo-status-beacon {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px rgba(0, 169, 79, .68), 0 0 16px 3px rgba(0, 169, 79, .62); }
+  48% { opacity: .48; box-shadow: 0 0 0 3px var(--paper), 0 0 0 7px rgba(0, 169, 79, .24), 0 0 9px 1px rgba(0, 169, 79, .32); }
+}
+.top-strip span:first-child {
+  position: relative;
+  color: #fff9f0;
+  background: linear-gradient(105deg, #fff9f0 0%, #fff9f0 36%, #f1c987 49%, #fff 53%, #fff9f0 67%, #fff9f0 100%);
+  background-size: 230% 100%;
+  background-position: 100% 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: tokyo-portfolio-sheen 5.2s ease-in-out infinite;
+}
+.top-strip span:first-child::before {
+  background: #00a94f;
+  -webkit-text-fill-color: #00a94f;
+  box-shadow: 0 0 0 2px rgba(0, 169, 79, .2), 0 0 12px rgba(0, 169, 79, .88);
+}
+.top-strip span:first-child::after {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f1c987 42%, #fff 50%, transparent 100%);
+  content: "";
+  opacity: 0;
+  transform: scaleX(.12);
+  transform-origin: left center;
+  animation: tokyo-portfolio-rule 4.8s cubic-bezier(.16, 1, .3, 1) infinite;
+}
+@keyframes tokyo-portfolio-sheen {
+  0%, 12% { background-position: 100% 0; }
+  58%, 100% { background-position: 0 0; }
+}
+@keyframes tokyo-portfolio-rule {
+  0%, 10% { opacity: 0; transform: scaleX(.12); }
+  23% { opacity: 1; }
+  62%, 100% { opacity: 0; transform: scaleX(1); }
+}
+@media (max-width: 800px) {
+  /* The fixed progress stripe covered the phone viewport while scrolling. */
+  .home-progress { display: none !important; }
+}
+@media (max-width: 600px) {
+  /* Keep the decorative sun inside the hero so it cannot widen the page. */
+  .home-page,
+  .home-page #home { overflow-x: clip; }
+  .home-page #home::before {
+    right: 0;
+    top: 22%;
+    width: min(88vw, 360px);
+    max-width: 100%;
+    transform: translateX(1%);
+  }
+  .home-page .hero-art,
+  .home-page .hero-copy { min-width: 0; max-width: 100%; }
+  .home-page .hero-photo { max-width: calc(100% - 12px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .top-strip span:first-child,
+  .top-strip span:first-child::after { animation: none !important; }
+  .top-strip span:first-child { background: none; -webkit-text-fill-color: #fff9f0; }
+  .top-strip span:first-child::after { display: none; }
+  .home-page .status-dot { animation: none; opacity: 1; }
+  .home-page .status-dot { box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px rgba(0, 169, 79, .58), 0 0 15px 2px rgba(0, 169, 79, .56); }
+}
+
+@media (max-width: 800px) {
+  .site-header .mobile-menu-trigger {
+    box-shadow: 0 4px 0 #8f6533, 0 8px 18px rgba(33, 27, 32, .16);
+  }
+}
