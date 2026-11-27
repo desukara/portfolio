@@ -5,6 +5,7 @@ import { PrintResumeButton } from "./print-button";
 export const metadata: Metadata = {
   title: "Résumé",
   description: "James Simmons — English teacher in Tokyo. Professional experience, education, and availability.",
+  alternates: { canonical: "/resume" },
 };
 
 import { teaching, type Position } from "./resume-data";

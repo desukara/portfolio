@@ -15,7 +15,7 @@ export default function Home() {
             <span className="home-title-mask" data-home-reveal="title" data-home-delay="150"><em>make English</em></span>
             <span className="home-title-mask home-title-mask-last" data-home-reveal="title" data-home-delay="230"><span>click.</span></span>
           </h1>
-          <p className="hero-lead" data-home-reveal="hero" data-home-delay="290">I’m a <strong>English teacher</strong>, bringing classroom experience in Japan and online to learners from age three through retirement.</p>
+          <p className="hero-lead" data-home-reveal="hero" data-home-delay="290">I’m an <strong>English teacher</strong>, bringing classroom experience in Japan and online to learners from age three through retirement.</p>
         </div>
         <figure className="hero-art hero-photo">
           <div className="home-photo-window">

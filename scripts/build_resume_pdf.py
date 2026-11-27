@@ -1,3 +1,4 @@
+import hashlib
 from pathlib import Path
 
 from reportlab.lib import colors
@@ -91,4 +92,6 @@ def footer(canvas, document):
 
 
 doc.build(story, onFirstPage=footer, onLaterPages=footer)
+sha256 = hashlib.sha256(OUTPUT.read_bytes()).hexdigest()
+OUTPUT.with_suffix(OUTPUT.suffix + ".sha256").write_text(sha256 + chr(10), encoding="ascii")
 print(OUTPUT)

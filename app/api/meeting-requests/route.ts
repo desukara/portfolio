@@ -1,3 +1,4 @@
+import { createHmac } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "nodejs";
@@ -6,6 +7,82 @@ const platforms = new Set(["Zoom", "Google Meet", "Microsoft Teams", "Phone", "O
 const zones = new Set(["Asia/Tokyo", "Etc/UTC", "America/New_York", "America/Chicago", "America/Los_Angeles", "Europe/London", "Europe/Paris", "Australia/Sydney"]);
 const allowedKeys = ["contact_name", "organization", "contact_email", "position_title", "meeting_platform", "preferred_date", "preferred_time", "time_zone", "alternate_date", "alternate_time", "message"] as const;
 type Key = typeof allowedKeys[number];
+const MAX_BODY_BYTES = 8000;
+
+function getClientIp(request: NextRequest): string | null {
+  // Vercel overwrites this header with the connecting client’s public IP.
+  const forwardedIp = request.headers.get("x-forwarded-for")?.trim();
+  return forwardedIp || request.headers.get("x-real-ip")?.trim() || null;
+}
+
+async function readJsonBody(request: NextRequest): Promise<
+  { kind: "ok"; body: unknown } | { kind: "invalid" } | { kind: "too-large" }
+> {
+  const contentLength = Number(request.headers.get("content-length") || 0);
+  if (Number.isFinite(contentLength) && contentLength > MAX_BODY_BYTES) return { kind: "too-large" };
+  const reader = request.body?.getReader();
+  if (!reader) return { kind: "invalid" };
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (!value) continue;
+      total += value.byteLength;
+      if (total > MAX_BODY_BYTES) {
+        await reader.cancel();
+        return { kind: "too-large" };
+      }
+      chunks.push(value);
+    }
+  } catch {
+    return { kind: "invalid" };
+  } finally {
+    reader.releaseLock();
+  }
+  const bytes = new Uint8Array(total);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  try {
+    return { kind: "ok", body: JSON.parse(new TextDecoder().decode(bytes)) };
+  } catch {
+    return { kind: "invalid" };
+  }
+}
+
+async function consumeRequestRateLimit(
+  baseUrl: string,
+  serviceKey: string,
+  clientIp: string,
+): Promise<{ allowed: boolean; retryAfterSeconds: number }> {
+  const fingerprint = createHmac("sha256", serviceKey).update(clientIp).digest("hex");
+  const endpoint = new URL("/rest/v1/rpc/consume_interview_request_rate_limit", baseUrl).toString();
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      apikey: serviceKey,
+      Authorization: "Bearer " + serviceKey,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ p_fingerprint: fingerprint }),
+    cache: "no-store",
+    signal: AbortSignal.timeout(8000),
+  });
+  if (!response.ok) throw new Error("Rate limit storage failed.");
+  const result: unknown = await response.json();
+  if (!Array.isArray(result) || result.length !== 1 || typeof result[0]?.allowed !== "boolean") {
+    throw new Error("Invalid rate limit response.");
+  }
+  const retryAfter = Number(result[0].retry_after_seconds);
+  return {
+    allowed: result[0].allowed,
+    retryAfterSeconds: Number.isFinite(retryAfter) ? Math.max(1, Math.ceil(retryAfter)) : 3600,
+  };
+}
 
 function validDate(value: string): boolean {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
@@ -30,9 +107,10 @@ export async function POST(request: NextRequest) {
       if (originHost !== request.nextUrl.host) return NextResponse.json({ error: "Invalid request origin." }, { status: 403 });
     } catch { return NextResponse.json({ error: "Invalid request origin." }, { status: 403 }); }
   }
-  if (Number(request.headers.get("content-length") || 0) > 8000) return NextResponse.json({ error: "Request too large." }, { status: 413 });
-  let body: unknown;
-  try { body = await request.json(); } catch { return NextResponse.json({ error: "Please check the form." }, { status: 400 }); }
+  const parsedBody = await readJsonBody(request);
+  if (parsedBody.kind === "too-large") return NextResponse.json({ error: "Request too large." }, { status: 413 });
+  if (parsedBody.kind === "invalid") return NextResponse.json({ error: "Please check the form." }, { status: 400 });
+  const body = parsedBody.body;
   if (!body || typeof body !== "object" || Array.isArray(body)) return NextResponse.json({ error: "Please check the form." }, { status: 400 });
   const input = body as Record<string, unknown>;
   if (input.website) return NextResponse.json({ ok: true }, { status: 201 }); // spam honeypot
@@ -56,9 +134,20 @@ export async function POST(request: NextRequest) {
   ) return NextResponse.json({ error: "Please correct the date, time, or contact details." }, { status: 400 });
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_PUBLISHABLE_KEY;
-  if (!url || !key) return NextResponse.json({ error: "Meeting requests are temporarily unavailable." }, { status: 503 });
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const clientIp = getClientIp(request);
+  if (!url || !key || !serviceKey || !clientIp) {
+    return NextResponse.json({ error: "Meeting requests are temporarily unavailable." }, { status: 503 });
+  }
   try {
-    const result = await fetch(url + "/rest/v1/interview_requests", {
+    const rateLimit = await consumeRequestRateLimit(url, serviceKey, clientIp);
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429, headers: { "Cache-Control": "no-store", "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+    const result = await fetch(new URL("/rest/v1/interview_requests", url).toString(), {
       method: "POST",
       headers: { apikey: key, "Content-Type": "application/json", Prefer: "return=minimal" },
       body: JSON.stringify(Object.fromEntries(Object.entries(data).filter(([, v]) => v !== null && v !== ""))),

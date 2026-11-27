@@ -13,9 +13,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const role = careerRoles.find((item) => item.slug === slug);
+  if (!role) return { title: "Career Experience" };
   return {
-    title: role ? `${role.name} | Career Experience` : "Career Experience",
-    description: role?.summary,
+    title: `${role.name} | Career Experience`,
+    description: role.summary,
+    alternates: { canonical: `/experience/${role.slug}` },
   };
 }
 
