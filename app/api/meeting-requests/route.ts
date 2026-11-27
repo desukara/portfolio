@@ -10,9 +10,8 @@ type Key = typeof allowedKeys[number];
 const MAX_BODY_BYTES = 8000;
 
 function getClientIp(request: NextRequest): string | null {
-  // Vercel appends the connecting client address to this proxy header.
-  const forwarded = request.headers.get("x-forwarded-for");
-  const forwardedIp = forwarded?.split(",").at(-1)?.trim();
+  // Vercel overwrites this header with the connecting client’s public IP.
+  const forwardedIp = request.headers.get("x-forwarded-for")?.trim();
   return forwardedIp || request.headers.get("x-real-ip")?.trim() || null;
 }
 
