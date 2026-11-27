@@ -16,7 +16,7 @@ function getClientIp(request: NextRequest): string | null {
 }
 
 async function readJsonBody(request: NextRequest): Promise<
-  { kind: "ok"; body: unknown } | { kind: "invalid" | "too-large" }
+  { kind: "ok"; body: unknown } | { kind: "invalid" } | { kind: "too-large" }
 > {
   const contentLength = Number(request.headers.get("content-length") || 0);
   if (Number.isFinite(contentLength) && contentLength > MAX_BODY_BYTES) return { kind: "too-large" };
