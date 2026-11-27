@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Classroom Example | James Simmons Teaching Portfolio",
   description:
     "An anonymized early-childhood teaching example: adapting a color-vocabulary activity for a three-year-old learner.",
+  alternates: { canonical: "/portfolio" },
 };
 
 export default function PortfolioPage() {

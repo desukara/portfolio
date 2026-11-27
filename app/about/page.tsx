@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "About | James Simmons, English Teacher",
   description:
     "James Simmons is a TEFL-certified English teacher in Tokyo with U.S. Army classroom instructor training and experience in Japan and online.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

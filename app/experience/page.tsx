@@ -6,6 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
  title: "Professional Experience",
  description: "Teaching experience in Tokyo and Saitama, online English instruction, and U.S. Army classroom instruction.",
+ alternates: { canonical: "/experience" },
 };
 
 
